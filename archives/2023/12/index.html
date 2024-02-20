@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1707304974310),
+    lastupdate: new Date(1708444609809),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2458,6 +2458,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
@@ -2696,23 +2698,7 @@ F5 生成的伪代码出现了JUMPOUT的错误
   <div class='md article-desc' itemprop="articleBody">
     
       
-        APK1.了解APK文件结构apk全称 Android Package,它相当于一个压缩文件，只有在电脑上将apk后缀改为rar即可解压
-
-
-
-文件
-注释
-
-
-
-
-assets目录
-存放APK的静态资源文件，比如视频，音频，图片等
-
-
-
-lib 目录
-armeabi-v7a基本通用所有android设备，arm64-v8a只适用于64位的android设备，x86常见用于android模拟器...
+        APKapk重新打包123456789101112#解包apktool d wuderuanjian.apk这时候有一个文件夹（你软件的名字）打开之后有个AndroidMainfest.xml 在里面加入android:debuggable=&quot;true&quot;如果有android:extractNativeLibs =&quot;false&quot; 删除这个 这个会影响打包...
       
     
   </div>
@@ -2734,6 +2720,72 @@ armeabi-v7a基本通用所有android设备，arm64-v8a只适用于64位的androi
       
         <div>
           <a class='readmore' href='/2023/12/19/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/19/逆向学习之多线程/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="holys2 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="holys2 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/12/19/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/"  itemprop="url">
+        逆向学习之多线程
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        简介
+进程— 资源分配的最小单位线程— 程序执行的最小单位
+
+进程是一个程序的一个实例，拥有自己独立的各种段（数据段，代码段等等），每次创建一个进程需要从操作系统分配这些资源给他，消耗一定的时间，在linux下C语言创建一个进程使用fork()函数；线程是一个轻量级的进程，除了自己少数的资源，不用用其他资源，且一个进程可以创建多个线程，这些线程共享进程的资源，创建线程的时间要比创建进程少很多...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-19T00:00:00+08:00">2023-12-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/cpp%E9%80%86%E5%90%91/">cpp逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/cpp%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">cpp逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/12/19/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3022,9 +3074,19 @@ python字节码Python 代码先被编译为字节码后，再由 Python 虚拟�
             ><div class='name'>IDA</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
+            active-action="action-categoriescppE98086E59091"
+            ><div class='name'>cpp逆向</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesctfE5ADA6E4B9A0"
             ><div class='name'>ctf学习</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
+            active-action="action-categoriesE58AA0E5AF86E7AE97E6B395"
+            ><div class='name'>加密算法</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"
