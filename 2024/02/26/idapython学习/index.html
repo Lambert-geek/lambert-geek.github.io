@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/02/16/逆向学习之多线程/"/>
+  <link rel="canonical" href="http://example.com/2024/02/26/idapython学习/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>逆向学习之多线程 - 5m10v3 blog</title>
+  <title>idapython学习 - 5m10v3 blog</title>
   <meta name="keywords" content="ctf学习,null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="逆向学习之多线程">
-<meta property="og:url" content="http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
+<meta property="og:title" content="idapython学习">
+<meta property="og:url" content="http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
-<meta property="og:description" content="简介 进程— 资源分配的最小单位线程— 程序执行的最小单位  进程是一个程序的一个实例，拥有自己独立的各种段（数据段，代码段等等），每次创建一个进程需要从操作系统分配这些资源给他，消耗一定的时间，在linux下C语言创建一个进程使用fork()函数；线程是一个轻量级的进程，除了自己少数的资源，不用用其他资源，且一个进程可以创建多个线程，这些线程共享进程的资源，创建线程的时间要比创建进程少很多，（几">
+<meta property="og:description" content="idapython-机械码的识别123450x50 这个会被识别push ax;0x74 这个会被识别jz;&#x2F;&#x2F;用U键或者D键,还原为数据之后nop这个数值,再用C键恢复,如果无法使用F5就用P键创造函数;0xE8 和0xB8一样被识别为jmp;0xB8;0x5E 会被识别为pop si;   访问原数据1234567idc.get_wide_byte(ea) &#x2F;&#x2F; 获取单字节，按整形解释idc.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-22T15:09:57.067Z">
+<meta property="article:published_time" content="2024-02-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-28T09:39:35.572Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
@@ -2444,7 +2444,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/16/逆向学习之多线程/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/26/idapython学习/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2465,7 +2465,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        逆向学习之多线程
+        idapython学习
       </h1>
       <div class='new-meta-box'>
         
@@ -2484,10 +2484,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/cpp%E9%80%86%E5%90%91/">cpp逆向</a>
+    <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/cpp%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">cpp逆向</span></a>
+        <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
       </span>
     
   </div>
@@ -2496,10 +2496,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-16T00:00:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-26T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 16, 2024</p>
+    <p>发布于：Feb 26, 2024</p>
   </a>
 </div>
 
@@ -2522,102 +2522,61 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
-<p>进程— 资源分配的最小单位<br>线程— 程序执行的最小单位</p>
-</blockquote>
-<p>进程是一个程序的一个实例，拥有自己独立的各种段（数据段，代码段等等），每次创建一个进程需要从操作系统分配这些资源给他，消耗一定的时间，在linux下C语言创建一个进程使用<code>fork()</code>函数；<br>线程是一个轻量级的进程，除了自己少数的资源，不用用其他资源，且一个进程可以创建多个线程，这些线程共享进程的资源，创建线程的时间要比创建进程少很多，（几十分之一），从函数角度是使用<code>clone()</code>创建。<br>使用线程处理文件I&#x2F;O或者socket处理都是非常有优势的，将一个大人物分解成若干个小任务，每个线程处理一个任务，线程之间切换不需要花很多时间，而且线程之间数据交换很方便，共享存储区。</p>
-<h2 id="C语言中使用多线程的函数"><a href="#C语言中使用多线程的函数" class="headerlink" title="C语言中使用多线程的函数"></a>C语言中使用多线程的函数</h2><h3 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h3><blockquote>
-<p><code>int pthread_create(pthread_t * tid, const pthread_attr_t * attr, void * ( * func) (void * ), void * arg);</code><br>其返回值是一个整数，若创建进程成功返回0，否则，返回其他错误代码，也是正整数。</p>
-</blockquote>
-<p>创建线程需要的参数：</p>
-<ul>
-<li>线程变量名：<code>pthread_t *</code>类型，是标示线程的id，一般是无符号整形，这里也可以是引用类型，目的是用于返回创建线程的ID</li>
-<li>线程的属性指针：制定线程的属性，比如<strong>线程优先*级</strong>，<strong>初始栈大小</strong>等，通常情况使用的都是指针。</li>
-<li>创建线程的程序代码：一般是函数指针，进程创建后执行该函数指针只想的函数。</li>
-<li>程序代码的参数：若线程执行的函数包含由若干个参数，需要将这些参数封装成结构体，并传递给它指针。<br>创建线程的函数的形式如下：</li>
-</ul>
-<h3 id="结束线程"><a href="#结束线程" class="headerlink" title="结束线程"></a>结束线程</h3><p>结束进程的函数定义如下：</p>
-<blockquote>
-<p><code>void pthread_exit (void *status);</code><br>参数是指针类型，用于存储线程结束后返回状态。</p>
-</blockquote>
-<h3 id="线程等待"><a href="#线程等待" class="headerlink" title="线程等待"></a>线程等待</h3><blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int pthread_join (pthread_t tid, void ** status);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<ul>
-<li>第一个参数表示要等待的进程的id；</li>
-<li>第二参数表示要等待的进程的返回状态，是个二级指针。</li>
-</ul>
-<p>线程创建后怎么执行，新线程和老线程谁先执行这些不是程序来决定，而是由操作系统进行调度的，但是在编程的时候我们常常需要多个线程配合工作，比如在结束某个线程之前，需要等待另外一个线程的处理结果（返回状态等信息），这时候就需要使用<strong>线程等待函数</strong>，这个函数的定义如下：</p>
-<h3 id="其他关于进程的函数"><a href="#其他关于进程的函数" class="headerlink" title="其他关于进程的函数"></a>其他关于进程的函数</h3><ol>
-<li><p>返回当前线程ID</p>
-<blockquote>
-<p><code>pthread_t pthread_self (void);</code><br>用于返回当前进程的ID</p>
-</blockquote>
-</li>
-<li><p>制定线程变成分裂状态</p>
-<blockquote>
-<p><code>int pthread_detach (pthread_t tid);</code><br>参数是指定线程的ID，指定的ID的线程变成分离状态；若指定线程是分离状态，则 如果线程退出，那么它所有的资源都将释放，如果线程不是分离状态，线程必须保留它的线程ID、退出状态，直到其他线程对他调用的<code>pthread_join()</code>函数</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="参考实例一"><a href="#参考实例一" class="headerlink" title="参考实例一"></a>参考实例一</h3><p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">void print_message_func(void *ptr);</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int tmp1,tmp2;</span><br><span class="line">    void *retival;</span><br><span class="line">    pthread_t thread1,thread2;</span><br><span class="line">    char *message1 = &quot;thread1&quot;;</span><br><span class="line">    char *message2 = &quot;thread2&quot;;</span><br><span class="line">    </span><br><span class="line">    int ret_thread1,ret_thread2;</span><br><span class="line">    ret_thread1 = pthread_create(&amp;thread1,NULL,(void *)&amp;print_message_func,(void *)message1);</span><br><span class="line">    ret_thread2 = pthread_create(&amp;thread2,NULL,(void *)&amp;print_message_func,(void *)message2);</span><br><span class="line">    </span><br><span class="line">    if(ret_thread1 == 0)</span><br><span class="line">        printf(&quot;create thread 1 true\n&quot;);</span><br><span class="line">    else</span><br><span class="line">        printf(&quot;create thread 1 false\n&quot;);</span><br><span class="line">    </span><br><span class="line">    if(ret_thread2 == 0)</span><br><span class="line">        printf(&quot;create thread 2 true\n&quot;);</span><br><span class="line">    else</span><br><span class="line">        printf(&quot;create thread 2 false\n&quot;);</span><br><span class="line">    </span><br><span class="line">    tmp1 = pthread_join(thread1,&amp;retival);</span><br><span class="line">    printf(&quot;thread 1 return value (retival) is %d\n&quot;,(int)retival);</span><br><span class="line">    printf(&quot;thread 1 return value (tmp1) is %d\n&quot;,tmp1);</span><br><span class="line">    </span><br><span class="line">    if(tmp1 != 0)</span><br><span class="line">        printf(&quot;cannot join with thread 1\n&quot;);</span><br><span class="line">    printf(&quot;thread 1 is end\n&quot;);</span><br><span class="line">    </span><br><span class="line">    tmp2 = pthread_join(thread2,&amp;retival);</span><br><span class="line">    printf(&quot;thread 2 return value (retival) is %d\n&quot;,(int)retival);</span><br><span class="line">    printf(&quot;thread 2 return value (tmp2) is %d\n&quot;,tmp2);</span><br><span class="line">    </span><br><span class="line">    if(tmp2 != 0)</span><br><span class="line">        printf(&quot;cannot join with thread 2\n&quot;);</span><br><span class="line">    printf(&quot;thread 2 is end\n&quot;);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void print_message_func(void *ptr)</span><br><span class="line">&#123;</span><br><span class="line">    for(int i=0;i&lt;5;++i)</span><br><span class="line">        printf(&quot;%s:%d\n&quot;,(char*)ptr,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <h2 id="idapython-机械码的识别"><a href="#idapython-机械码的识别" class="headerlink" title="idapython-机械码的识别"></a>idapython-机械码的识别</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0x50 这个会被识别push ax;</span><br><span class="line">0x74 这个会被识别jz;//用U键或者D键,还原为数据之后nop这个数值,再用C键恢复,如果无法使用F5就用P键创造函数;</span><br><span class="line">0xE8 和0xB8一样被识别为jmp;</span><br><span class="line">0xB8;</span><br><span class="line">0x5E 会被识别为pop si;</span><br></pre></td></tr></table></figure>
 
-<p>这个代码比较简单，就是演示这几个常用函数的使用。</p>
-<p>这里是纯C语言程序，在Linux下的编译命令是<code>gcc main.c -test -lpthread</code>，运行程序是<code>./test</code>，后面的程序同样</p>
-<h2 id="多线程的同步与互斥"><a href="#多线程的同步与互斥" class="headerlink" title="多线程的同步与互斥"></a>多线程的同步与互斥</h2><h3 id="锁机制"><a href="#锁机制" class="headerlink" title="锁机制"></a>锁机制</h3><p>多线程之间可能需要互斥的访问一些全局变量，这就需要互斥的来访问，这些需要共享访问的字段被称作是<strong>临界资源</strong>，访问<strong>临界资源</strong>的程序段称作是<strong>临界区</strong>。<br>实现线程间的互斥与同步机制的是<strong>锁机制</strong>，下面是常用的锁机制的函数和类。</p>
-<blockquote>
-<ol>
-<li><code>pthread_mutex_t mutex</code> 锁对象</li>
-<li><code>pthread_mutex_init(&amp;mutex,NULL)</code> 在主线程中初始化锁为解锁状态</li>
-<li><code>pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER</code> 编译时初始化锁位解锁状态</li>
-<li><code>pthread_mutex_lock(&amp;mutex)</code>: 访问临界区加锁操作</li>
-<li><code>pthread_mutex_unlock(&amp;mutex)</code>: 访问临界区解锁操作</li>
-</ol>
-</blockquote>
-<h3 id="参考实例二（不加锁访问互斥全局变量）"><a href="#参考实例二（不加锁访问互斥全局变量）" class="headerlink" title="参考实例二（不加锁访问互斥全局变量）"></a>参考实例二（不加锁访问互斥全局变量）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line"></span><br><span class="line">int sharei = 0;</span><br><span class="line">void increase_num(void);</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  int ret;</span><br><span class="line">  pthread_t thread1,thread2,thread3;</span><br><span class="line">  ret = pthread_create(&amp;thread1,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line">  ret = pthread_create(&amp;thread2,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line">  ret = pthread_create(&amp;thread3,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line"></span><br><span class="line">  pthread_join(thread1,NULL);</span><br><span class="line">  pthread_join(thread2,NULL);</span><br><span class="line">  pthread_join(thread3,NULL);</span><br><span class="line"></span><br><span class="line">  printf(&quot;sharei = %d\n&quot;,sharei);</span><br><span class="line"></span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void increase_num(void)</span><br><span class="line">&#123;</span><br><span class="line">  long i,tmp;</span><br><span class="line">  for(i =0;i&lt;=10000;++i)</span><br><span class="line">  &#123;</span><br><span class="line">    tmp = sharei;</span><br><span class="line">    tmp = tmp + 1;</span><br><span class="line">    sharei = tmp;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/../image/320.png" class="lazyload" data-srcset="/../image/320.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="320"></p>
+<h2 id="访问原数据"><a href="#访问原数据" class="headerlink" title="访问原数据"></a>访问原数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">idc.get_wide_byte(ea) // 获取单字节，按整形解释</span><br><span class="line">idc.get_wide_word(ea) // 获取双字节，按整形解释</span><br><span class="line">idc.get_wide_dword(ea) // 获取四字节，按整形解释</span><br><span class="line">idc.get_qword(ea) // 获取八字节，按整形解释</span><br><span class="line">idc.GetFloat(ea) //获取四字节，按浮点解释</span><br><span class="line">idc.GetDouble(ea)//获取八字节，按浮点解释</span><br><span class="line">idc.get_bytes(ea,size) // 在ea获取size字节，按byte解释</span><br></pre></td></tr></table></figure>
 
-<p>编译运行结果，多运行几次，发现结果都不一样。这就是因为对于全局变量，没有添加互斥锁，导致的问题。</p>
-<h3 id="参考实例三-（访问全局变量添加互斥锁）"><a href="#参考实例三-（访问全局变量添加互斥锁）" class="headerlink" title="参考实例三 （访问全局变量添加互斥锁）"></a>参考实例三 （访问全局变量添加互斥锁）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line"></span><br><span class="line">int sharei = 0;</span><br><span class="line">void increase_num(void);</span><br><span class="line">// add mutex</span><br><span class="line">pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  int ret;</span><br><span class="line">  pthread_t thread1,thread2,thread3;</span><br><span class="line">  ret = pthread_create(&amp;thread1,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line">  ret = pthread_create(&amp;thread2,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line">  ret = pthread_create(&amp;thread3,NULL,(void *)&amp;increase_num,NULL);</span><br><span class="line"></span><br><span class="line">  pthread_join(thread1,NULL);</span><br><span class="line">  pthread_join(thread2,NULL);</span><br><span class="line">  pthread_join(thread3,NULL);</span><br><span class="line"></span><br><span class="line">  printf(&quot;sharei = %d\n&quot;,sharei);</span><br><span class="line"></span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void increase_num(void)</span><br><span class="line">&#123;</span><br><span class="line">  long i,tmp;</span><br><span class="line">  for(i =0;i&lt;=10000;++i)</span><br><span class="line">  &#123;</span><br><span class="line">    // lock</span><br><span class="line">    if(pthread_mutex_lock(&amp;mutex) != 0)</span><br><span class="line">    &#123;</span><br><span class="line">      perror(&quot;pthread_mutex_lock&quot;);</span><br><span class="line">      exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">    tmp = sharei;</span><br><span class="line">    tmp = tmp + 1;</span><br><span class="line">    sharei = tmp;</span><br><span class="line">    // unlock</span><br><span class="line">    if(pthread_mutex_unlock(&amp;mutex) != 0)</span><br><span class="line">    &#123;</span><br><span class="line">      perror(&quot;pthread_mutex_unlock&quot;);</span><br><span class="line">      exit(EXIT_FAILURE);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="idc-get-wide-byte-ea"><a href="#idc-get-wide-byte-ea" class="headerlink" title="idc.get_wide_byte(ea)"></a>idc.get_wide_byte(ea)</h3><p>从ea获取一个字节，以整形的形式返回</p>
+<p><img src="/../image/321.png" class="lazyload" data-srcset="/../image/321.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="321"></p>
+<h3 id="idc-get-wide-word-ea"><a href="#idc-get-wide-word-ea" class="headerlink" title="idc.get_wide_word(ea)"></a>idc.get_wide_word(ea)</h3><p>从ea获取2个字节，以整形的形式返回，这里 为了方便大家看，我把整形转为16进制</p>
+<p><img src="/../image/322.png" class="lazyload" data-srcset="/../image/322.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="322"></p>
+<p>这里注意小端序</p>
+<h3 id="idc-get-wide-dword-ea"><a href="#idc-get-wide-dword-ea" class="headerlink" title="idc.get_wide_dword(ea)"></a>idc.get_wide_dword(ea)</h3><p>从ea获取4个字节，以整形的形式返回</p>
+<h3 id="idc-get-qword-ea"><a href="#idc-get-qword-ea" class="headerlink" title="idc.get_qword(ea)"></a>idc.get_qword(ea)</h3><p>从ea获取8个字节，以整形的形式返回</p>
+<h3 id="idc-GetFloat-ea"><a href="#idc-GetFloat-ea" class="headerlink" title="idc.GetFloat(ea)"></a>idc.GetFloat(ea)</h3><p>从ea获取4个字节，以浮点的形式返回</p>
+<h3 id="idc-GetDouble-ea"><a href="#idc-GetDouble-ea" class="headerlink" title="idc.GetDouble(ea)"></a>idc.GetDouble(ea)</h3><p>从ea获取8个字节，以浮点的形式返回</p>
+<h3 id="idc-get-bytes-ea-size"><a href="#idc-get-bytes-ea-size" class="headerlink" title="idc.get_bytes(ea,size)"></a>idc.get_bytes(ea,size)</h3><p>在ea获取size字节，按byte解释</p>
+<h2 id="数据打补丁"><a href="#数据打补丁" class="headerlink" title="数据打补丁"></a>数据打补丁</h2><p>一般和获取原数据的api配合使用<br>idc.patch_byte(ea, value)<br>idc.patch_word(ea, value)<br>idc.patch_dword(ea, value)<br>idc.patch_qword(ea, value)</p>
+<h2 id="获取指令相关数据"><a href="#获取指令相关数据" class="headerlink" title="获取指令相关数据"></a>获取指令相关数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">ScreenEA()或者here()获取光标所在地址</span><br><span class="line">idc.GetOpType(ea,n) 获取操作数类型</span><br><span class="line"></span><br><span class="line">o_void- 0 不含有操作数的指令返回0，如：retn</span><br><span class="line">o_reg- 1 寄存器，如：pop edi</span><br><span class="line">o_mem- 2 内存引用，如：cmp ds:dword_A152B8, 0</span><br><span class="line">o_phrase- 3 寄存器寻址，如：mov [edi+ecx], eax</span><br><span class="line">o_displ- 4 偏移寻址，如：mov eax, [edi+18h]</span><br><span class="line">o_imm- 5 直接数，如：add esp, 0Ch</span><br><span class="line">o_far- 6 x86和x86_64很少用到</span><br><span class="line">o_near- 7 x86和x86_64很少用到</span><br><span class="line"></span><br><span class="line">idc.GetOperandValue(ea, n) 获取操作数引用的地址(取值)</span><br><span class="line">idc.GetOpnd(ea,n) 获取操作数 如rdx(取符号)</span><br><span class="line">idc.GetMnem(ea) 获取操作符 如 mov</span><br><span class="line">idc.GetDisasm(ea) 获取汇编 如mov rdx, rdi</span><br><span class="line"></span><br><span class="line">idautils.Functions() 将返回一个已知函数列表。这个列表将包含起始地址的每一个函数。</span><br><span class="line">start = idc.GetFunctionAttr(ea, FUNCATTR_START) 获取函数起始地址</span><br><span class="line">end = idc.GetFunctionAttr(ea, FUNCATTR_END) 获取函数结束地址（实际是结束地址的下一个地址）</span><br><span class="line">idautils.FuncItems(ea)- 返回当前函数所有指令，需要list(FuncItems(ea))转化为list</span><br><span class="line">idc.NextHead(ea)- 返回下一条指令</span><br><span class="line">idc.PrevHead(ea)- 返回上一条指令</span><br><span class="line">idc.NextAddr(ea)- 返回下一地址</span><br><span class="line">idc.PrevAddr(ea)- 返回上一地址</span><br><span class="line">遍历函数指令最好使用idc.GetFunctionAttr(),因为如果存在异常处理，上面四个会遍历很多不属于函数的指令</span><br><span class="line"></span><br><span class="line">**段**</span><br><span class="line"></span><br><span class="line">Segments()</span><br><span class="line">返回目标程序中的所有段的开始地址。</span><br><span class="line">SegName( long Address )</span><br><span class="line">通过段内的某个地址，获得段名。</span><br><span class="line">SegStart( long Address )</span><br><span class="line">通过段内的某个地址，获得段头的地址。</span><br><span class="line">SegEnd( long Address )</span><br><span class="line">通过段内的某个地址，获得段尾的地址。</span><br><span class="line">SegByName( string SegmentName )</span><br><span class="line">通过段名字返回段基址，举个例子，如果调用.text 作为参数，就会返回程序中代码段的开始 位置。</span><br><span class="line">NextSeg()</span><br><span class="line">访问下一个段，如果没有就返回 BADADDR。</span><br><span class="line">FirstSeg()</span><br><span class="line">访问程序中的第一个段。</span><br></pre></td></tr></table></figure>
 
-<p>添加互斥锁后，就发现，多次运行的结果都是一样的。</p>
-<blockquote>
-<ol>
-<li>其实这里的加锁不是对共享变量（全局变量）或者共享内存进行保护，这里的加锁实际上是对<strong>临界区</strong>的控制，所谓的<strong>临界区</strong>就是访问临界资源的那一段代码，这段代码对临界资源进行多种操作，正确的情况是不允许这段代码执行到一半，处理器使用权就被其他线程抢走，所以这段代码具有<strong>原子性</strong>，即要么执行，要么不执行，不能执行到一半就被抢走处理权，这样就会造成共享数据被污染。</li>
-<li>还有一点，添加锁来控制临界区是有代价的，这个代价表现出来就是时间的额外开销，内部过程是因为要保护现场，会利用一些资源，也需要处理器处理的时间。</li>
-</ol>
-</blockquote>
-<h3 id="信号量机制（可能考察的点）"><a href="#信号量机制（可能考察的点）" class="headerlink" title="信号量机制（可能考察的点）"></a>信号量机制（可能考察的点）</h3><p>锁机制使用是有限制的，锁只有两种状态，即加锁和解锁，对于互斥的访问一个全局变量，这样的方式还可以对付，但是要是对于其他的临界资源，比如说多台打印机等，这种方式显然不行了。<br>信号量机制在操作系统里面学习的比较熟悉了，信号量是一个整数计数器，其数值表示空闲临界资源的数量。<br>当有进程释放资源时，信号量增加，表示可用资源数增加；当有进程申请到资源时，信号量减少，表示可用资源数减少。这个时候可以把锁机制认为是0-1信号量。<br>关于信号量机制的函数。</p>
-<blockquote>
-<p><code>int sem_init(sem_t * sem, int pshared, unsigned int value);</code>初始化信号量</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 成功返回0，失败返回-1；</span><br><span class="line">- 参数sem：表示指向信号结构的指针。</span><br><span class="line">- 参数pshared：不是0 的时候该信号量在进程间共享，否则只能在当前进程的所有线程间共享。</span><br><span class="line">- 参数value：信号量的初始值。</span><br></pre></td></tr></table></figure>
+<h2 id="IDApython去花指令"><a href="#IDApython去花指令" class="headerlink" title="IDApython去花指令"></a>IDApython去花指令</h2><p> 首先第一步还是要分辨出是什么样的花指令</p>
+<table>
+<thead>
+<tr>
+<th>机械码</th>
+<th>汇编语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>9A</td>
+<td>CALL immed32</td>
+</tr>
+<tr>
+<td>E8</td>
+<td>CALL immed16</td>
+</tr>
+<tr>
+<td>E9</td>
+<td>JMP immed16</td>
+</tr>
+<tr>
+<td>EB</td>
+<td>JMP immed8</td>
+</tr>
+</tbody></table>
+<h3 id="1（最简单）"><a href="#1（最简单）" class="headerlink" title="1（最简单）"></a>1（最简单）</h3><p><img src="/../image/323.png" class="lazyload" data-srcset="/../image/323.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="323"></p>
+<p>这里<br>jz跳转条件是zf&#x3D;1，<br>jnz跳转条件是zf&#x3D;0，<br>但是zf就2种可能,所以无论如何都会跳转到loc_411DDF+3的位置,等于jmp loc_411DDF+3.<br>这里可以等长度的nop，我们可以手动nop</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idc</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clear</span>(<span class="params">start_ea,end_ea</span>):</span><br><span class="line">    s_o_h=[<span class="number">0x74</span>,<span class="number">0x05</span>,<span class="number">0x75</span>,<span class="number">0x03</span>,<span class="number">0xe8</span>,<span class="number">0x11</span>,<span class="number">0x00</span>]</span><br><span class="line">	<span class="keyword">while</span> start_ea&lt;end_ea:</span><br><span class="line">		<span class="keyword">if</span> idc.get_bytes(start_ea,<span class="number">7</span>)==<span class="built_in">bytes</span>(s_o_h):</span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">7</span>):</span><br><span class="line">				idc.patch_byte(start_ea+i,<span class="number">0x90</span>)</span><br><span class="line">		start_ea+=<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">start_ea=<span class="number">0x00411DC0</span> </span><br><span class="line">end_ea=<span class="number">0x00411E1E</span></span><br><span class="line">clear(start_ea,end_ea)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;done&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p><code>int sem_wait(sem_t *sem);</code> 信号量减一操作，有线程申请资源</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 成功返回0，否则返回-1</span><br><span class="line">- 参数sem：指向一个信号量的指针</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>int sem_post(sem_t *sem);</code>信号量加一操作，有线程释放资源</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 成功返回0，否则返回-1</span><br><span class="line">- 参数sem：指向一个信号量指针</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>int sem_destroy(sem_t *sem);</code> 销毁信号量。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 成功返回0，否则返回-1</span><br><span class="line">- 参数sem：指向一个信号量的指针。</span><br></pre></td></tr></table></figure>
-
-<h3 id="参考实例四（生产者消费者）"><a href="#参考实例四（生产者消费者）" class="headerlink" title="参考实例四（生产者消费者）"></a>参考实例四（生产者消费者）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;pthread.h&gt;</span><br><span class="line">#include &lt;semaphore.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAXSIZE 10</span><br><span class="line"></span><br><span class="line">int stack[MAXSIZE];</span><br><span class="line"></span><br><span class="line">int size =0;</span><br><span class="line">sem_t sem;</span><br><span class="line"></span><br><span class="line">void privide_data(void)</span><br><span class="line">&#123;</span><br><span class="line">  int i;</span><br><span class="line">  for(i =0;i&lt;MAXSIZE;++i)</span><br><span class="line">  &#123;</span><br><span class="line">    stack[i] = i;</span><br><span class="line">    sem_post(&amp;sem);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void handle_data(void)</span><br><span class="line">&#123;</span><br><span class="line">  int i;</span><br><span class="line">  while((i = size ++) &lt;MAXSIZE)</span><br><span class="line">  &#123;</span><br><span class="line">    sem_wait(&amp;sem);</span><br><span class="line">    printf(&quot;cross : %d X %d = %d \n&quot;,stack[i],stack[i],stack[i] * stack[i]);</span><br><span class="line">    sleep(1);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  pthread_t privider,handler;</span><br><span class="line">  sem_init(&amp;sem,0,0);</span><br><span class="line">  pthread_create(&amp;privider,NULL,(void *)&amp;privide_data,NULL);</span><br><span class="line">  pthread_create(&amp;handler,NULL,(void *)&amp;handle_data,NULL);</span><br><span class="line">  pthread_join(privider,NULL);</span><br><span class="line">  pthread_join(handler,NULL);</span><br><span class="line">  sem_destroy(&amp;sem);</span><br><span class="line"></span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这段代码是经典的生产者消费者问题，只有当生产者把资源放入存储区，消费者才能取得。</p>
-<p>根据生产者消费者问题，我们可以解决cpp逆向的题目</p>
-<h2 id="Hgame2024week2-easyre"><a href="#Hgame2024week2-easyre" class="headerlink" title="Hgame2024week2-easyre"></a>Hgame2024week2-easyre</h2><p><img src="/../image/307.PNG" class="lazyload" data-srcset="/../image/307.PNG" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="307"></p>
-<p>这个很显然是考察多线程中的信号量</p>
-<p>然后我们注意到这里有四个函数，然后他们的信号量是逐次传输的，信号量重要的点就是是否为1，如果为1就执行，否则就不执行</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">char</span> key[] = &#123;<span class="number">119</span>, <span class="number">116</span>, <span class="number">120</span>, <span class="number">102</span>, <span class="number">101</span>, <span class="number">105</span>&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="type">int</span> enc[<span class="number">33</span>] = &#123;<span class="number">12052</span>, <span class="number">78</span>, <span class="number">20467</span>, <span class="number">109</span>, <span class="number">13016</span>, <span class="number">109</span>, <span class="number">27467</span>, <span class="number">-110</span>, <span class="number">9807</span>, <span class="number">91</span>,</span><br><span class="line"><span class="number">21243</span>, <span class="number">-100</span>, <span class="number">11121</span>, <span class="number">20</span>, <span class="number">10863</span>, <span class="number">-107</span>, <span class="number">10490</span>, <span class="number">29</span>, <span class="number">10633</span>, <span class="number">-101</span>, <span class="number">10420</span>, <span class="number">78</span>, <span class="number">17670</span>,</span><br><span class="line"><span class="number">-38</span>, <span class="number">6011</span>, <span class="number">-4</span>, <span class="number">16590</span>, <span class="number">125</span>, <span class="number">10723</span>, <span class="number">15</span>, <span class="number">7953</span>, <span class="number">255</span>, <span class="number">250</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">28</span>; i &gt;= <span class="number">0</span>; i -= <span class="number">4</span>) &#123;</span><br><span class="line">enc[i + <span class="number">3</span>] = enc[i + <span class="number">3</span>] ^ (enc[i + <span class="number">4</span>] - key[(i + <span class="number">4</span>) % <span class="number">6</span>]);</span><br><span class="line">enc[i + <span class="number">2</span>] = enc[i + <span class="number">2</span>] / (enc[i + <span class="number">3</span>] + key[(i + <span class="number">3</span>) % <span class="number">6</span>]);</span><br><span class="line">enc[i + <span class="number">1</span>] = enc[i + <span class="number">1</span>] + (enc[i + <span class="number">2</span>] ^ key[(i + <span class="number">2</span>) % <span class="number">6</span>]);</span><br><span class="line">enc[i + <span class="number">0</span>] = enc[i + <span class="number">0</span>] - (enc[i + <span class="number">1</span>] * key[(i + <span class="number">1</span>) % <span class="number">6</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, enc[i]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<p><img src="/../image/324.png" class="lazyload" data-srcset="/../image/324.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="324"></p>
+<p><img src="/../image/325.png" class="lazyload" data-srcset="/../image/325.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="325"></p>
+<p>为了更精细可以将这些机械码放到一个列表里面</p>
+<h3 id="21年WUST校赛AskforU"><a href="#21年WUST校赛AskforU" class="headerlink" title="21年WUST校赛AskforU"></a>21年WUST校赛AskforU</h3><p><img src="/../image/326.png" class="lazyload" data-srcset="/../image/326.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="326"></p>
+<p>esp指向栈顶，而栈顶是返回地址，导致返回地址+1</p>
+<p><img src="/../image/327.png" class="lazyload" data-srcset="/../image/327.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="327"></p>
+<p>确定好特征后开始写</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import idc</span><br><span class="line">def <span class="attribute">clear</span>(start_ea,end_ea):</span><br><span class="line">	s_o_h=[<span class="number">0</span>xE8, <span class="number">0</span>x06, <span class="number">0</span>x00, <span class="number">0</span>x00, <span class="number">0</span>x00, <span class="number">0</span>xEB, <span class="number">0</span>xE9, <span class="number">0</span>x05, <span class="number">0</span>x00, <span class="number">0</span>x00, </span><br><span class="line">  <span class="number">0</span>x00, <span class="number">0</span>x83, <span class="number">0</span>x04, <span class="number">0</span>x24, <span class="number">0</span>x01, <span class="number">0</span>xC3]</span><br><span class="line">	while start_ea&lt;end_ea:</span><br><span class="line">		if idc.<span class="built_in">get_bytes</span>(start_ea,<span class="built_in">len</span>(s_o_h))==<span class="built_in">bytes</span>(s_o_h):</span><br><span class="line">			for i in <span class="built_in">range</span>(<span class="built_in">len</span>(s_o_h)):</span><br><span class="line">				idc.<span class="built_in">patch_byte</span>(start_ea+i,<span class="number">0</span>x90)</span><br><span class="line">		start_ea+=<span class="number">1</span></span><br><span class="line">start_ea=<span class="number">0</span>x000401490</span><br><span class="line">end_ea=<span class="number">0</span>x0004017CD</span><br><span class="line"><span class="built_in">clear</span>(start_ea,end_ea)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;done&quot;</span>)</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2641,10 +2600,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-22T23:09:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-28T17:39:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 22, 2024</p>
+    <p>更新于：Feb 28, 2024</p>
   </a>
 </div>
 
@@ -2667,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/&title=逆向学习之多线程 - 5m10v3 blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/&title=idapython学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2679,7 +2638,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/&title=逆向学习之多线程 - 5m10v3 blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/&title=idapython学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2691,7 +2650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/&title=逆向学习之多线程 - 5m10v3 blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/&title=idapython学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2724,18 +2683,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/16/%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>常见加密算法</p>
-          <p class='content'>base64base64是一种以64个可打印字符对二进制数据进行编码的编码算法。base64在对数据进行编码时以三个8位字符型数据为一组，取这三个字符型数据的ASCII码，然后以6位为一组组成4...</p>
+        <a class='prev' href='/2024/02/26/%E6%97%A5%E8%AE%B0(3)/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>日记(3)</p>
+          <p class='content'>今天学习了一下idapython，感觉用脚本去除花指令真的爽
+
+我们发现有好多这样的指令
+
+那我就写一个脚本
+1234567891011121314151617181920212223impor...</p>
         </a>
       
       
-        <a class='next' href='/2024/01/26/%E5%85%B3%E4%BA%8ESIMD%E5%9C%A8%E9%80%86%E5%90%91%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/'>
-          <p class='title'>关于SIMD在逆向中的应用<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>SIMD指令在逆向当中常常用于数据的加密处理
-SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
+        <a class='next' href='/2024/02/23/%E6%97%A5%E8%AE%B0(2)/'>
+          <p class='title'>日记(2)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>今天学习了PE文件格式，去解决了一下昨天做的那道题
 
-我们第一眼看到这些_mm_loadu_si128 , _mm_xor_si128……就很让人头...</p>
+发现他的
+DOS头都不对
+123456789101112131415161718192021222324252627282930313233...</p>
         </a>
       
     </div>
@@ -2751,7 +2716,7 @@ SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2793,7 +2758,7 @@ SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">C语言中使用多线程的函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B"><span class="toc-text">创建线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E7%BA%BF%E7%A8%8B"><span class="toc-text">结束线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%AD%89%E5%BE%85"><span class="toc-text">线程等待</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%85%B3%E4%BA%8E%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">其他关于进程的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%AE%9E%E4%BE%8B%E4%B8%80"><span class="toc-text">参考实例一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5"><span class="toc-text">多线程的同步与互斥</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%81%E6%9C%BA%E5%88%B6"><span class="toc-text">锁机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%AE%9E%E4%BE%8B%E4%BA%8C%EF%BC%88%E4%B8%8D%E5%8A%A0%E9%94%81%E8%AE%BF%E9%97%AE%E4%BA%92%E6%96%A5%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89"><span class="toc-text">参考实例二（不加锁访问互斥全局变量）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%AE%9E%E4%BE%8B%E4%B8%89-%EF%BC%88%E8%AE%BF%E9%97%AE%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E6%B7%BB%E5%8A%A0%E4%BA%92%E6%96%A5%E9%94%81%EF%BC%89"><span class="toc-text">参考实例三 （访问全局变量添加互斥锁）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6%EF%BC%88%E5%8F%AF%E8%83%BD%E8%80%83%E5%AF%9F%E7%9A%84%E7%82%B9%EF%BC%89"><span class="toc-text">信号量机制（可能考察的点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%AE%9E%E4%BE%8B%E5%9B%9B%EF%BC%88%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%89"><span class="toc-text">参考实例四（生产者消费者）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hgame2024week2-easyre"><span class="toc-text">Hgame2024week2-easyre</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#idapython-%E6%9C%BA%E6%A2%B0%E7%A0%81%E7%9A%84%E8%AF%86%E5%88%AB"><span class="toc-text">idapython-机械码的识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%8E%9F%E6%95%B0%E6%8D%AE"><span class="toc-text">访问原数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-byte-ea"><span class="toc-text">idc.get_wide_byte(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-word-ea"><span class="toc-text">idc.get_wide_word(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-dword-ea"><span class="toc-text">idc.get_wide_dword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-qword-ea"><span class="toc-text">idc.get_qword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetFloat-ea"><span class="toc-text">idc.GetFloat(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetDouble-ea"><span class="toc-text">idc.GetDouble(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-bytes-ea-size"><span class="toc-text">idc.get_bytes(ea,size)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%89%93%E8%A1%A5%E4%B8%81"><span class="toc-text">数据打补丁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%8C%87%E4%BB%A4%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE"><span class="toc-text">获取指令相关数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDApython%E5%8E%BB%E8%8A%B1%E6%8C%87%E4%BB%A4"><span class="toc-text">IDApython去花指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%88%E6%9C%80%E7%AE%80%E5%8D%95%EF%BC%89"><span class="toc-text">1（最简单）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E5%B9%B4WUST%E6%A0%A1%E8%B5%9BAskforU"><span class="toc-text">21年WUST校赛AskforU</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3367,7 +3332,7 @@ SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/cpp逆向/","name":"cpp逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/16/逆向学习之多线程/","name":"逆向学习之多线程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"逆向学习之多线程","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/","wordCount":0,"datePublished":"2024-02-15T16:00:00.000Z","dateModified":"2024-02-22T15:09:57.067Z","articleSection":"cpp逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/26/idapython学习/","name":"idapython学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"idapython学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2024-02-25T16:00:00.000Z","dateModified":"2024-02-28T09:39:35.572Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
