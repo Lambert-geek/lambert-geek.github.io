@@ -36,14 +36,16 @@
   <title>逆向学习之SEH - 5m10v3 blog</title>
   <meta name="keywords" content="ctf学习,null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
-  <meta property="og:type" content="article">
+  
+<meta property="og:type" content="article">
 <meta property="og:title" content="逆向学习之SEH">
 <meta property="og:url" content="http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
+<meta property="og:description" content="对SEH的浅显认识SEH 是 Windows 操作系统提供的异常处理机制。 使用 __try 关键字注册 SEH使用 __try 关键字可以创建 SEH： 123456789101112131415161718192021int FilterFunc(DWORD dwExceptionCode)&amp;#123;    if (dwExceptionCode &#x3D;&#x3D; EXCEPTION_ACCESS_VI">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-05T13:53:20.184Z">
+<meta property="article:modified_time" content="2024-03-07T15:57:36.877Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
@@ -1627,7 +1629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1709653041806),
+    lastupdate: new Date(1709827564937),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2520,7 +2522,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h2 id="对SEH的浅显认识"><a href="#对SEH的浅显认识" class="headerlink" title="对SEH的浅显认识"></a>对SEH的浅显认识</h2><p>SEH 是 Windows 操作系统提供的异常处理机制。</p>
+<h2 id="使用-try-关键字注册-SEH"><a href="#使用-try-关键字注册-SEH" class="headerlink" title="使用 __try 关键字注册 SEH"></a>使用 __try 关键字注册 SEH</h2><p>使用 __try 关键字可以创建 SEH：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">FilterFunc</span><span class="params">(DWORD dwExceptionCode)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (dwExceptionCode == EXCEPTION_ACCESS_VIOLATION)	<span class="comment">//非法访问异常</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;SEH catch\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> EXCEPTION_EXECUTE_HANDLER;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> EXCEPTION_CONTINUE_SEARCH;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    __try &#123;</span><br><span class="line">        <span class="type">int</span> *a=<span class="literal">NULL</span>;</span><br><span class="line">        *a=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    __except (FilterFunc(GetExceptionCode()))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;SEH final\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;in main&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该段代码在 32 位和 64 位上均有效，不过在汇编层面的具体实现方式不同。</p>
+<p>其中<code>__try</code>关键字和<code>__except</code>关键字共同完成异常处理，<code>__try</code>关键字用来捕获异常，<code>__except</code>关键字根据后面表达式的值来确定当前的异常处理模块是否可以处理该种异常。括号内表达式值有三种：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//https://docs.microsoft.com/en-us/cpp/cpp/try-except-statement?view=msvc-160</span><br><span class="line">EXCEPTION_CONTINUE_EXECUTION (–1)          //异常被忽略，控制流将在异常出现的点之后，继续恢复运行。</span><br><span class="line">EXCEPTION_CONTINUE_SEARCH (0)              //异常不被识别，也即当前的这个__except模块不是这个异常错误所对应的正确的异常处理模块。</span><br><span class="line">EXCEPTION_EXECUTE_HANDLER (1)              //异常已经被识别，控制流将进入到__except模块中运行异常处理代码</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/02/16/逆向学习之SEH/image" class="lazyload" data-srcset="/2024/02/16/逆向学习之SEH/image" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="424" style="zoom:67%;" />
+
+<p>例如这种就是异常已经被识别</p>
+<p>直接一手强制跳转，然后就可以看见代码（经典SEH异或）</p>
+<img src="/2024/02/16/逆向学习之SEH/image" class="lazyload" data-srcset="/2024/02/16/逆向学习之SEH/image" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="425" style="zoom:50%;" />
+
+<p>而<code>FilterFunc</code>函数参数中的<code>GetExceptionCode</code>函数作用是获取异常代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//minwinbase.h</span></span><br><span class="line"><span class="comment">/* compatibility macros */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_ACCESS_VIOLATION          STATUS_ACCESS_VIOLATION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_DATATYPE_MISALIGNMENT     STATUS_DATATYPE_MISALIGNMENT</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_BREAKPOINT                STATUS_BREAKPOINT</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_SINGLE_STEP               STATUS_SINGLE_STEP</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_ARRAY_BOUNDS_EXCEEDED     STATUS_ARRAY_BOUNDS_EXCEEDED</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_DENORMAL_OPERAND      STATUS_FLOAT_DENORMAL_OPERAND</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_DIVIDE_BY_ZERO        STATUS_FLOAT_DIVIDE_BY_ZERO</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_INEXACT_RESULT        STATUS_FLOAT_INEXACT_RESULT</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_INVALID_OPERATION     STATUS_FLOAT_INVALID_OPERATION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_OVERFLOW              STATUS_FLOAT_OVERFLOW</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_STACK_CHECK           STATUS_FLOAT_STACK_CHECK</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_FLT_UNDERFLOW             STATUS_FLOAT_UNDERFLOW</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_INT_DIVIDE_BY_ZERO        STATUS_INTEGER_DIVIDE_BY_ZERO</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_INT_OVERFLOW              STATUS_INTEGER_OVERFLOW</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_PRIV_INSTRUCTION          STATUS_PRIVILEGED_INSTRUCTION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_IN_PAGE_ERROR             STATUS_IN_PAGE_ERROR</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_ILLEGAL_INSTRUCTION       STATUS_ILLEGAL_INSTRUCTION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_NONCONTINUABLE_EXCEPTION  STATUS_NONCONTINUABLE_EXCEPTION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_STACK_OVERFLOW            STATUS_STACK_OVERFLOW</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_INVALID_DISPOSITION       STATUS_INVALID_DISPOSITION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_GUARD_PAGE                STATUS_GUARD_PAGE_VIOLATION</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_INVALID_HANDLE            STATUS_INVALID_HANDLE</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> EXCEPTION_POSSIBLE_DEADLOCK         STATUS_POSSIBLE_DEADLOCK</span></span><br><span class="line"><span class="comment">//确切的常数定义在winnt.h</span></span><br></pre></td></tr></table></figure>
+
+<p>其中常用的如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">EXCEPTION_ACCESS_VIOLATION    非法访问异常</span><br><span class="line">EXCEPTION_BREAKPOINT          <span class="type">int</span> <span class="number">3</span> 断点异常</span><br><span class="line">EXCEPTION_ILLEGAL_INSTRUCTION 无法解析指令异常</span><br><span class="line">EXCEPTION_INT_DIVIDE_BY_ZERO  整数除 <span class="number">0</span> 异常</span><br><span class="line">EXCEPTION_SINGLE_STEP         单步工作模式异常</span><br></pre></td></tr></table></figure>
+
+<p>除<code>GetExceptionCode</code>外，还有一个函数<code>GetExceptionInformation</code>用于获取异常的详细信息。</p>
+<p>另外，还有<code>__try-__finally</code>语句,<code>finally</code>没有表达式，即异常直接被<code>finally</code>中的语句处理(或直接跳过)。</p>
+<h2 id="在32位汇编中注册-SEH-异常处理函数"><a href="#在32位汇编中注册-SEH-异常处理函数" class="headerlink" title="在32位汇编中注册 SEH 异常处理函数"></a>在32位汇编中注册 SEH 异常处理函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">push SEHfunction</span><br><span class="line">push DWORD PTR FS:[0]</span><br><span class="line">mov DWORD PTR FS:[0],esp</span><br></pre></td></tr></table></figure>
+
+<p>该段代码仅适用于 32 位，64 位中 SEH 由编译器直接注册</p>
+
   </div>
   
   
@@ -2544,10 +2571,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-05T21:53:20+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-07T23:57:36+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 5, 2024</p>
+    <p>更新于：Mar 7, 2024</p>
   </a>
 </div>
 
@@ -2689,9 +2716,19 @@ SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9SEH%E7%9A%84%E6%B5%85%E6%98%BE%E8%AE%A4%E8%AF%86"><span class="toc-text">对SEH的浅显认识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-try-%E5%85%B3%E9%94%AE%E5%AD%97%E6%B3%A8%E5%86%8C-SEH"><span class="toc-text">使用 __try 关键字注册 SEH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A832%E4%BD%8D%E6%B1%87%E7%BC%96%E4%B8%AD%E6%B3%A8%E5%86%8C-SEH-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-text">在32位汇编中注册 SEH 异常处理函数</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3263,7 +3300,7 @@ SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/16/逆向学习之SEH/","name":"逆向学习之SEH"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"逆向学习之SEH","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/","wordCount":0,"datePublished":"2024-02-15T16:00:00.000Z","dateModified":"2024-03-05T13:53:20.184Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/16/逆向学习之SEH/","name":"逆向学习之SEH"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"逆向学习之SEH","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/","wordCount":0,"datePublished":"2024-02-15T16:00:00.000Z","dateModified":"2024-03-07T15:57:36.877Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
