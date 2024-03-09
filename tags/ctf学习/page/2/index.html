@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1709915646730),
+    lastupdate: new Date(1709994668705),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2449,6 +2449,143 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/26/关于SIMD在逆向中的应用/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/01/26/%E5%85%B3%E4%BA%8ESIMD%E5%9C%A8%E9%80%86%E5%90%91%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/"  itemprop="url">
+        关于SIMD在逆向中的应用
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        SIMD指令在逆向当中常常用于数据的加密处理
+SIMD 在逆向中的类型有很多，在这里我就抛砖引玉
+
+我们第一眼看到这些_mm_loadu_si128 , _mm_xor_si128……就很让人头大，从来没有见过，但是不要慌，我们肯定知道这是实现一种功能，对数据进行一种处理，接下来我们看汇编的界面
+
+xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的寄存器
+12做SIMD...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-01-26T00:00:00+08:00">2024-01-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/01/26/%E5%85%B3%E4%BA%8ESIMD%E5%9C%A8%E9%80%86%E5%90%91%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/29/2023-强网杯安卓逆向知识总结(neon加速)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/12/29/2023-%E5%BC%BA%E7%BD%91%E6%9D%AF%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93(neon%E5%8A%A0%E9%80%9F)/"  itemprop="url">
+        2023-强网杯安卓逆向知识总结（neon加速）
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        前面的apk重打包就不做详细操作
+我们用ida打开so文件，找到了它的加密函数，但是实话实说很难懂，那么我们分析它的汇编代码
+
+
+首先我们先来到了这个加密函数的开头，映入眼帘的是这个UMOV函数，mov指令我们都知道，给寄存器赋值，但是后面这个V0.D[1]是什么东西 ，这个D就是V0的子寄存器，它常见于SIMD指令
+1UMOV 指令的原本含义UMOV (from a SIMD elemen...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-29T00:00:00+08:00">2023-12-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/">安卓逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">安卓逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/12/29/2023-%E5%BC%BA%E7%BD%91%E6%9D%AF%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93(neon%E5%8A%A0%E9%80%9F)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/29/关于IDA F5伪代码出现JUMPOUT问题/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2797,12 +2934,17 @@ F5 生成的伪代码出现了JUMPOUT的错误
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(8)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(7)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%80%86%E5%90%91/%E5%A4%8D%E7%8E%B0/" href="/categories/%E9%80%86%E5%90%91/%E5%A4%8D%E7%8E%B0/"
+            active-action="action-categoriesE98086E59091E5A48DE78EB0"
+            ><div class='name'>复现</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2827,7 +2969,7 @@ F5 生成的伪代码出现了JUMPOUT的错误
 
 
     <div class='content'>
-      <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">ctf学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">学习</a>
+      <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">ctf学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">学习</a>
     </div>
   </section>
 
