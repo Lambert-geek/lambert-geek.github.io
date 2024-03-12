@@ -45,7 +45,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-12T11:37:49.268Z">
+<meta property="article:modified_time" content="2024-03-12T12:18:12.381Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
@@ -1629,7 +1629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710245357216),
+    lastupdate: new Date(1710245908100),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2484,14 +2484,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a><span class="sep"></span><a class="category-link" href="/categories/%E9%80%86%E5%90%91/%E5%A4%8D%E7%8E%B0/">复现</a>
+    <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
-      </span>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E9%80%86%E5%90%91/%E5%A4%8D%E7%8E%B0/" itemprop="url"><span itemprop="name">复现</span></a>
       </span>
     
   </div>
@@ -2562,7 +2558,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cargo build</span><br><span class="line">Cargo run --./ezbyte</span><br></pre></td></tr></table></figure>
 
 <p><img src="/../image/437.png" class="lazyload" data-srcset="/../image/437.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="437"></p>
-<h2 id="思路-三-终极手撸"><a href="#思路-三-终极手撸" class="headerlink" title="思路(三)终极手撸"></a>思路(三)终极手撸</h2>
+<h2 id="思路-三-终极手撸"><a href="#思路-三-终极手撸" class="headerlink" title="思路(三)终极手撸"></a>思路(三)终极手撸</h2><p><img src="/../image/453.png" class="lazyload" data-srcset="/../image/453.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="453"></p>
+<p>当将我们输入的数压入栈的时候，在前面我们知道r12是我们存储前8个字节，然后我们在栈上直接下内存断点</p>
+<p><img src="/../image/454.png" class="lazyload" data-srcset="/../image/454.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="454"></p>
+<p>然后我们就直接到了虚拟机的地方</p>
+<p><img src="/../image/455.png" class="lazyload" data-srcset="/../image/455.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="455"></p>
+<p>之后根据我们的分析，可以得出四个寄存器的操作</p>
+<p><img src="/../image/456.png" class="lazyload" data-srcset="/../image/456.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="456"></p>
+<p>之后就是写个脚本解决</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>():</span><br><span class="line"> r15 = (<span class="number">8722213363631027234</span> ^ <span class="number">1890878197237214971</span>) - <span class="number">9123704</span></span><br><span class="line"> r14 = (<span class="number">2451795628338718684</span> ^ <span class="number">1098791727398412397</span>) - <span class="number">1512312</span></span><br><span class="line"> r13 = (<span class="number">8502251781212277489</span> ^ <span class="number">1209847170981118947</span>) - <span class="number">8971237</span></span><br><span class="line"> r12 = (<span class="number">2616514329260088143</span> ^ <span class="number">1237891274917891239</span>) - <span class="number">1892739</span></span><br><span class="line"> <span class="built_in">print</span>(<span class="built_in">hex</span>(r12))</span><br><span class="line"> <span class="built_in">print</span>(<span class="built_in">hex</span>(r13))</span><br><span class="line"> <span class="built_in">print</span>(<span class="built_in">hex</span>(r14))</span><br><span class="line"> <span class="built_in">print</span>(<span class="built_in">hex</span>(r15))</span><br><span class="line"></span><br><span class="line"> hexstring = <span class="string">&quot;65363039656662352d653730652d346539342d616336392d6163333164393663&quot;</span></span><br><span class="line"> <span class="built_in">print</span>(<span class="string">&quot;flag&#123;&quot;</span> + binascii.unhexlify(hexstring).decode(encoding=<span class="string">&quot;utf-8&quot;</span>) + <span class="string">&quot;3861&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line">decrypt()</span><br></pre></td></tr></table></figure>
+
+
   </div>
   
   
@@ -2586,7 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-12T19:37:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-12T20:18:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 12, 2024</p>
@@ -3316,7 +3322,7 @@ DSCTF2022 -nothing调试(调试了一部分)...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/复现/","name":"复现"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/","name":"2023CICN初赛-ezbyte复现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2023CICN初赛-ezbyte复现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/","wordCount":0,"datePublished":"2024-03-08T16:00:00.000Z","dateModified":"2024-03-12T11:37:49.268Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/","name":"2023CICN初赛-ezbyte复现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2023CICN初赛-ezbyte复现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/","wordCount":0,"datePublished":"2024-03-08T16:00:00.000Z","dateModified":"2024-03-12T12:18:12.381Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
