@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710245908100),
+    lastupdate: new Date(1710265677307),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2460,6 +2460,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
@@ -2669,6 +2671,70 @@ Itlly师傅
       
         <div>
           <a class='readmore' href='/2024/03/07/2022%E5%BC%BA%E7%BD%91%E6%9D%AF-easyre%E6%80%9D%E8%B7%AF%E5%A4%8D%E7%8E%B0/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/DSCTF2022-nothing复现与思路/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/05/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/"  itemprop="url">
+        DSCTF2022-nothing复现与思路
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        DWARF分析器通过Richar师傅的思路
+参考通过DWARF Expression将代码隐藏在栈展开过程中这篇文章，可以得知有可能是在DWRAF中恢复寄存器的表达式中做了手脚。通过readelf -wf nothing查看得到大量信息。其中有4段DW_CFA_val_expression非常长就是恢复寄存器所运行的表达式，具体指令含义请参考文档DWARF 5 Standard(2.5 DW...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-05T00:00:00+08:00">2024-03-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/05/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3080,12 +3146,12 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(11)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(8)</div></a></li>
         
       </ul>
     </div>
