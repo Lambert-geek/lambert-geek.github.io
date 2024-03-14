@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710265744336),
+    lastupdate: new Date(1710436549872),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2473,6 +2473,70 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/14/angr学习/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/14/angr%E5%AD%A6%E4%B9%A0/"  itemprop="url">
+        angr学习
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        符号执行原理0x01.什么是符号执行一般情况下，当我们运行一个程序并给定程序所需要的所有输入时，一个程序的执行路径是确定并且唯一的，这里用一个伪代码来说明：
+1234567891011121314int main()&#123;    x = input();    y = input();    z = 2 * y;    if(x == z)&#123;        if(x &gt;...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-14T00:00:00+08:00">2024-03-14</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/14/angr%E5%AD%A6%E4%B9%A0/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -3082,71 +3146,6 @@ pip install frida-tools （如果后面没有加入国内源，一定要关掉vp
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/16/逆向学习之SEH/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/"  itemprop="url">
-        逆向学习之SEH
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        对SEH的浅显认识SEH 是 Windows 操作系统提供的异常处理机制。
-使用 __try 关键字注册 SEH使用 __try 关键字可以创建 SEH：
-123456789101112131415161718192021int FilterFunc(DWORD dwExceptionCode)&#123;    if (dwExceptionCode == EXCEPTION_ACCESS...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-16T00:00:00+08:00">2024-02-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3263,7 +3262,7 @@ pip install frida-tools （如果后面没有加入国内源，一定要关掉vp
           <li><a class="flat-box"
             title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
             active-action="action-categoriescppE98086E59091"
-            ><div class='name'>cpp逆向</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>cpp逆向</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
@@ -3298,12 +3297,12 @@ pip install frida-tools （如果后面没有加入国内源，一定要关掉vp
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(11)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(13)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(8)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(9)</div></a></li>
         
       </ul>
     </div>
