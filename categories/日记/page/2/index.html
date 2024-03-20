@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710436549872),
+    lastupdate: new Date(1710919918867),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2449,6 +2449,362 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/09/日记(8)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/09/%E6%97%A5%E8%AE%B0(8)/"  itemprop="url">
+        日记(8)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今天学习了一下riChar师傅解题的思路
+原文:ISC-Nothing出题思路及WriteUp
+这个题也是跟昨天CISCN那道ezbyte考法相似
+但是这个比较难，因为这个的恢复寄存器的表达式特别长，只能通过脚本来还原
+riChar师傅写了一个简单的分析器
+12345678910111213141516171819202122232425262728293031323334353637383...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-09T00:00:00+08:00">2024-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/09/%E6%97%A5%E8%AE%B0(8)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/08/日记(7)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/08/%E6%97%A5%E8%AE%B0(7)/"  itemprop="url">
+        日记(7)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今天下午复现了2023国赛的CISCN里面涉及到了异常处理中的栈回调，DWARF Expression
+由于对于r12寄存器的操作隐藏了，然后选择了dump的方法
+1readelf -wf ezbyte &gt;out.txt
+
+
+
+
+然后根据DWARF Expression操作符
+还原加密过程
+之后写脚本就可以解决了，但是这只是简单的恢复寄存器的方式，如果是非常长的恢复寄存器手工分析的话就...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-08T00:00:00+08:00">2024-03-08</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/08/%E6%97%A5%E8%AE%B0(7)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/07/日记(6)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/07/%E6%97%A5%E8%AE%B0(6)/"  itemprop="url">
+        日记(6)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今天复现了一下2022强网杯的easyre真的是太爽了，三位师傅的想法深深在我的脑海中已经融会贯通了，他们不分伯仲
+
+其中SMC的知识和ptrace调试还是要加深学习一下
+今日完成任务:
+
+SEH的简单总结
+
+2022qwb easyre 三种思路的总结与复现
+
+
+明日待完成任务:
+
+上午总结一下SMC
+下午开始整理国赛的那个dump题
+
+其实自己有好多欠着的知识，frida框架，pwndb...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-07T00:00:00+08:00">2024-03-07</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/07/%E6%97%A5%E8%AE%B0(6)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/日记(5)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/05/%E6%97%A5%E8%AE%B0(5)/"  itemprop="url">
+        日记(5)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今日解决了之前寒假里面week4里面的那个crackme2
+主要知识点SEH异常处理，SMC封装
+
+处理这个的方式就是利用强制跳转，跳到 loc_1400034EB
+
+然后F5之后，我们发现sub_7FF7D98A105C是个函数地址
+经典SMC异或
+利用idc脚本
+12345678910import idcaddr = 0x7FF7D98A105C  # encrypt函数的地址arr=[...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-05T00:00:00+08:00">2024-03-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/05/%E6%97%A5%E8%AE%B0(5)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/27/日记(4)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/02/27/%E6%97%A5%E8%AE%B0(4)/"  itemprop="url">
+        日记(4)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今天上午陪妈妈出门拿了一下单子
+下午回来也匆匆忙忙，AES加密没来得及看，闹钟突然蹦出来一个想法，之前好像做过一个迷宫的题目，那是个html文件，要提取里面的迷宫信息需要用到bs4的知识，顺便又把request学了一下
+
+马上要去学校了，回到学校之后把剩下的Frida学习一下
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-02-27T00:00:00+08:00">2024-02-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/02/27/%E6%97%A5%E8%AE%B0(4)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/26/日记(3)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2809,12 +3165,12 @@ Frida Hook（还是要配...
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(13)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(18)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(9)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(10)</div></a></li>
         
       </ul>
     </div>

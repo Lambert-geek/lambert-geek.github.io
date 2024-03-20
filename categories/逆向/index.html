@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710436549872),
+    lastupdate: new Date(1710919918867),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2464,9 +2464,79 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/18/2024venomCTF逆向/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/18/2024venomCTF%E9%80%86%E5%90%91/"  itemprop="url">
+        2024venomCTF逆向
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        ezre
+sub_1492()是个init函数，对密钥的处理
+sub_16B3()是个魔改的RC4，但是最后还是异或操作
+sub_1249()是个base64换表
+脚本:
+12345678910111213141516import stringimport base64def base64_decode_and_hex_output(encoded_str):    string1=&#x2...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-18T00:00:00+08:00">2024-03-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/18/2024venomCTF%E9%80%86%E5%90%91/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3212,12 +3282,12 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(13)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(18)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(9)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(10)</div></a></li>
         
       </ul>
     </div>
