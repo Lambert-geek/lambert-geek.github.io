@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710919918867),
+    lastupdate: new Date(1711032228065),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2446,6 +2446,206 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/29/关于IDA F5伪代码出现JUMPOUT问题/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/12/29/%E5%85%B3%E4%BA%8EIDA%20F5%E4%BC%AA%E4%BB%A3%E7%A0%81%E5%87%BA%E7%8E%B0JUMPOUT%E9%97%AE%E9%A2%98/"  itemprop="url">
+        关于IDA F5伪代码出现JUMPOUT问题
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        
+F5 生成的伪代码出现了JUMPOUT的错误
+
+很显然这个 call loc_C22应该是调用一个函数，而IDA反汇编了一个标签
+首先我们找到JUMPOUT所在的函数，然后按U重新定义这个函数
+
+然后按p重新创建函数，就可以恢复正常了
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-29T00:00:00+08:00">2023-12-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/IDA/">IDA</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/IDA/" itemprop="url"><span itemprop="name">IDA</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/12/29/%E5%85%B3%E4%BA%8EIDA%20F5%E4%BC%AA%E4%BB%A3%E7%A0%81%E5%87%BA%E7%8E%B0JUMPOUT%E9%97%AE%E9%A2%98/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/23/AndroidManifest文件格式/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/12/23/AndroidManifest%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/"  itemprop="url">
+        AndroidManifest文件格式
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1、AndroidManifest文件格式解析
+2、头部信息3、String Chunk
+这个Chunk主要存放的是AndroidManifest文件中所有的字符串信息
+1234567891、ChunkType：StringChunk的类型，固定四个字节：0x001C0001 2、ChunkSize：StringChunk的大小，四个字节 3、StringCount：StringChunk中...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-23T00:00:00+08:00">2023-12-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/">安卓逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">安卓逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/12/23/AndroidManifest%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/19/安卓逆向/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/12/19/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"  itemprop="url">
+        安卓逆向学习
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        APKapk重新打包123456789101112#解包apktool d wuderuanjian.apk这时候有一个文件夹（你软件的名字）打开之后有个AndroidMainfest.xml 在里面加入android:debuggable=&quot;true&quot;如果有android:extractNativeLibs =&quot;false&quot; 删除这个 这个会影响打包...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-12-19T00:00:00+08:00">2023-12-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/">安卓逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">安卓逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/12/19/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/16/安装python库的踩坑记录/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2876,212 +3076,6 @@ ROM：它会一直存在那里除非你把它刷掉
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/14/C-语言-学习笔记/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/14/C-%E8%AF%AD%E8%A8%80-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"  itemprop="url">
-        C 语言 学习笔记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        关于visual stdio调试怎么调试呢？？ 我们可以在我们的程序中加一个断点   然后debug &#x2F; F5
-
-程序执行到printf 函数这里会停止 但不运行
-
-
-C 程序的编译，运行，调试创建一个空的工程，添加文件，编译运行
-Debug版本
-
-下断点，单步执行，运行数据查看
-
-release版本
-
-编译优化，文件精简
-
-X64
-
-64位
-
-CPU,寄存器最多处理8个字节
-
-内...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-14T10:55:59+08:00">2023-10-14</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/14/C-%E8%AF%AD%E8%A8%80-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/12/newstar-ctf/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/12/newstar-ctf/"  itemprop="url">
-        newstar_ctf
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        week1—CRYPTObrainfuck
-Caesar’s Secert
-Fence
-Vigenère
-babyencoding
-week1—MISCCyberChef’s Secret
-机密图片发现是图片隐写术 利用StegSolve
-
-
-流量！鲨鱼！利用wireshark
-
-
-找到那个最像flag的文件    Wm14aFozdFhjbWt6TldnMGNtdGZNWE5mZFRVel...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-12T17:16:13+08:00">2023-10-12</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/12/newstar-ctf/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/10/Linux基本指令/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/10/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/"  itemprop="url">
-        Linux基本指令
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        linux的基本命令
-1.cd命令（切换目录）1234567cd /                 //切换到根目录cd /bin              //切换到根目录下的bin目录cd ../               //切换到上一级目录 或者使用命令：cd ..cd ~                 //切换到home目录cd -                 //切换到...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-10-10T00:00:00+08:00">2023-10-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/linux%E5%AD%A6%E4%B9%A0/">linux学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/linux%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">linux学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/10/10/Linux%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3096,8 +3090,14 @@ week1—MISCCyberChef’s Secret
           </a>
         
         <p class="current">
-          5 / 5
+          5 / 6
         </p>
+        
+          <a class="next" rel="next" href="/page/6/">
+            <section class="post next white-box shadow floatable blur">
+              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
         
       </div>
     
@@ -3231,12 +3231,12 @@ week1—MISCCyberChef’s Secret
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(18)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(12)</div></a></li>
         
       </ul>
     </div>

@@ -1624,7 +1624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1710919918867),
+    lastupdate: new Date(1711032228065),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2473,6 +2473,84 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/21/2023西湖论剑-Dual personality复现与思考/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/21/2023%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91-Dual%20personality%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"  itemprop="url">
+        2023西湖论剑-Dual personality复现与思考
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        这道题是最经典的天堂之门简单查一下壳
+32位程序
+
+里面应该是有花指令的，导致无法进行反编译，但是找了一圈没有找到花指令，那么我们直接动调吧。
+
+这个函数应该是scanf函数
+然后我们在scanf函数后面下一个硬件断点
+
+然后F9 
+然后我们发现断在的第一处是对输入的字符串进行了处理
+
+
+接下来就是调试我们的天堂之门，我们发现有多处使用天堂之门
+我们在天堂之门函数里面下个条件断点
+
+然后我们...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-21T00:00:00+08:00">2024-03-21</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/21/2023%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91-Dual%20personality%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/18/2024venomCTF逆向/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2911,10 +2989,7 @@ Itlly师傅
   <div class='md article-desc' itemprop="articleBody">
     
       
-        idapython-机械码的识别123450x50 这个会被识别push ax;0x74 这个会被识别jz;//用U键或者D键,还原为数据之后nop这个数值,再用C键恢复,如果无法使用F5就用P键创造函数;0xE8 和0xB8一样被识别为jmp;0xB8;0x5E 会被识别为pop si;
-
-
-访问原数据1234567idc.get_wide_byte(ea) // 获取单字节，按整形解释i...
+        idapython-机械码的识别123456780x50 这个会被识别push ax;0x74 这个会被识别jz;//用U键或者D键,还原为数据之后nop这个数值,再用C键恢复,如果无法使用F5就用P键创造函数;0xE8 和0xB8一样被识别为jmp;0xB8;0x5E 会被识别为pop si;je或jz         //  相等则跳（机器码是74或84）jne或jnz       //...
       
     
   </div>
@@ -3084,70 +3159,6 @@ pip install frida-tools （如果后面没有加入国内源，一定要关掉vp
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/16/常见加密算法/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/16/%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"  itemprop="url">
-        常见加密算法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        base64base64是一种以64个可打印字符对二进制数据进行编码的编码算法。base64在对数据进行编码时以三个8位字符型数据为一组，取这三个字符型数据的ASCII码，然后以6位为一组组成4个新的数据，这4个新的数据有6位，所以它的最大值为2^6&#x3D;64。我们以4个6位数据的十进制数从base64表中得到最终编码后的字符。
-由于base64编码是将编码前的3*8位数据，分解成4个...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-16T00:00:00+08:00">2024-02-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" itemprop="url"><span itemprop="name">加密算法</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/16/%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3299,12 +3310,12 @@ pip install frida-tools （如果后面没有加入国内源，一定要关掉vp
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(18)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(12)</div></a></li>
         
       </ul>
     </div>
