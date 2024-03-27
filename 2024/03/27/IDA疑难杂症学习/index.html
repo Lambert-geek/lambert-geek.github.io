@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/03/25/aliyunctf2024-逆向-euler复现与思考/"/>
+  <link rel="canonical" href="http://example.com/2024/03/27/ida疑难杂症学习/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,18 +34,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="5m10v3 blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>5m10v3 blog</title>
-  <meta name="keywords" content="null">
+  <title>IDA疑难杂症学习 - 5m10v3 blog</title>
+  <meta name="keywords" content="ctf学习,null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="5m10v3 blog">
-<meta property="og:url" content="http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="IDA疑难杂症学习">
+<meta property="og:url" content="http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
+<meta property="og:description" content="1.IDA Decompile as call强网杯某vm逆向重建后的代码，其syscall 于标准的 Linux syscall 有区别，导致 IDA 对其优化产生错误的代码 设想一种情况，在一个自定义运行环境中，syscall  rax 传入调用号  rax 作为返回值传递   默认情况(linux syscall)下,ida认为此处的 syscall 不会修改 rax 寄存器的值,导致 ra">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-03-25T15:35:29.227Z">
-<meta property="article:modified_time" content="2024-03-25T15:35:29.227Z">
+<meta property="article:published_time" content="2024-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-27T17:19:41.414Z">
 <meta property="article:author" content="5m10v3">
+<meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1627,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711462654477),
+    lastupdate: new Date(1711560038615),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2442,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/25/AliyunCTF2024-逆向-Euler复现与思考/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/27/IDA疑难杂症学习/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2462,16 +2465,124 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        IDA疑难杂症学习
+      </h1>
+      <div class='new-meta-box'>
         
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/IDA%E5%AD%A6%E4%B9%A0/">IDA学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/IDA%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">IDA学习</span></a>
       </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-03-27T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Mar 27, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h2 id="1-IDA-Decompile-as-call"><a href="#1-IDA-Decompile-as-call" class="headerlink" title="1.IDA Decompile as call"></a>1.IDA Decompile as call</h2><p>强网杯某vm逆向重建后的代码，其syscall 于标准的 Linux syscall 有区别，导致 IDA 对其优化产生错误的代码</p>
+<p>设想一种情况，在一个自定义运行环境中，syscall</p>
+<ul>
+<li><p>rax 传入调用号</p>
+</li>
+<li><p>rax 作为返回值传递</p>
+</li>
+</ul>
+<p>默认情况(linux syscall)下,ida认为此处的 syscall 不会修改 rax 寄存器的值,导致 rax寄存器常量传播优化</p>
+<p><img src="/../image/546.png" class="lazyload" data-srcset="/../image/546.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="546"></p>
+<p>这种情况，我们也无法看出它对eax的处理体现在哪里，这个时候我们将它变成一条call指令</p>
+<p>1.选中syscall指令</p>
+<p>2.菜单：Edit -&gt; Other -&gt; Decompile as  call 输入如下定义</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int __usercall mysyscall@&lt;eax&gt;(int num@&lt;eax&gt;);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>将两次读取 fs:0 用Decompile as call 定义为: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__int64 getFuckKey();</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/../image/547.png" class="lazyload" data-srcset="/../image/547.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="547"></p>
+<p>修复后</p>
+<p><img src="/../image/548.png" class="lazyload" data-srcset="/../image/548.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="548"></p>
+<h2 id="2-IDA-positive-sp-value"><a href="#2-IDA-positive-sp-value" class="headerlink" title="2.IDA positive sp value"></a>2.IDA positive sp value</h2><p>这是由于栈不平衡导致的</p>
+<p><img src="/../image/549.png" class="lazyload" data-srcset="/../image/549.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="549"></p>
+<p>点击options-general，勾选 stack pointer</p>
+<p><img src="/../image/550.png" class="lazyload" data-srcset="/../image/550.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="550"></p>
+<p>是这里导致了栈不平衡</p>
+<p><img src="/../image/551.png" class="lazyload" data-srcset="/../image/551.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="551"></p>
+<p><img src="/../image/552.png" class="lazyload" data-srcset="/../image/552.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="552"></p>
+<h2 id="3-IDA-too-big-stack-frame"><a href="#3-IDA-too-big-stack-frame" class="headerlink" title="3.IDA too big stack frame"></a>3.IDA too big stack frame</h2><p>这个原理其实跟栈不平衡一样，只不过 add esp , xxxx 的时候将栈改的特别大，我们依旧勾选stack pointer</p>
+<p><img src="/../image/553.png" class="lazyload" data-srcset="/../image/553.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="553"></p>
+<h2 id="4-IDA-跳转表修复"><a href="#4-IDA-跳转表修复" class="headerlink" title="4.IDA 跳转表修复"></a>4.IDA 跳转表修复</h2><p>有的时候识别不出来，取决于IDA的版本</p>
+<p>笔者在此使用的是IDA 7.6</p>
+<p><img src="/../image/554.png" class="lazyload" data-srcset="/../image/554.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="554"></p>
+<p><img src="/../image/555.png" class="lazyload" data-srcset="/../image/555.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="555"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Edit -&gt; Other -&gt; Specify Switch.. 打开配置窗口</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../image/556.png" class="lazyload" data-srcset="/../image/556.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="556"></p>
+<p><img src="/../image/557.png" class="lazyload" data-srcset="/../image/557.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="557"></p>
+<h2 id="5-函数大小限制"><a href="#5-函数大小限制" class="headerlink" title="5.函数大小限制"></a>5.函数大小限制</h2><ul>
+<li><p>IDA 反编译函数有大小限制，超过最大长度将报错</p>
+</li>
+<li><p>cfg&#x2F;hexrays.cfg 配置文件可以修改最大反编译函数大小配置项</p>
+</li>
+<li><p>配置项：MAX_FUNCSIZE，默认 64</p>
+</li>
+</ul>
+<h2 id="6-Golang-反编译失败处理"><a href="#6-Golang-反编译失败处理" class="headerlink" title="6.Golang 反编译失败处理"></a>6.Golang 反编译失败处理</h2><ul>
+<li><p>逆向分析 golang 函数时，报错 “Call analysis failed…”</p>
+</li>
+<li><p>问题原因是 IDA 分析 0xBB620 处函数调用的目标函数参数错误</p>
+</li>
+<li><p>修改调用目标函数的原型定义为 void x(); 即可解决问题</p>
+</li>
+</ul>
+<p><img src="/../image/558.png" class="lazyload" data-srcset="/../image/558.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="558"></p>
+
   </div>
   
   
@@ -2495,10 +2606,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-25T23:35:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-28T01:19:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 25, 2024</p>
+    <p>更新于：Mar 28, 2024</p>
   </a>
 </div>
 
@@ -2506,6 +2617,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ctf%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ctf学习</p></a></div>
+  <span hidden itemprop="keywords">ctf学习</span>
+
 
         
       
@@ -2517,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title= - 5m10v3 blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/&title=IDA疑难杂症学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2529,7 +2644,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title= - 5m10v3 blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/&title=IDA疑难杂症学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2541,7 +2656,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title= - 5m10v3 blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/&title=IDA疑难杂症学习 - 5m10v3 blog&summary="
           
           >
           
@@ -2575,15 +2690,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
       
-        <a class='next' href='/2024/03/21/2023%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91-Dual%20personality%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/'>
-          <p class='title'>2023西湖论剑-Dual personality复现与思考<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>这道题是最经典的天堂之门简单查一下壳
-32位程序
-
-里面应该是有花指令的，导致无法进行反编译，但是找了一圈没有找到花指令，那么我们直接动调吧。
-
-这个函数应该是scanf函数
-然后我们在scan...</p>
+        <a class='next' href='/2024/03/26/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/'>
+          <p class='title'>AliyunCTF2024-逆向-Euler复现与思考<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'></p>
         </a>
       
     </div>
@@ -2599,7 +2708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2631,9 +2740,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-IDA-Decompile-as-call"><span class="toc-text">1.IDA Decompile as call</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IDA-positive-sp-value"><span class="toc-text">2.IDA positive sp value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-IDA-too-big-stack-frame"><span class="toc-text">3.IDA too big stack frame</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-IDA-%E8%B7%B3%E8%BD%AC%E8%A1%A8%E4%BF%AE%E5%A4%8D"><span class="toc-text">4.IDA 跳转表修复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%87%BD%E6%95%B0%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6"><span class="toc-text">5.函数大小限制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Golang-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%A4%B1%E8%B4%A5%E5%A4%84%E7%90%86"><span class="toc-text">6.Golang 反编译失败处理</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2691,7 +2810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3205,7 +3324,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/25/AliyunCTF2024-逆向-Euler复现与思考/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/25/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/","wordCount":0,"datePublished":"2024-03-25T15:35:29.227Z","dateModified":"2024-03-25T15:35:29.227Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/IDA学习/","name":"IDA学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/27/IDA疑难杂症学习/","name":"IDA疑难杂症学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"IDA疑难杂症学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/27/IDA%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2024-03-26T16:00:00.000Z","dateModified":"2024-03-27T17:19:41.414Z","articleSection":"IDA学习","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
