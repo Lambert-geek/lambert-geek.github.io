@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711617513414),
+    lastupdate: new Date(1711617587158),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2637,13 +2637,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/12/29/%E5%85%B3%E4%BA%8EIDA%20F5%E4%BC%AA%E4%BB%A3%E7%A0%81%E5%87%BA%E7%8E%B0JUMPOUT%E9%97%AE%E9%A2%98/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>关于IDA F5伪代码出现JUMPOUT问题</p>
-          <p class='content'>
-F5 生成的伪代码出现了JUMPOUT的错误
+        <a class='prev' href='/2023/12/29/2023-%E5%BC%BA%E7%BD%91%E6%9D%AF%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93(neon%E5%8A%A0%E9%80%9F)/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2023-强网杯安卓逆向知识总结（neon加速）</p>
+          <p class='content'>前面的apk重打包就不做详细操作
+我们用ida打开so文件，找到了它的加密函数，但是实话实说很难懂，那么我们分析它的汇编代码
 
-很显然这个 call loc_C22应该是调用一个函数，而IDA反汇编了一个标签
-首先我们找到JUMPOUT所在的函数，然后按U重新定义这个函数...</p>
+
+首先我们先来到了这个加密函数的开头，映入眼帘的是这个UMOV函数...</p>
         </a>
       
       

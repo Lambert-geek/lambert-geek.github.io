@@ -452,15 +452,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/12/29/%E5%85%B3%E4%BA%8EIDA%20F5%E4%BC%AA%E4%BB%A3%E7%A0%81%E5%87%BA%E7%8E%B0JUMPOUT%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2024-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2023/12/23/AndroidManifest%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/</loc>
     
     <lastmod>2023-12-23</lastmod>
@@ -603,13 +594,6 @@
   
   <url>
     <loc>http://example.com/categories/python/</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/IDA/</loc>
     <lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
