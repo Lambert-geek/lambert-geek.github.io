@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711560150579),
+    lastupdate: new Date(1711617434749),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2561,9 +2561,169 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/28/IDA学习之c++逆向/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8Bc++%E9%80%86%E5%90%91/"  itemprop="url">
+        IDA学习之c++逆向
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        STL 逆向方法论
+识别 STL 容器类型
+识别 STL 容器操作
+提取STL 容器中的数据
+
+逆向STL 主要的问题:
+缺少符号,无法判断STL 容器类型 （主要困难）
+STL 内部数据结构复杂，难以提取数据
+03 优化使大量 stl 函数被 inline
+方法: 解析 STL 容器内存数据，从内存数据角度判断容器类型，提取容器内判断函数操作
+
+常见 STL容器
+序列容器
+
+vector
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-28T00:00:00+08:00">2024-03-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/IDA%E5%AD%A6%E4%B9%A0/">IDA学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/IDA%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">IDA学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8Bc++%E9%80%86%E5%90%91/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/28/IDA学习之类型修复/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E4%BF%AE%E5%A4%8D/"  itemprop="url">
+        IDA学习之类型修复
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        源码编译成二进制代码的过程中，大量辅助信息被删除，其中最重要的就是类型信息
+为什么要修复伪代码中的类型？
+
+提高伪代码的准确度
+指导 IDA 反编译器中的优化器使用正确的优化方案
+让 IDA 生成的伪代码更接近源码
+
+我们需要手动修复哪些类型？
+
+函数返回值类型
+参数类型 &#x2F; 局部变量类型 &#x2F; 全局变量类型
+数组类型 &#x2F; 数组大小
+结构体类型
+虚表类型
+
+判断函...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-28T00:00:00+08:00">2024-03-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/IDA%E5%AD%A6%E4%B9%A0/">IDA学习</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/IDA%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">IDA学习</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E4%BF%AE%E5%A4%8D/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3118,150 +3278,6 @@ sub_1249()是个base64换表
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/17/日记(16)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/17/%E6%97%A5%E8%AE%B0(16)/"  itemprop="url">
-        日记(16)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        今天venomCTF只出了一道，然后在看XCTF的一道题
-看的XCTF那道题里面反调试
-今日完成任务
-
-做venomCTF，XCTF
-
-由于明天XCTF还没有结束明天要完成的任务:
-
-继续做XCTF
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-17T00:00:00+08:00">2024-03-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/17/%E6%97%A5%E8%AE%B0(16)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/16/日记(15)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/16/%E6%97%A5%E8%AE%B0(15)/"  itemprop="url">
-        日记(15)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        今日完成任务
-
-了解去ollvm流程
-
-明天有两个比赛要打，venomCTF纳新赛，xctf明日要做的事情
-
-打venomCTF 纳新赛 XCTF
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-16T00:00:00+08:00">2024-03-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/16/%E6%97%A5%E8%AE%B0(15)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3376,7 +3392,7 @@ sub_1249()是个base64换表
           <li><a class="flat-box"
             title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesIDAE5ADA6E4B9A0"
-            ><div class='name'>IDA学习</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"

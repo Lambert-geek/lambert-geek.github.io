@@ -46,7 +46,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-27T14:26:02.564Z">
+<meta property="article:modified_time" content="2024-03-28T06:08:05.777Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711560150579),
+    lastupdate: new Date(1711617434749),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2541,6 +2541,115 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="数据打补丁"><a href="#数据打补丁" class="headerlink" title="数据打补丁"></a>数据打补丁</h2><p>一般和获取原数据的api配合使用<br>idc.patch_byte(ea, value)<br>idc.patch_word(ea, value)<br>idc.patch_dword(ea, value)<br>idc.patch_qword(ea, value)</p>
 <h2 id="获取指令相关数据"><a href="#获取指令相关数据" class="headerlink" title="获取指令相关数据"></a>获取指令相关数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">ScreenEA()或者here()获取光标所在地址</span><br><span class="line">idc.GetOpType(ea,n) 获取操作数类型</span><br><span class="line"></span><br><span class="line">o_void- 0 不含有操作数的指令返回0，如：retn</span><br><span class="line">o_reg- 1 寄存器，如：pop edi</span><br><span class="line">o_mem- 2 内存引用，如：cmp ds:dword_A152B8, 0</span><br><span class="line">o_phrase- 3 寄存器寻址，如：mov [edi+ecx], eax</span><br><span class="line">o_displ- 4 偏移寻址，如：mov eax, [edi+18h]</span><br><span class="line">o_imm- 5 直接数，如：add esp, 0Ch</span><br><span class="line">o_far- 6 x86和x86_64很少用到</span><br><span class="line">o_near- 7 x86和x86_64很少用到</span><br><span class="line"></span><br><span class="line">idc.GetOperandValue(ea, n) 获取操作数引用的地址(取值)</span><br><span class="line">idc.GetOpnd(ea,n) 获取操作数 如rdx(取符号)</span><br><span class="line">idc.GetMnem(ea) 获取操作符 如 mov</span><br><span class="line">idc.GetDisasm(ea) 获取汇编 如mov rdx, rdi</span><br><span class="line"></span><br><span class="line">idautils.Functions() 将返回一个已知函数列表。这个列表将包含起始地址的每一个函数。</span><br><span class="line">start = idc.GetFunctionAttr(ea, FUNCATTR_START) 获取函数起始地址</span><br><span class="line">end = idc.GetFunctionAttr(ea, FUNCATTR_END) 获取函数结束地址（实际是结束地址的下一个地址）</span><br><span class="line">idautils.FuncItems(ea)- 返回当前函数所有指令，需要list(FuncItems(ea))转化为list</span><br><span class="line">idc.NextHead(ea)- 返回下一条指令</span><br><span class="line">idc.PrevHead(ea)- 返回上一条指令</span><br><span class="line">idc.NextAddr(ea)- 返回下一地址</span><br><span class="line">idc.PrevAddr(ea)- 返回上一地址</span><br><span class="line">遍历函数指令最好使用idc.GetFunctionAttr(),因为如果存在异常处理，上面四个会遍历很多不属于函数的指令</span><br><span class="line"></span><br><span class="line">**段**</span><br><span class="line"></span><br><span class="line">Segments()</span><br><span class="line">返回目标程序中的所有段的开始地址。</span><br><span class="line">SegName( long Address )</span><br><span class="line">通过段内的某个地址，获得段名。</span><br><span class="line">SegStart( long Address )</span><br><span class="line">通过段内的某个地址，获得段头的地址。</span><br><span class="line">SegEnd( long Address )</span><br><span class="line">通过段内的某个地址，获得段尾的地址。</span><br><span class="line">SegByName( string SegmentName )</span><br><span class="line">通过段名字返回段基址，举个例子，如果调用.text 作为参数，就会返回程序中代码段的开始 位置。</span><br><span class="line">NextSeg()</span><br><span class="line">访问下一个段，如果没有就返回 BADADDR。</span><br><span class="line">FirstSeg()</span><br><span class="line">访问程序中的第一个段。</span><br></pre></td></tr></table></figure>
 
+<h3 id="读取-xmm-寄存器"><a href="#读取-xmm-寄存器" class="headerlink" title="读取 xmm 寄存器"></a>读取 xmm 寄存器</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">read_xmm_reg</span>(<span class="params">name</span>):</span><br><span class="line">    rv = idaapi.regval_t()</span><br><span class="line">    idaapi.get_reg_val(name.rv)</span><br><span class="line">    <span class="keyword">return</span> (struct.unpack(<span class="string">&#x27;Q&#x27;</span>,rv.<span class="built_in">bytes</span>())[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试内存操作"><a href="#调试内存操作" class="headerlink" title="调试内存操作"></a>调试内存操作</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">idc.read_dbg_byte(addr)</span><br><span class="line">idc.read_dbg_memory(addr,size)</span><br><span class="line">idc.read_dbg_dowrd(addr)</span><br><span class="line">idc.read_dbg_qword(addr)</span><br><span class="line">idc.patch_dbg_byte(addr,val)</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试内存读写封装"><a href="#调试内存读写封装" class="headerlink" title="调试内存读写封装"></a>调试内存读写封装</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">patch_dbg_mem</span>(<span class="params">addr,data</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(data)):</span><br><span class="line">        idc.patch_dbg_byte(addr+i,data[i])</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">read_dbg_mem</span>(<span class="params">addr,size</span>):</span><br><span class="line">    dd=[]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size):</span><br><span class="line">        dd.append(idc.read_dbg_byte(addr+i))</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">bytes</span>(dd)    </span><br></pre></td></tr></table></figure>
+
+<h3 id="交叉引用分析"><a href="#交叉引用分析" class="headerlink" title="交叉引用分析"></a>交叉引用分析</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ref <span class="keyword">in</span> idautils.XrefsTo(ea):</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(ref.frm))</span><br></pre></td></tr></table></figure>
+
+<h3 id="杂项常用接口"><a href="#杂项常用接口" class="headerlink" title="杂项常用接口"></a>杂项常用接口</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">idc.add_bpt(<span class="number">0x409437</span>) <span class="comment">#添加断点</span></span><br><span class="line">idaapi.get_imagebase() <span class="comment">#获取基地址</span></span><br><span class="line">idc.create_insn(addr) <span class="comment">#c,Make Code</span></span><br><span class="line">ida_funcs.add_func(addr) <span class="comment">#p,create function</span></span><br><span class="line">ida_bytes.create_strlit(addr) <span class="comment"># 创建字符串,A键操作</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数遍历"><a href="#函数遍历" class="headerlink" title="函数遍历"></a>函数遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;0x%x,%s&quot;</span>%(func,idc.get_func_name(func)))</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本块遍历"><a href="#基本块遍历" class="headerlink" title="基本块遍历"></a>基本块遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fn = addr <span class="comment">#目标函数地址</span></span><br><span class="line">f_blocks = idaapi.FlowChart(idaapi.get_func(fn),flags=idaapi.FC_PREDS)</span><br><span class="line"><span class="keyword">for</span> block <span class="keyword">in</span> f_blocks:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(block.start_ea))</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本块的前驱"><a href="#基本块的前驱" class="headerlink" title="基本块的前驱"></a>基本块的前驱</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> pred <span class="keyword">in</span> block.preds():</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(pred.start_ea))</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本块的后继"><a href="#基本块的后继" class="headerlink" title="基本块的后继"></a>基本块的后继</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> succ <span class="keyword">in</span> block.succs():</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(succ.start_ea))</span><br></pre></td></tr></table></figure>
+
+<h3 id="指令遍历"><a href="#指令遍历" class="headerlink" title="指令遍历"></a>指令遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ins <span class="keyword">in</span> idautils.FuncItems(<span class="number">0x401000</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(ins))</span><br></pre></td></tr></table></figure>
+
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="1-ollvm批量断点设置"><a href="#1-ollvm批量断点设置" class="headerlink" title="1.ollvm批量断点设置"></a>1.ollvm批量断点设置</h4><p><img src="/../image/559.png" class="lazyload" data-srcset="/../image/559.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="559"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fn =<span class="number">0x401F60</span></span><br><span class="line">ollvm_tail = <span class="number">0x405D4B</span> <span class="comment"># ollvm 真实块的汇集点</span></span><br><span class="line">f_blocks = idaapi.FlowChart(idaapi.get_func(fn),flags=idaapi.FC_PREDS)</span><br><span class="line"><span class="keyword">for</span> block <span class="keyword">in</span> f_blocks:</span><br><span class="line">    <span class="keyword">for</span> succ <span class="keyword">in</span> block.succs():</span><br><span class="line">        <span class="keyword">if</span> succ.start_ea == ollvm_tail:</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">hex</span>(block.start_ea))</span><br><span class="line">            idc.add_bpt(block.start_ea)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../image/560.png" class="lazyload" data-srcset="/../image/560.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="560"></p>
+<p>我们发现上面还有一些漏网之鱼，我们选择手动添加断点，一般在一个函数的最前面下断点</p>
+<p><img src="/../image/561.png" class="lazyload" data-srcset="/../image/561.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="561"></p>
+<p>然而这些只是main函数的断点，然后我们可以把main函数的断点放在一个文件夹，方便后续操作</p>
+<h3 id="Microcode"><a href="#Microcode" class="headerlink" title="Microcode"></a>Microcode</h3><p>Microcode 是 hexrays 内部采用的介于机器代码与伪代码之间的一种中间表示语言(IR)。</p>
+<p>目前，有许多编译器与反编译器都采用了中间表示语言，例如 LLVM IR、 Binary Ninja 的 NIL等。</p>
+<p>hexrays 的 microcode 的 IR，早在 1999 年就有最早版本。</p>
+<ul>
+<li><p>生成 Microcode</p>
+</li>
+<li><p>变换 Microcode （例如优化）</p>
+</li>
+<li><p>局部变量分配</p>
+</li>
+<li><p>生成 CTree （CTree 是 IDA 用来表示伪代码的抽象语法树 AST）</p>
+</li>
+<li><p>优化 CTree</p>
+</li>
+<li><p>输出 CTree</p>
+</li>
+</ul>
+<h4 id="Microcode-指令格式"><a href="#Microcode-指令格式" class="headerlink" title="Microcode 指令格式"></a>Microcode 指令格式</h4><ul>
+<li><p>opcode left, right, destination</p>
+</li>
+<li><p>一般来说有三个操作数，有一些指令可能缺少某个操作数，destination 也不一定会被修改（Store 指令）</p>
+</li>
+</ul>
+<h4 id="Microcode-寄存器"><a href="#Microcode-寄存器" class="headerlink" title="Microcode 寄存器"></a>Microcode 寄存器</h4><p>microcode 的寄存器没有数量限制，物理寄存器往往会被直接映射到 microcode 寄存器，例如</p>
+<ul>
+<li><p>AL   is mapped into al.1 (mreg number 8)</p>
+</li>
+<li><p>AH  is mapped into ah.1 (mreg number 9)</p>
+</li>
+<li><p>EAX is mapped into eax.4 (mreg numbers 8-11)</p>
+</li>
+<li><p>RSI  is mapped into rsi.8</p>
+</li>
+</ul>
+<p>Microcode 相关的数据结构: <strong>mbl_array_t</strong></p>
+<p>这个结构用来存放函数的基本块信息。</p>
+<p><img src="/../image/562.png" class="lazyload" data-srcset="/../image/562.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="562"></p>
+<ul>
+<li><p>基本块之间使用双向链表链接</p>
+</li>
+<li><p>基本块数组存放在 natural 数组</p>
+</li>
+</ul>
+<p>Microcode 相关的数据结构: mblock_t</p>
+<p>这个结构用来描述基本块信息。</p>
+<p><img src="/../image/564%E2%80%99.png" class="lazyload" data-srcset="/../image/564%E2%80%99.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="564’"></p>
+<ul>
+<li>基本块内的指令与指令之间使用双向链表链接</li>
+</ul>
+<p>Microcode 相关的数据结构: minsn_t</p>
+<p>用于描述指令信息的结构。</p>
+<p><img src="/../image/563.png" class="lazyload" data-srcset="/../image/563.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="563"></p>
+<p>（注意微码指令支持指令嵌套。）</p>
+<p>Microcode 相关的数据结构: mop_t</p>
+<p>用于描述操作数信息的结构，指令 minsn_t 有 0 ~ 3 个操作数，分别时 l (left), r (right), d (destination) 操作数的类型用 mop_t 来表示。</p>
+<p><img src="/../image/565.png" class="lazyload" data-srcset="/../image/565.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="565"></p>
+<p>Microcode 插件例子</p>
+<ul>
+<li><p>实现 svc 0x900001 与 svc 0x9000F8 指令反编译成一条 call 指令(其实也跟Decompile as call 一样)</p>
+</li>
+<li><p>install_microcode_filter 注册 microcode filter 实现拦截指令翻译</p>
+</li>
+<li><p>microcode filter 是一种可以拦截 microcode 指令生成的机制，开发者需要继承 microcode_filter_t 类并实现 match 与 apply 两个函数。 </p>
+</li>
+<li><p>ida 在生成某一条指令的 microcode 之前会调用所有已经注册的 filter 的 match 函数，若 match 函数返回 True，则调用对应的 apply 函数实现指令替换。</p>
+</li>
+<li><p>我们需要将 svc 指令替换成 call 指令，ida 已经为我们实现了替换类 udc_filter_t, 这个类继承于 microcode_filter_t 并实现了 apply 方法（即替换call指令），我们需要继承 udc_filter_t 并实现它的 match 方法用于判断拦截的指令。</p>
+</li>
+</ul>
+<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><p><img src="/../image/567.png" class="lazyload" data-srcset="/../image/567.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="567"></p>
+<h3 id="Hexrays-Hooks"><a href="#Hexrays-Hooks" class="headerlink" title="Hexrays Hooks"></a>Hexrays Hooks</h3><ul>
+<li>实现 IDA 的回调类的不同事件的回调方法，获得不同事件</li>
+</ul>
+<p><img src="/../image/568.png" class="lazyload" data-srcset="/../image/568.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="568"></p>
+<ul>
+<li><p>上面的例子是获取 Microcode 生成成功的回调，此时可以修改 MC</p>
+</li>
+<li><p>调试时，可以直接复制到 ida 底部运行，再次调试时先调用 r.unhook() 卸载</p>
+</li>
+<li><p>其余回调可以参考文档中 Hexrays_Hooks 的方法</p>
+</li>
+</ul>
 <h2 id="IDApython去花指令"><a href="#IDApython去花指令" class="headerlink" title="IDApython去花指令"></a>IDApython去花指令</h2><p> 首先第一步还是要分辨出是什么样的花指令</p>
 <table>
 <thead>
@@ -2601,10 +2710,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-27T22:26:02+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-28T14:08:05+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 27, 2024</p>
+    <p>更新于：Mar 28, 2024</p>
   </a>
 </div>
 
@@ -2756,7 +2865,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#idapython-%E6%9C%BA%E6%A2%B0%E7%A0%81%E7%9A%84%E8%AF%86%E5%88%AB"><span class="toc-text">idapython-机械码的识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%8E%9F%E6%95%B0%E6%8D%AE"><span class="toc-text">访问原数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-byte-ea"><span class="toc-text">idc.get_wide_byte(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-word-ea"><span class="toc-text">idc.get_wide_word(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-dword-ea"><span class="toc-text">idc.get_wide_dword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-qword-ea"><span class="toc-text">idc.get_qword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetFloat-ea"><span class="toc-text">idc.GetFloat(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetDouble-ea"><span class="toc-text">idc.GetDouble(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-bytes-ea-size"><span class="toc-text">idc.get_bytes(ea,size)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%89%93%E8%A1%A5%E4%B8%81"><span class="toc-text">数据打补丁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%8C%87%E4%BB%A4%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE"><span class="toc-text">获取指令相关数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDApython%E5%8E%BB%E8%8A%B1%E6%8C%87%E4%BB%A4"><span class="toc-text">IDApython去花指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%88%E6%9C%80%E7%AE%80%E5%8D%95%EF%BC%89"><span class="toc-text">1（最简单）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E5%B9%B4WUST%E6%A0%A1%E8%B5%9BAskforU"><span class="toc-text">21年WUST校赛AskforU</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#idapython-%E6%9C%BA%E6%A2%B0%E7%A0%81%E7%9A%84%E8%AF%86%E5%88%AB"><span class="toc-text">idapython-机械码的识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%8E%9F%E6%95%B0%E6%8D%AE"><span class="toc-text">访问原数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-byte-ea"><span class="toc-text">idc.get_wide_byte(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-word-ea"><span class="toc-text">idc.get_wide_word(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-wide-dword-ea"><span class="toc-text">idc.get_wide_dword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-qword-ea"><span class="toc-text">idc.get_qword(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetFloat-ea"><span class="toc-text">idc.GetFloat(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-GetDouble-ea"><span class="toc-text">idc.GetDouble(ea)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#idc-get-bytes-ea-size"><span class="toc-text">idc.get_bytes(ea,size)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%89%93%E8%A1%A5%E4%B8%81"><span class="toc-text">数据打补丁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%8C%87%E4%BB%A4%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE"><span class="toc-text">获取指令相关数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96-xmm-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">读取 xmm 寄存器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E5%86%85%E5%AD%98%E6%93%8D%E4%BD%9C"><span class="toc-text">调试内存操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E5%86%85%E5%AD%98%E8%AF%BB%E5%86%99%E5%B0%81%E8%A3%85"><span class="toc-text">调试内存读写封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E5%88%86%E6%9E%90"><span class="toc-text">交叉引用分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%82%E9%A1%B9%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3"><span class="toc-text">杂项常用接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E9%81%8D%E5%8E%86"><span class="toc-text">函数遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%9D%97%E9%81%8D%E5%8E%86"><span class="toc-text">基本块遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%9D%97%E7%9A%84%E5%89%8D%E9%A9%B1"><span class="toc-text">基本块的前驱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%9D%97%E7%9A%84%E5%90%8E%E7%BB%A7"><span class="toc-text">基本块的后继</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E9%81%8D%E5%8E%86"><span class="toc-text">指令遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ollvm%E6%89%B9%E9%87%8F%E6%96%AD%E7%82%B9%E8%AE%BE%E7%BD%AE"><span class="toc-text">1.ollvm批量断点设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Microcode"><span class="toc-text">Microcode</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Microcode-%E6%8C%87%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-text">Microcode 指令格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Microcode-%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">Microcode 寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90-1"><span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexrays-Hooks"><span class="toc-text">Hexrays Hooks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IDApython%E5%8E%BB%E8%8A%B1%E6%8C%87%E4%BB%A4"><span class="toc-text">IDApython去花指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%BC%88%E6%9C%80%E7%AE%80%E5%8D%95%EF%BC%89"><span class="toc-text">1（最简单）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21%E5%B9%B4WUST%E6%A0%A1%E8%B5%9BAskforU"><span class="toc-text">21年WUST校赛AskforU</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3330,7 +3439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/26/idapython学习/","name":"idapython学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"idapython学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2024-02-25T16:00:00.000Z","dateModified":"2024-03-27T14:26:02.564Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/26/idapython学习/","name":"idapython学习"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"idapython学习","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/26/idapython%E5%AD%A6%E4%B9%A0/","wordCount":0,"datePublished":"2024-02-25T16:00:00.000Z","dateModified":"2024-03-28T06:08:05.777Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

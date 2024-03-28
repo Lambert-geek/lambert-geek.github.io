@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711560150579),
+    lastupdate: new Date(1711617434749),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2448,6 +2448,137 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/16/逆向学习之SEH/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/"  itemprop="url">
+        逆向学习之SEH
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        对SEH的浅显认识SEH 是 Windows 操作系统提供的异常处理机制。
+使用 __try 关键字注册 SEH使用 __try 关键字可以创建 SEH：
+123456789101112131415161718192021int FilterFunc(DWORD dwExceptionCode)&#123;    if (dwExceptionCode == EXCEPTION_ACCESS...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-02-16T00:00:00+08:00">2024-02-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8BSEH/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/16/逆向学习之多线程/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/"  itemprop="url">
+        逆向学习之多线程
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        简介
+进程— 资源分配的最小单位线程— 程序执行的最小单位
+
+进程是一个程序的一个实例，拥有自己独立的各种段（数据段，代码段等等），每次创建一个进程需要从操作系统分配这些资源给他，消耗一定的时间，在linux下C语言创建一个进程使用fork()函数；线程是一个轻量级的进程，除了自己少数的资源，不用用其他资源，且一个进程可以创建多个线程，这些线程共享进程的资源，创建线程的时间要比创建进程少很多...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-02-16T00:00:00+08:00">2024-02-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/cpp%E9%80%86%E5%90%91/">cpp逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/cpp%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">cpp逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/02/16/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E7%BA%BF%E7%A8%8B/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/26/关于SIMD在逆向中的应用/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2629,7 +2760,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
           <li><a class="flat-box"
             title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesIDAE5ADA6E4B9A0"
-            ><div class='name'>IDA学习</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
