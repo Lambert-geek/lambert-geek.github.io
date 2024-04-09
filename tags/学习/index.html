@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712197582126),
+    lastupdate: new Date(1712663082450),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2474,7 +2474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/重生之我学内核驱动(三)/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/日记(20)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2492,12 +2492,88 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/03/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%B8%89)/"  itemprop="url">
-        重生之我学内核驱动(三)
+      <a href="/2024/04/08/%E6%97%A5%E8%AE%B0(20)/"  itemprop="url">
+        日记(20)
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
+    
+      
+        有一段时间没有更新日记了，日记这个好习惯还是要继续坚持的近期遇到的麻烦如何动调sys（长城杯-ez_driver）这道题总结一下里面需要用到的知识吧
+
+IRP请求
+内核通信
+
+还是要学习一下关于内核的一些知识
+123456近期的任务1.windows内核驱动学习2.继续学习ollvm混淆3.研究upx源码4.穿插着练题2-4条都是穿插来
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-08T00:00:00+08:00">2024-04-08</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/08/%E6%97%A5%E8%AE%B0(20)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/Windows内核驱动学习(三)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/"  itemprop="url">
+        Windows内核驱动学习(三)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        这一节讲述的是如何断在DriverEntry处
+
+      
     
   </div>
   
@@ -2517,7 +2593,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/03/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%B8%89)/' itemprop="url">
+          <a class='readmore' href='/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2533,7 +2609,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/重生之我学内核驱动(二)/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/Windows内核驱动学习(二)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2551,8 +2627,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/02/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%BA%8C)/"  itemprop="url">
-        重生之我学内核驱动(二)
+      <a href="/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
+        Windows内核驱动学习(二)
       </a>
     </h2>
   
@@ -2560,6 +2636,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         由于作者本人第一次学习内核驱动，不足之处，望各位师傅多多指出
+这一节主要是在配置环境中遇到的问题以及解决办法
 
       
     
@@ -2581,7 +2658,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/02/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%BA%8C)/' itemprop="url">
+          <a class='readmore' href='/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2597,7 +2674,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/01/重生之我学内核驱动(一)/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/01/Windows内核驱动学习(一)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2615,20 +2692,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/01/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%B8%80)/"  itemprop="url">
-        重生之我学内核驱动(一)
+      <a href="/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"  itemprop="url">
+        Windows内核驱动学习(一)
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        配置环境一.windbg双机调试内核驱动首先要准备的工具:windbg,虚拟机，win7系统(这里我用的64位系统演示)
+        这一节主要讲述如何配置环境
+配置环境一.windbg双机调试内核驱动首先要准备的工具:windbg,虚拟机，win7系统(这里我用的64位系统演示)
 1.打开虚拟机设置，设置串流端口，如果有打印机这个硬件要先删去
 
 按上图进行配置
 2.虚拟机上的配置
-由于笔者用的是win7系统，这里选择win7进行演示，开机进入桌面后，在运行窗口输入 msconfig –&gt; 引导 –&gt; 高级选项 –&gt; 调试 –&gt...
+由于笔者用的是win7系统，这里选择win7进行演示，开机进入桌面后，在运行窗口输入 msconfig –&gt; 引导 –&gt; 高级选项...
       
     
   </div>
@@ -2649,7 +2727,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/01/%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E5%AD%A6%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8(%E4%B8%80)/' itemprop="url">
+          <a class='readmore' href='/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3060,72 +3138,6 @@ SEH封装异常处理
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/20/日记(19)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/20/%E6%97%A5%E8%AE%B0(19)/"  itemprop="url">
-        日记(19)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        今天彻底复现了DubheCTF2024-Destination那道题，不过还没来得及总结
-明天总结一下这道题
-再找一道这样的题复现
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-20T00:00:00+08:00">2024-03-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/20/%E6%97%A5%E8%AE%B0(19)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3292,7 +3304,7 @@ SEH封装异常处理
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(19)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
