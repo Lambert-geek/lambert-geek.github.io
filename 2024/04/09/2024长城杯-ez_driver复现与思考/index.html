@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2024/"/>
+  
+  <link rel="canonical" href="http://example.com/2024/04/09/2024长城杯-ez_driver复现与思考/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,16 +34,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="5m10v3 blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>Archive: 2024 - 5m10v3 blog</title>
-  <meta name="keywords" content="null">
+  <title>2024长城杯-ez_driver复现与思考 - 5m10v3 blog</title>
+  <meta name="keywords" content="ctf学习,null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="5m10v3 blog">
-<meta property="og:url" content="http://example.com/archives/2024/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024长城杯-ez_driver复现与思考">
+<meta property="og:url" content="http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
+<meta property="og:description" content="当时这道题在比赛的时候，因为自己对c语言的学艺不精，没有解出来这是道驱动逆向题，但是最简单的方法用不到动调 以下是主要加密程序 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-04-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-09T16:13:48.256Z">
 <meta property="article:author" content="5m10v3">
+<meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2053,7 +2058,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2356,7 +2361,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://w.wallhaven.cc/full/jx/wallhaven-jxqgjw.jpg"></div>
 
@@ -2439,39 +2444,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/09/2024长城杯-ez_driver复现与思考/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2481,697 +2454,233 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         2024长城杯-ez_driver复现与思考
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/">驱动逆向</a>
     
-      
-        当时这道题在比赛的时候，因为自己对c语言的学艺不精，没有解出来这是道驱动逆向题，但是最简单的方法用不到动调
-以下是主要加密程序
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">驱动逆向</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-09T00:00:00+08:00">2024-04-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/">驱动逆向</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">驱动逆向</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-04-09T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Apr 9, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>当时这道题在比赛的时候，因为自己对c语言的学艺不精，没有解出来<br>这是道驱动逆向题，但是最简单的方法用不到动调</p>
+<p>以下是主要加密程序</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">__int64 __fastcall <span class="title">sub_140001110</span><span class="params">(__int64 a1, __int64 a2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> j; <span class="comment">// [rsp+20h] [rbp-B8h]</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [rsp+28h] [rbp-B0h] BYREF</span></span><br><span class="line">  <span class="type">int</span> v5; <span class="comment">// [rsp+2Ch] [rbp-ACh]</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> i; <span class="comment">// [rsp+30h] [rbp-A8h]</span></span><br><span class="line">  <span class="type">int</span> k; <span class="comment">// [rsp+34h] [rbp-A4h]</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v8; <span class="comment">// [rsp+38h] [rbp-A0h]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+3Ch] [rbp-9Ch]</span></span><br><span class="line">  <span class="type">int</span> v10; <span class="comment">// [rsp+40h] [rbp-98h]</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v11; <span class="comment">// [rsp+44h] [rbp-94h]</span></span><br><span class="line">  PCSTR Format; <span class="comment">// [rsp+48h] [rbp-90h]</span></span><br><span class="line">  <span class="type">int</span> v13; <span class="comment">// [rsp+50h] [rbp-88h]</span></span><br><span class="line">  <span class="type">int</span> v14; <span class="comment">// [rsp+54h] [rbp-84h]</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v15; <span class="comment">// [rsp+58h] [rbp-80h]</span></span><br><span class="line">  _DWORD *v16; <span class="comment">// [rsp+60h] [rbp-78h]</span></span><br><span class="line">  <span class="type">char</span> *v17; <span class="comment">// [rsp+68h] [rbp-70h]</span></span><br><span class="line">  <span class="type">int</span> v18; <span class="comment">// [rsp+70h] [rbp-68h]</span></span><br><span class="line">  <span class="type">int</span> v19; <span class="comment">// [rsp+74h] [rbp-64h]</span></span><br><span class="line">  PCSTR v20; <span class="comment">// [rsp+78h] [rbp-60h]</span></span><br><span class="line">  <span class="type">int</span> v21[<span class="number">4</span>]; <span class="comment">// [rsp+80h] [rbp-58h] BYREF</span></span><br><span class="line">  <span class="type">char</span> v22[<span class="number">40</span>]; <span class="comment">// [rsp+90h] [rbp-48h] BYREF</span></span><br><span class="line"></span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  v4 = <span class="number">0</span>;</span><br><span class="line">  v5 = <span class="number">0</span>;</span><br><span class="line">  v16 = (_DWORD *)<span class="built_in">sub_140001890</span>(a2);</span><br><span class="line">  v13 = v16[<span class="number">6</span>];</span><br><span class="line">  Format = *(PCSTR *)(a2 + <span class="number">24</span>);</span><br><span class="line">  v11 = v16[<span class="number">4</span>];</span><br><span class="line">  v18 = v16[<span class="number">2</span>];</span><br><span class="line">  v10 = v13;</span><br><span class="line">  <span class="keyword">if</span> ( v13 == <span class="number">0x222000</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">DbgPrint</span>(&amp;byte_140001F80);</span><br><span class="line">    <span class="built_in">memset</span>(v22, <span class="number">0</span>, <span class="built_in">sizeof</span>(v22));</span><br><span class="line">    v20 = Format;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v11; ++i )</span><br><span class="line">      v22[i] = v20[i];</span><br><span class="line">    <span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt; <span class="number">32</span>; j += <span class="number">8</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      v4 = <span class="number">0</span>;</span><br><span class="line">      v5 = <span class="number">0</span>;</span><br><span class="line">      v4 = (<span class="type">unsigned</span> __int8)v22[j] &lt;&lt; <span class="number">24</span>;</span><br><span class="line">      v4 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">1</span>] &lt;&lt; <span class="number">16</span>;</span><br><span class="line">      v4 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">2</span>] &lt;&lt; <span class="number">8</span>;</span><br><span class="line">      v4 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">3</span>];</span><br><span class="line">      v5 = (<span class="type">unsigned</span> __int8)v22[j + <span class="number">4</span>] &lt;&lt; <span class="number">24</span>;</span><br><span class="line">      v5 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">5</span>] &lt;&lt; <span class="number">16</span>;</span><br><span class="line">      v5 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">6</span>] &lt;&lt; <span class="number">8</span>;</span><br><span class="line">      v5 += (<span class="type">unsigned</span> __int8)v22[j + <span class="number">7</span>];</span><br><span class="line">      v21[<span class="number">0</span>] = <span class="number">6699</span>;</span><br><span class="line">      v21[<span class="number">1</span>] = <span class="number">14925</span>;</span><br><span class="line">      v21[<span class="number">2</span>] = <span class="number">24175</span>;</span><br><span class="line">      v21[<span class="number">3</span>] = <span class="number">43571</span>;</span><br><span class="line">      v19 = <span class="number">2</span>;</span><br><span class="line">      v14 = <span class="number">33</span>;</span><br><span class="line">      <span class="built_in">xtea</span>(<span class="number">33</span>i64, &amp;v4, v21);</span><br><span class="line">      v22[j] = <span class="built_in">HIBYTE</span>(v4);</span><br><span class="line">      v22[j + <span class="number">1</span>] = <span class="built_in">BYTE2</span>(v4);</span><br><span class="line">      v22[j + <span class="number">2</span>] = <span class="built_in">BYTE1</span>(v4);</span><br><span class="line">      v22[j + <span class="number">3</span>] = v4;</span><br><span class="line">      v22[j + <span class="number">4</span>] = <span class="built_in">HIBYTE</span>(v5);</span><br><span class="line">      v22[j + <span class="number">5</span>] = <span class="built_in">BYTE2</span>(v5);</span><br><span class="line">      v22[j + <span class="number">6</span>] = <span class="built_in">BYTE1</span>(v5);</span><br><span class="line">      v22[j + <span class="number">7</span>] = v5;</span><br><span class="line">    &#125;</span><br><span class="line">    v8 = <span class="number">0</span>;</span><br><span class="line">    v17 = v22;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">      v15 = v8;</span><br><span class="line">      <span class="built_in">sub_140001A70</span>(v17, v8++);</span><br><span class="line">      v17 += <span class="number">16</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> ( (<span class="type">int</span>)v8 &lt; <span class="number">2</span> );</span><br><span class="line">    <span class="keyword">for</span> ( k = <span class="number">0</span>; k &lt; <span class="number">32</span>; ++k )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span> ( v22[k] == byte_140004000[k] )</span><br><span class="line">        ++v9;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">DbgPrint</span>(&amp;byte_140001F90);</span><br><span class="line">    <span class="keyword">if</span> ( v9 == <span class="number">32</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>((<span class="type">char</span> *)Format, <span class="string">&quot;flag is you input&quot;</span>);</span><br><span class="line">      *(_QWORD *)(a2 + <span class="number">56</span>) = <span class="number">18</span>i64;</span><br><span class="line">      <span class="built_in">DbgPrint</span>(&amp;byte_140001FC0);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">strcpy</span>((<span class="type">char</span> *)Format, <span class="string">&quot;wrong&quot;</span>);</span><br><span class="line">      *(_QWORD *)(a2 + <span class="number">56</span>) = <span class="number">6</span>i64;</span><br><span class="line">      <span class="built_in">DbgPrint</span>(&amp;byte_140001FE0);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> ( v10 != <span class="number">2237440</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">goto</span> LABEL_21;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">DbgPrint</span>(aIrpdevicecontr, v11);</span><br><span class="line">  <span class="built_in">DbgPrint</span>(<span class="string">&quot;CODE_WRITE %X\n&quot;</span>, <span class="number">2237440</span>i64);</span><br><span class="line">  <span class="built_in">DbgPrint</span>(Format);</span><br><span class="line">  *(_QWORD *)(a2 + <span class="number">56</span>) = <span class="number">0</span>i64;</span><br><span class="line">LABEL_21:</span><br><span class="line">  *(_QWORD *)(a2 + <span class="number">56</span>) = <span class="number">65</span>i64;</span><br><span class="line">  <span class="built_in">IofCompleteRequest</span>((PIRP)a2, <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>i64;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>sub_140001A70</strong>函数如下:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> __fastcall <span class="title">sub_140001A70</span><span class="params">(_DWORD *a1, <span class="type">int</span> a2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="type">int</span> j; <span class="comment">// [rsp+4h] [rbp-44h]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+8h] [rbp-40h]</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [rsp+Ch] [rbp-3Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> *v5; <span class="comment">// [rsp+10h] [rbp-38h]</span></span><br><span class="line">  <span class="type">int</span> v6; <span class="comment">// [rsp+18h] [rbp-30h]</span></span><br><span class="line">  <span class="type">char</span> v7[<span class="number">16</span>]; <span class="comment">// [rsp+20h] [rbp-28h]</span></span><br><span class="line"></span><br><span class="line">  v7[<span class="number">1</span>] = a2 ^ <span class="number">0x25</span>;</span><br><span class="line">  v7[<span class="number">0</span>] = a2 ^ <span class="number">0x7A</span>;</span><br><span class="line">  v7[<span class="number">8</span>] = a2 ^ <span class="number">0x1A</span>;</span><br><span class="line">  v7[<span class="number">2</span>] = a2 ^ <span class="number">0x35</span>;</span><br><span class="line">  v7[<span class="number">9</span>] = a2 ^ <span class="number">0x6D</span>;</span><br><span class="line">  v7[<span class="number">3</span>] = a2 ^ <span class="number">0x23</span>;</span><br><span class="line">  v7[<span class="number">11</span>] = a2 ^ <span class="number">0x94</span>;</span><br><span class="line">  v7[<span class="number">4</span>] = a2 ^ <span class="number">0xC5</span>;</span><br><span class="line">  v7[<span class="number">5</span>] = a2 ^ <span class="number">0x4B</span>;</span><br><span class="line">  v7[<span class="number">6</span>] = a2 ^ <span class="number">0x21</span>;</span><br><span class="line">  v7[<span class="number">7</span>] = a2 ^ <span class="number">0x35</span>;</span><br><span class="line">  v7[<span class="number">10</span>] = a2 ^ <span class="number">0x91</span>;</span><br><span class="line">  v7[<span class="number">12</span>] = a2 ^ <span class="number">0x2C</span>;</span><br><span class="line">  v7[<span class="number">13</span>] = a2 ^ <span class="number">0xC1</span>;</span><br><span class="line">  v7[<span class="number">14</span>] = a2 ^ <span class="number">0x92</span>;</span><br><span class="line">  v7[<span class="number">15</span>] = a2 ^ <span class="number">0x51</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">4</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v5 = &amp;v4;</span><br><span class="line">    v4 = *a1 ^ a2;</span><br><span class="line">    <span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt; <span class="number">4</span>; ++j )</span><br><span class="line">    &#123;</span><br><span class="line">      v5 = (<span class="type">int</span> *)((<span class="type">char</span> *)v5 + <span class="number">1</span>);</span><br><span class="line">      *((_BYTE *)v5 - <span class="number">1</span>) ^= v7[<span class="number">15</span> - (((<span class="type">unsigned</span> __int8)i + (<span class="type">unsigned</span> __int8)j) &amp; <span class="number">0xF</span>)] | ((<span class="type">unsigned</span> __int8)j &lt;&lt; j) | j | <span class="number">4</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v6 = ~a2 ^ v4;</span><br><span class="line">    *a1++ = v6;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实自己主要是栽倒到了类型转换，还有指针运用的问题</p>
+<p>根据以上加密程序写出解密exp</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">func1</span><span class="params">(<span class="type">uint32_t</span>* p, <span class="type">char</span>* res, <span class="type">int</span> k)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			res[k + j + <span class="number">4</span> * i] = (p[i] &gt;&gt; (<span class="number">8</span> * j)) &amp; <span class="number">0xff</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">uint32_t</span> <span class="title function_">char_to_uint</span><span class="params">(<span class="type">unsigned</span> <span class="type">char</span> *p,<span class="type">int</span> k,<span class="type">int</span> i)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">int</span> res = p[k + <span class="number">4</span> * i] | p[k + <span class="number">1</span> + <span class="number">4</span> * i] &lt;&lt; <span class="number">8</span> | p[k + <span class="number">2</span> + <span class="number">4</span> * i] &lt;&lt; <span class="number">16</span> | p[k + <span class="number">3</span> + <span class="number">4</span> * i] &lt;&lt; <span class="number">24</span>;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">uint32_t</span> <span class="title function_">swap</span><span class="params">(<span class="type">uint32_t</span> num)</span> &#123;</span><br><span class="line">	num = (num &amp; <span class="number">0xff</span>) &lt;&lt; <span class="number">24</span> | ((num &gt;&gt; <span class="number">8</span>) &amp; <span class="number">0xff</span>) &lt;&lt; <span class="number">16</span> | ((num &gt;&gt; <span class="number">16</span>) &amp; <span class="number">0xff</span>) &lt;&lt; <span class="number">8</span> | ((num &gt;&gt; <span class="number">24</span>) &amp; <span class="number">0xff</span>);</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">char_to_uint32</span><span class="params">(<span class="type">unsigned</span> <span class="type">char</span>* p, <span class="type">int</span> k)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">int</span> result = p[k]|p[k+<span class="number">1</span>]&lt;&lt;<span class="number">8</span> | p[k + <span class="number">2</span>] &lt;&lt; <span class="number">16</span>| p[k + <span class="number">3</span>] &lt;&lt; <span class="number">24</span>;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">decrypt</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> rounds, <span class="type">uint32_t</span> * a2, <span class="type">uint32_t</span>* a3)</span> &#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">int</span> sum, v0, v1, i;</span><br><span class="line"></span><br><span class="line">	v0 = a2[<span class="number">0</span>];</span><br><span class="line">	v1 = a2[<span class="number">1</span>];</span><br><span class="line">	sum = <span class="number">1697034457</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; rounds; ++i) &#123;</span><br><span class="line">		v1 -= (a3[(sum &gt;&gt; <span class="number">11</span>) &amp; <span class="number">3</span>] + sum) ^ (v0 + ((v0 &gt;&gt; <span class="number">5</span>) ^ (<span class="number">16</span> * v0)));</span><br><span class="line">		sum += <span class="number">1640531527</span>;</span><br><span class="line">		v0 -= (a3[sum &amp; <span class="number">3</span>] + sum) ^ (v1 + ((v1 &gt;&gt; <span class="number">6</span>) ^ (<span class="number">16</span> * v1)));</span><br><span class="line">	&#125;</span><br><span class="line">	a2[<span class="number">0</span>] = v0;</span><br><span class="line">	a2[<span class="number">1</span>] = v1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(<span class="type">unsigned</span> <span class="type">char</span> *flag, <span class="type">int</span> k, <span class="type">int</span> i)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> v7[<span class="number">16</span>];</span><br><span class="line">	v7[<span class="number">1</span>] = i ^ <span class="number">0x25</span>;</span><br><span class="line">	v7[<span class="number">0</span>] = i ^ <span class="number">0x7a</span>;</span><br><span class="line">	v7[<span class="number">8</span>] = i ^ <span class="number">0x1a</span>;</span><br><span class="line">	v7[<span class="number">2</span>] = i ^ <span class="number">0x35</span>;</span><br><span class="line">	v7[<span class="number">9</span>] = i ^ <span class="number">0x6d</span>;</span><br><span class="line">	v7[<span class="number">3</span>] = i ^ <span class="number">0x23</span>;</span><br><span class="line">	v7[<span class="number">11</span>] = i ^ <span class="number">0x94</span>;</span><br><span class="line">	v7[<span class="number">4</span>] = i ^ <span class="number">0xc5</span>;</span><br><span class="line">	v7[<span class="number">5</span>] = i ^ <span class="number">0x4b</span>;</span><br><span class="line">	v7[<span class="number">6</span>] = i ^ <span class="number">0x21</span>;</span><br><span class="line">	v7[<span class="number">7</span>] = i ^ <span class="number">0x35</span>;</span><br><span class="line">	v7[<span class="number">10</span>] = i ^ <span class="number">0x91</span>;</span><br><span class="line">	v7[<span class="number">12</span>] = i ^ <span class="number">0x2c</span>;</span><br><span class="line">	v7[<span class="number">13</span>] = i ^ <span class="number">0xc1</span>;</span><br><span class="line">	v7[<span class="number">14</span>] = i ^ <span class="number">0x92</span>;</span><br><span class="line">	v7[<span class="number">15</span>] = i ^ <span class="number">0x51</span>;</span><br><span class="line">	<span class="keyword">for</span> ( <span class="type">int</span> z= <span class="number">0</span>; z &lt; <span class="number">4</span>; z++) </span><br><span class="line">	&#123;</span><br><span class="line">		flag[k + <span class="number">4</span> * z] ^= i;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">unsigned</span> <span class="type">char</span> sum = v7[<span class="number">15</span> - ((z + j) &amp; <span class="number">0xf</span>)] |(j &lt;&lt; j) | j | <span class="number">4</span>;</span><br><span class="line">			flag[k + <span class="number">4</span> * z + j] ^= sum;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">unsigned</span> <span class="type">int</span> v6 = char_to_uint32(flag, k + <span class="number">4</span> * z);</span><br><span class="line">		v6 ^= (~i) ;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> e = <span class="number">0</span>; e &lt; <span class="number">4</span>; e++)</span><br><span class="line">		&#123;</span><br><span class="line">			flag[k + <span class="number">4</span> * z + e] = (v6 &gt;&gt; (<span class="number">8</span> * e)) &amp; <span class="number">0xff</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> flag[<span class="number">32</span>] = &#123; <span class="number">0x72</span>, <span class="number">0x62</span>, <span class="number">0xae</span>, <span class="number">0x34</span>, <span class="number">0x52</span>, <span class="number">0x9a</span>, <span class="number">0x06</span>, <span class="number">0xaf</span>, <span class="number">0x72</span>, <span class="number">0xfb</span>, <span class="number">0x40</span>, <span class="number">0xc0</span>, <span class="number">0x10</span>, <span class="number">0x35</span>, <span class="number">0xbd</span>, <span class="number">0xd4</span>, <span class="number">0x22</span>, <span class="number">0xa5</span>, <span class="number">0x93</span>, <span class="number">0x07</span>, <span class="number">0xb4</span>, <span class="number">0xfb</span>, <span class="number">0xb5</span>, <span class="number">0xca</span>, <span class="number">0xe8</span>, <span class="number">0x01</span>, <span class="number">0xf5</span>, <span class="number">0xae</span>, <span class="number">0xed</span>, <span class="number">0x7b</span>, <span class="number">0xb8</span>, <span class="number">0x6a</span> &#125;;	<span class="type">uint32_t</span> k[<span class="number">4</span>] = &#123; <span class="number">0x1a2b</span>, <span class="number">0x3a4d</span>, <span class="number">0x5e6f</span>, <span class="number">0xaa33</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		func(flag, i * <span class="number">16</span>, i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i += <span class="number">8</span>) &#123;</span><br><span class="line">		<span class="type">uint32_t</span> p[<span class="number">2</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		p[<span class="number">0</span>] = char_to_uint(flag, i, <span class="number">0</span>);</span><br><span class="line">		p[<span class="number">1</span>] = char_to_uint(flag, i, <span class="number">1</span>);</span><br><span class="line">		p[<span class="number">0</span>] = swap(p[<span class="number">0</span>]);</span><br><span class="line">		p[<span class="number">1</span>] = swap(p[<span class="number">1</span>]);</span><br><span class="line">		decrypt(<span class="number">33</span>, p, k);</span><br><span class="line">		p[<span class="number">0</span>] = swap(p[<span class="number">0</span>]);</span><br><span class="line">		p[<span class="number">1</span>] = swap(p[<span class="number">1</span>]);</span><br><span class="line">		func1(p, flag, i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, flag[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结一下自己的问题吧，对于类型转换和指针掌握的不是那么熟</p>
+<p>这几天一直在弄动调的问题，没有静下心来静态分析，接下来就是动态调试这个驱动</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-10T00:13:48+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 10, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/日记(20)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
+          
   
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/08/%E6%97%A5%E8%AE%B0(20)/"  itemprop="url">
-        日记(20)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ctf%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ctf学习</p></a></div>
+  <span hidden itemprop="keywords">ctf学习</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        有一段时间没有更新日记了，日记这个好习惯还是要继续坚持的近期遇到的麻烦如何动调sys（长城杯-ez_driver）这道题总结一下里面需要用到的知识吧
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title=2024长城杯-ez_driver复现与思考 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title=2024长城杯-ez_driver复现与思考 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/&title=2024长城杯-ez_driver复现与思考 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/04/08/%E6%97%A5%E8%AE%B0(20)/'>
+          <p class='title'>日记(20)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>有一段时间没有更新日记了，日记这个好习惯还是要继续坚持的近期遇到的麻烦如何动调sys（长城杯-ez_driver）这道题总结一下里面需要用到的知识吧
 
 IRP请求
 内核通信
 
-还是要学习一下关于内核的一些知识
-123456近期的任务1.windows内核驱动学习2.继续学习ollvm混淆3.研究upx源码4.穿插着练题2-4条都是穿插来
-
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-08T00:00:00+08:00">2024-04-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/08/%E6%97%A5%E8%AE%B0(20)/' itemprop="url">
-            Read More
-          </a>
-        </div>
+还是要学习一下关于...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/Windows内核驱动学习(三)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
   
-  
-  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/"  itemprop="url">
-        Windows内核驱动学习(三)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这一节讲述的是如何断在DriverEntry处
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-03T00:00:00+08:00">2024-04-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/Windows内核驱动学习(二)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
-        Windows内核驱动学习(二)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        由于作者本人第一次学习内核驱动，不足之处，望各位师傅多多指出
-这一节主要是在配置环境中遇到的问题以及解决办法
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-02T00:00:00+08:00">2024-04-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/01/Windows内核驱动学习(一)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"  itemprop="url">
-        Windows内核驱动学习(一)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这一节主要讲述如何配置环境
-配置环境一.windbg双机调试内核驱动首先要准备的工具:windbg,虚拟机，win7系统(这里我用的64位系统演示)
-1.打开虚拟机设置，设置串流端口，如果有打印机这个硬件要先删去
-
-按上图进行配置
-2.虚拟机上的配置
-由于笔者用的是win7系统，这里选择win7进行演示，开机进入桌面后，在运行窗口输入 msconfig –&gt; 引导 –&gt; 高级选项...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-01T00:00:00+08:00">2024-04-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/31/DLL学习(二)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/31/DLL%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
-        DLL学习(二)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        编写DLL在VS2019创建动态链接库
-这个函数就是DLL的导出函数
-
-这个相当于就是正常应用程序的main函数
-
-然后我们介绍关于这个函数
-12345678910111213141516171819BOOL APIENTRY DllMain( HMODULE hModule,   //DLL 模块的句柄。该值是 DLL 的基址。                       DWORD  u...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-31T00:00:00+08:00">2024-03-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/dll%E6%B3%A8%E5%85%A5/">dll注入</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/dll%E6%B3%A8%E5%85%A5/" itemprop="url"><span itemprop="name">dll注入</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/31/DLL%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/DLL学习(一)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/30/DLL%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"  itemprop="url">
-        DLL学习(一)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        了解dllDLL 是 Dynamic Link Library的缩写，意为动态链接库
-在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。
-比如:
-windows系统就是由许多的动态链接库(DLL 文件)构成
-
-当我们执行某一个程序时，相应的DLL文件就会被调用，一个应用程序可有多个DLL文件，一个DLL文件也可能被几...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/dll%E6%B3%A8%E5%85%A5/">dll注入</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/dll%E6%B3%A8%E5%85%A5/" itemprop="url"><span itemprop="name">dll注入</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/30/DLL%E5%AD%A6%E4%B9%A0(%E4%B8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/DLL注入学习(一)远程线程注入/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/30/DLL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0(%E4%B8%80)%E8%BF%9C%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B3%A8%E5%85%A5/"  itemprop="url">
-        DLL注入学习(一)远程线程注入
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        远程线程指的是跨进程，可以在别的进程里创建线程
-用到的API函数是 CreateRemoteThread
-使用 CreateRemoteThread 创建远程线程的时候，需要提供目标进程的句柄，这个可以通过OpenProcess得到，然后还需要一个函数地址和一个参数地址
-这个函数地址是在目标进程里创建线程执行的函数，而这个函数只能带有一个参数
-说也巧，加载DLL的函数 LoadLibrary...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/dll%E6%B3%A8%E5%85%A5/">dll注入</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/dll%E6%B3%A8%E5%85%A5/" itemprop="url"><span itemprop="name">dll注入</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/30/DLL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0(%E4%B8%80)%E8%BF%9C%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B3%A8%E5%85%A5/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/win32API学习(第一天)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/"  itemprop="url">
-        win32API学习(第一天)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        实例一(实现植物大战僵尸无限阳光)我们想利用MFC实现窗口化
-12345678FindWindow   查找窗口句柄//源码HWND FindWindowW(  [in, optional] LPCWSTR lpClassName,  [in, optional] LPCWSTR lpWindowName);//首先这个函数是返回HWND类型，然后返回的是窗口句柄HWND wndProces...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/WIN32API/">WIN32API</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/WIN32API/" itemprop="url"><span itemprop="name">WIN32API</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/28/IDA学习之c++逆向/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8Bc++%E9%80%86%E5%90%91/"  itemprop="url">
-        IDA学习之c++逆向
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        STL 逆向方法论
-识别 STL 容器类型
-识别 STL 容器操作
-提取STL 容器中的数据
-
-逆向STL 主要的问题:
-缺少符号,无法判断STL 容器类型 （主要困难）
-STL 内部数据结构复杂，难以提取数据
-03 优化使大量 stl 函数被 inline
-方法: 解析 STL 容器内存数据，从内存数据角度判断容器类型，提取容器内判断函数操作
-
-常见 STL容器
-序列容器
-
-vector
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-28T00:00:00+08:00">2024-03-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/IDA%E5%AD%A6%E4%B9%A0/">IDA学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/IDA%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">IDA学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8Bc++%E9%80%86%E5%90%91/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 6
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2024/page/2/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3180,192 +2689,38 @@ vector
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://img2.woyaogexing.com/2024/03/26/c9ed4f48dcabd3e7!400x400.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>5m10v3</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">5m10v3 blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:3353581619@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesIDAE5ADA6E4B9A0"
-            ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/WIN32API/" href="/categories/WIN32API/"
-            active-action="action-categoriesWIN32API"
-            ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
-            active-action="action-categoriescppE98086E59091"
-            ><div class='name'>cpp逆向</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesctfE5ADA6E4B9A0"
-            ><div class='name'>ctf学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/dll%E6%B3%A8%E5%85%A5/" href="/categories/dll%E6%B3%A8%E5%85%A5/"
-            active-action="action-categoriesdllE6B3A8E585A5"
-            ><div class='name'>dll注入</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux%E5%AD%A6%E4%B9%A0/" href="/categories/linux%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categorieslinuxE5ADA6E4B9A0"
-            ><div class='name'>linux学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/python/" href="/categories/python/"
-            active-action="action-categoriespython"
-            ><div class='name'>python</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/python%E5%AD%A6%E4%B9%A0/" href="/categories/python%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriespythonE5ADA6E4B9A0"
-            ><div class='name'>python学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"
-            active-action="action-categoriesE58685E6A0B8E9A9B1E58AA8"
-            ><div class='name'>内核驱动</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
-            active-action="action-categoriesE58AA0E5AF86E7AE97E6B395"
-            ><div class='name'>加密算法</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE5AE89E58D93E98086E59091"
-            ><div class='name'>安卓逆向</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(13)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE9A9B1E58AA8E98086E59091"
-            ><div class='name'>驱动逆向</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">ctf学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3397,13 +2752,14 @@ vector
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3412,14 +2768,14 @@ vector
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3917,7 +3273,7 @@ vector
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2024/","name":"2024"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/驱动逆向/","name":"驱动逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/09/2024长城杯-ez_driver复现与思考/","name":"2024长城杯-ez_driver复现与思考"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2024长城杯-ez_driver复现与思考","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/","wordCount":0,"datePublished":"2024-04-08T16:00:00.000Z","dateModified":"2024-04-09T16:13:48.256Z","articleSection":"驱动逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

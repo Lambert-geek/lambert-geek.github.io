@@ -1,3 +1,4 @@
+http://example.com/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/
 http://example.com/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/
 http://example.com/2024/04/08/%E6%97%A5%E8%AE%B0(20)/
 http://example.com/2024/03/07/2022%E5%BC%BA%E7%BD%91%E6%9D%AF-easyre%E6%80%9D%E8%B7%AF%E5%A4%8D%E7%8E%B0/
@@ -81,3 +82,4 @@ http://example.com/categories/%E6%97%A5%E8%AE%B0/
 http://example.com/categories/dll%E6%B3%A8%E5%85%A5/
 http://example.com/categories/WIN32API/
 http://example.com/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/
+http://example.com/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/
