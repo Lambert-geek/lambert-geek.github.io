@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-09T16:13:48.256Z</updated>
+  <updated>2024-04-11T03:24:48.230Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows内核驱动学习(四)</title>
+    <link href="http://example.com/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/"/>
+    <id>http://example.com/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/</id>
+    <published>2024-04-09T16:00:00.000Z</published>
+    <updated>2024-04-11T03:24:48.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里笔者用的系统为Win10，virtual studio2019</p><h2 id="配置驱动开发环境"><a href="#配置驱动开发环境" class="headerlink" title="配置驱动开发环境"></a>配置驱动开发环境</h2><p>这里参考官方文档<a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk">https://learn.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk</a></p><p>笔者建议下载virtual studio2019(比较稳定)+SDK10.0.22000.0,还有一个原因就是生成的驱动在win7，win10，win11都能使用 </p><p>然后下载的WDK要跟SDK对应</p><h2 id="第一个驱动"><a href="#第一个驱动" class="headerlink" title="第一个驱动"></a>第一个驱动</h2><p><img src="/../image/617.png" class="lazyload" data-srcset="/../image/617.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="617"></p><p>我们可以点击PDRIVER_OBJECT 然后F12看它的结构</p><p><img src="/../image/618.png" class="lazyload" data-srcset="/../image/618.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="618"></p><p>这里的分别就是驱动的一些配置</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里笔者用的系统为Win10，virtual studio2019&lt;/p&gt;
+&lt;h2 id=&quot;配置驱动开发环境&quot;&gt;&lt;a href=&quot;#配置驱动开发环境&quot; class=&quot;headerlink&quot; title=&quot;配置驱动开发环境&quot;&gt;&lt;/a&gt;配置驱动开发环境&lt;/h2&gt;&lt;p&gt;这里参考官</summary>
+      
+    
+    
+    
+    <category term="内核驱动" scheme="http://example.com/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>2024长城杯-ez_driver复现与思考</title>
@@ -495,36 +520,6 @@
 &lt;li&gt;总结不会的知识点然后学习&lt;/li&gt;
 &lt;/ul&gt;
 </summary>
-      
-    
-    
-    
-    <category term="日记" scheme="http://example.com/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日记(16)</title>
-    <link href="http://example.com/2024/03/17/%E6%97%A5%E8%AE%B0(16)/"/>
-    <id>http://example.com/2024/03/17/%E6%97%A5%E8%AE%B0(16)/</id>
-    <published>2024-03-16T16:00:00.000Z</published>
-    <updated>2024-03-20T07:22:21.244Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天venomCTF只出了一道，然后在看XCTF的一道题</p><p>看的XCTF那道题里面反调试</p><p>今日完成任务</p><ul><li>做venomCTF，XCTF</li></ul><p>由于明天XCTF还没有结束<br>明天要完成的任务:</p><ul><li>继续做XCTF</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今天venomCTF只出了一道，然后在看XCTF的一道题&lt;/p&gt;
-&lt;p&gt;看的XCTF那道题里面反调试&lt;/p&gt;
-&lt;p&gt;今日完成任务&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;做venomCTF，XCTF&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;由于明天XCTF还没有结束&lt;br&gt;明天要完成的任务:&lt;/p&gt;</summary>
       
     
     
