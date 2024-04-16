@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1712852828491),
+    lastupdate: new Date(1713276393681),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2474,7 +2474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/Windows内核驱动学习(五)/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/15/近日学习总结/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2492,16 +2492,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/11/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%94)/"  itemprop="url">
-        Windows内核驱动学习(五)
+      <a href="/2024/04/15/%E8%BF%91%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"  itemprop="url">
+        近日学习总结
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        字符串操作基本数据类型
-12345678unsigned long 重定义为 ULONG。 unsigned char 重定义为 UCHAR。 unsigned int 重定义为 UINT。 void 重定义为 VOID。 unsigned long *重定义为 PULONG。 unsigned char * 重定义为 PUCHAR。 unsigned int *重定义 PUINT。 voi...
+        这一周的学习主要还是为了弄懂如何动态调试驱动，以及如何和驱动进行通信
+，在IO通信学习上总感觉缺了一点东西，我觉得可能是练的太少了，没有彻底理解它的实现原理
+但是在与长城杯的那道ez_driver进行通信的时候，发现这个驱动不能被加载，应该是设置了不执行，现在的目标是把这个原因找出来并且解决。
+
       
     
   </div>
@@ -2509,20 +2511,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-04-11T00:00:00+08:00">2024-04-11</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/11/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%94)/' itemprop="url">
+          <a class='readmore' href='/2024/04/15/%E8%BF%91%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2669,71 +2671,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/Windows内核驱动学习(四)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/"  itemprop="url">
-        Windows内核驱动学习(四)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这里笔者用的系统为Win10，virtual studio2019
-配置驱动开发环境这里参考官方文档https://learn.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk
-笔者建议下载virtual studio2019(比较稳定)+SDK10.0.22000.0,还有一个原因就是生成的驱动在win7，win10...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-10T00:00:00+08:00">2024-04-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/08/日记(20)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2790,204 +2727,6 @@ IRP请求
       
         <div>
           <a class='readmore' href='/2024/04/08/%E6%97%A5%E8%AE%B0(20)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/Windows内核驱动学习(三)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/"  itemprop="url">
-        Windows内核驱动学习(三)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这一节讲述的是如何断在DriverEntry处
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-03T00:00:00+08:00">2024-04-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/02/Windows内核驱动学习(二)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
-        Windows内核驱动学习(二)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        由于作者本人第一次学习内核驱动，不足之处，望各位师傅多多指出
-这一节主要是在配置环境中遇到的问题以及解决办法
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-02T00:00:00+08:00">2024-04-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/02/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/01/Windows内核驱动学习(一)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"  itemprop="url">
-        Windows内核驱动学习(一)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这一节主要讲述如何配置环境
-配置环境一.windbg双机调试内核驱动首先要准备的工具:windbg,虚拟机，win7系统(这里我用的64位系统演示)
-1.打开虚拟机设置，设置串流端口，如果有打印机这个硬件要先删去
-
-按上图进行配置
-2.虚拟机上的配置
-由于笔者用的是win7系统，这里选择win7进行演示，开机进入桌面后，在运行窗口输入 msconfig –&gt; 引导 –&gt; 高级选项...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-01T00:00:00+08:00">2024-04-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/01/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%80)/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3137,6 +2876,267 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           </div>
         
       
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/DLL注入学习(一)远程线程注入/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/30/DLL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0(%E4%B8%80)%E8%BF%9C%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B3%A8%E5%85%A5/"  itemprop="url">
+        DLL注入学习(一)远程线程注入
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        远程线程指的是跨进程，可以在别的进程里创建线程
+用到的API函数是 CreateRemoteThread
+使用 CreateRemoteThread 创建远程线程的时候，需要提供目标进程的句柄，这个可以通过OpenProcess得到，然后还需要一个函数地址和一个参数地址
+这个函数地址是在目标进程里创建线程执行的函数，而这个函数只能带有一个参数
+说也巧，加载DLL的函数 LoadLibrary...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/dll%E6%B3%A8%E5%85%A5/">dll注入</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/dll%E6%B3%A8%E5%85%A5/" itemprop="url"><span itemprop="name">dll注入</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/30/DLL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0(%E4%B8%80)%E8%BF%9C%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B3%A8%E5%85%A5/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/win32API学习(第一天)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/"  itemprop="url">
+        win32API学习(第一天)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        实例一(实现植物大战僵尸无限阳光)我们想利用MFC实现窗口化
+12345678FindWindow   查找窗口句柄//源码HWND FindWindowW(  [in, optional] LPCWSTR lpClassName,  [in, optional] LPCWSTR lpWindowName);//首先这个函数是返回HWND类型，然后返回的是窗口句柄HWND wndProces...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/WIN32API/">WIN32API</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/WIN32API/" itemprop="url"><span itemprop="name">WIN32API</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/26/AliyunCTF2024-逆向-Euler复现与思考/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/26/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"  itemprop="url">
+        AliyunCTF2024-逆向-Euler复现与思考
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-26T00:00:00+08:00">2024-03-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/26/AliyunCTF2024-%E9%80%86%E5%90%91-Euler%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/21/Dubhe2024-Destination复现总结/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/21/Dubhe2024-Destination%E5%A4%8D%E7%8E%B0%E6%80%BB%E7%BB%93/"  itemprop="url">
+        Dubhe2024-Destination复现总结
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        涉及知识点：
+
+反调试
+SEH封装异常处理
+天堂之门
+去花指令
+
+我们发现并不能在main函数入口处下断点
+123引用来自https://www.dazhuanlan.com/relic256/topics/1212274虽然 VS 系列入口函数均为`mainCRTStartup`，但不同版本的实现仍然有些许不同。 在 VC6.0 中，可通过 API`GetVersion`、`GetComm...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-21T00:00:00+08:00">2024-03-21</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/21/Dubhe2024-Destination%E5%A4%8D%E7%8E%B0%E6%80%BB%E7%BB%93/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
     
   </section>
   
@@ -3145,7 +3145,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
       <div class="prev-next">
         
         <p class="current">
-          1 / 5
+          1 / 4
         </p>
         
           <a class="next" rel="next" href="/tags/%E5%AD%A6%E4%B9%A0/page/2/">
@@ -3278,7 +3278,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           <li><a class="flat-box"
             title="/categories/python/" href="/categories/python/"
             active-action="action-categoriespython"
-            ><div class='name'>python</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/python%E5%AD%A6%E4%B9%A0/" href="/categories/python%E5%AD%A6%E4%B9%A0/"
@@ -3288,7 +3288,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           <li><a class="flat-box"
             title="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"
             active-action="action-categoriesE58685E6A0B8E9A9B1E58AA8"
-            ><div class='name'>内核驱动</div><div class='badge'>(5)</div></a></li>
+            ><div class='name'>内核驱动</div><div class='badge'>(8)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
@@ -3308,7 +3308,12 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(21)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
+            active-action="action-categoriesE788ACE899AB"
+            ><div class='name'>爬虫</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
@@ -3343,7 +3348,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
 
 
     <div class='content'>
-      <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">ctf学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
+      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
     </div>
   </section>
 
