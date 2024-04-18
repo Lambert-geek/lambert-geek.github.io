@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713276393681),
+    lastupdate: new Date(1713459805060),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2598,7 +2598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/15/近日学习总结/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/18/AliyunCTF2023-字节码跳动复现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2616,18 +2616,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/15/%E8%BF%91%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"  itemprop="url">
-        近日学习总结
+      <a href="/2024/04/18/AliyunCTF2023-%E5%AD%97%E8%8A%82%E7%A0%81%E8%B7%B3%E5%8A%A8%E5%A4%8D%E7%8E%B0/"  itemprop="url">
+        AliyunCTF2023-字节码跳动复现
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        这一周的学习主要还是为了弄懂如何动态调试驱动，以及如何和驱动进行通信
-，在IO通信学习上总感觉缺了一点东西，我觉得可能是练的太少了，没有彻底理解它的实现原理
-但是在与长城杯的那道ez_driver进行通信的时候，发现这个驱动不能被加载，应该是设置了不执行，现在的目标是把这个原因找出来并且解决。
-
+        复现本题主要是为了学习js字节码，若有不足之处，请各位师傅多多指出
+V8 是 Google 开发的开源 JavaScript 引擎。 Chrome、Node.js和许多其他应用程序都在使用 V8。如果只发布V8引擎编译后的字节码，就可以保护源码。
+可以从下面这篇文章中学习变量声明、条件分支、循环、函数声明、类等最基本语法对应的字节码。
+https://tw.coderbridge.com/s...
       
     
   </div>
@@ -2635,20 +2635,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-04-15T00:00:00+08:00">2024-04-15</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-04-18T00:00:00+08:00">2024-04-18</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          <a class="category-link" href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/">js字节码</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+              <a href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/" itemprop="url"><span itemprop="name">js字节码</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/15/%E8%BF%91%E6%97%A5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/' itemprop="url">
+          <a class='readmore' href='/2024/04/18/AliyunCTF2023-%E5%AD%97%E8%8A%82%E7%A0%81%E8%B7%B3%E5%8A%A8%E5%A4%8D%E7%8E%B0/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3379,6 +3379,11 @@ IRP请求
             ><div class='name'>dll注入</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/" href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/"
+            active-action="action-categoriesjsE5AD97E88A82E7A081"
+            ><div class='name'>js字节码</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/linux%E5%AD%A6%E4%B9%A0/" href="/categories/linux%E5%AD%A6%E4%B9%A0/"
             active-action="action-categorieslinuxE5ADA6E4B9A0"
             ><div class='name'>linux学习</div><div class='badge'>(1)</div></a></li>
@@ -3416,7 +3421,7 @@ IRP请求
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(21)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
@@ -3456,7 +3461,7 @@ IRP请求
 
 
     <div class='content'>
-      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
+      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
     </div>
   </section>
 
