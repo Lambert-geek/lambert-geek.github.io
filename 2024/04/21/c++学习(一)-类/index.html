@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/categories/数据结构/"/>
+  
+  <link rel="canonical" href="http://example.com/2024/04/21/c++学习(一)-类/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,16 +34,21 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="5m10v3 blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>Category: 数据结构 - 5m10v3 blog</title>
-  <meta name="keywords" content="null">
+  <title>C++学习(一)-类与重载 - 5m10v3 blog</title>
+  <meta name="keywords" content="学习,null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="5m10v3 blog">
-<meta property="og:url" content="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++学习(一)-类与重载">
+<meta property="og:url" content="http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
+<meta property="og:description" content="。。 new操作符使用 new 运算符 分配内存 并 初始化1.分配内存初始化标量类型（如 int 或 double），在类型名后加初始值，并用小括号括起，C++11中也支持大括号。 12345int * pi &#x3D; new int (6); double * pd &#x3D; new double (9.99); &#x2F;&#x2F;C++11中, 支持以下写法int * pi &#x3D; new int &amp;#123;6&amp;#12">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-04-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-21T02:55:12.861Z">
 <meta property="article:author" content="5m10v3">
+<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2356,7 +2361,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://w.wallhaven.cc/full/jx/wallhaven-jxqgjw.jpg"></div>
 
@@ -2438,27 +2443,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/[数据结构]双向链表及双向循环链表(C语言)/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/21/c++学习(一)-类/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2467,134 +2454,269 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8(C%E8%AF%AD%E8%A8%80)/"  itemprop="url">
-        双向链表及双向循环链表(C语言)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        双向链表双向链表概念双向链表也叫双链表，其每个数据结点中都有两个指针，分别指向直接后继和直接前驱。在单向链表中若要找到某个节点的前驱节点，需要先遍历到这个节点，然后再遍历一次找到其前驱节点，这无疑是十分低效的。而双向链表可以做到正向反向遍历，由此相比单向链表可以更高效地找到某个节点的前驱节点。
-双向链表的创建双向链表的节点构成双向链表的单个节点含有两个指针域，一个值域。
-结构体
-123456...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        C++学习(一)-类与重载
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/C/">C++</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/C/" itemprop="url"><span itemprop="name">C++</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-11T00:00:00+08:00">2024-04-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url"><span itemprop="name">数据结构</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-04-21T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Apr 21, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>。。</p>
+<h2 id="new操作符"><a href="#new操作符" class="headerlink" title="new操作符"></a>new操作符</h2><h3 id="使用-new-运算符-分配内存-并-初始化"><a href="#使用-new-运算符-分配内存-并-初始化" class="headerlink" title="使用 new 运算符 分配内存 并 初始化"></a>使用 new 运算符 分配内存 并 初始化</h3><p>1.分配内存初始化标量类型（如 int 或 double），在类型名后加初始值，并用小括号括起，C++11中也支持大括号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int * pi = new int (6); </span><br><span class="line">double * pd = new double (9.99); </span><br><span class="line">//C++11中, 支持以下写法</span><br><span class="line">int * pi = new int &#123;6&#125;; </span><br><span class="line">double * pd = new double &#123;9.99&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>2.初始化结构或数组，需要使用大括号列表初始化 ，需编译器 <strong>支持 C++11</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">struct where&#123;double x; double y; double z;&#125;;</span><br><span class="line">where * one = new where &#123;1.2, 2.2, 3.2&#125;;</span><br><span class="line">int * ar = new int [4] &#123;1, 2, 3, 4&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用 delete 释放 new分配的内存 （仅限于常规 new 分配的 堆内存）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">delete pi;</span><br><span class="line">delete pd;</span><br><span class="line">delete one;</span><br><span class="line">// 释放数组 记住 加[]</span><br><span class="line">delete [] ar;</span><br></pre></td></tr></table></figure>
+
+<p>4.创建类对象</p>
+<p>（1）new创建对象，pTest用来接收对象指针。new申请的对象，则只有调用到delete时才会执行析构函数，如果程序退出而没有执行delete则会造成内存泄漏：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CTest*  pTest = new  CTest();  delete pTest;</span><br></pre></td></tr></table></figure>
+
+<p>（2）不用new，直接使用类定义申明，使用完后不需要手动释放，该类析构函数会自动执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CTest  mTest;</span><br></pre></td></tr></table></figure>
+
+<p>（3）使用普通方式创建的类对象，在创建之初就已经分配了内存空间。而类指针，如果未经过对象初始化，则不需要delete释放：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CTest*  pTest = NULL;</span><br></pre></td></tr></table></figure>
+
+<h3 id="new-失败时处理方式"><a href="#new-失败时处理方式" class="headerlink" title="new 失败时处理方式"></a>new 失败时处理方式</h3><p>1.常规分配内存，调用构造函数。分配失败时，<strong>抛出异常</strong>。定义如下：</p>
+<blockquote>
+<p>void* operator new(std::size_t) throw(std::bad_alloc);</p>
+<p>void operator delete(void *) throw();</p>
+<p><strong>分配失败则抛出异常std::bad_alloc，不是返回NULL，所以判断返回值是否为NULL是没用的</strong>。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char *p=new char[size]; //分配失败，不是返回NULL</span><br><span class="line"></span><br><span class="line">delete [] p;</span><br></pre></td></tr></table></figure>
+
+<p>2.<strong>不抛出异常</strong>。分配失败时，返回NULL。定义如下：</p>
+<blockquote>
+<p>void* operator new(std::size_t,const std::nothrow_t&amp;) throw();</p>
+<p>void operator delete(void*) throw();</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">char *p=new(nothrow) char[size]; //分配失败，是返回NULL</span><br><span class="line">if(NULL==p)</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;&quot;alloc failure!&quot;&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+<h3 id="new-运算符、函数和替换函数"><a href="#new-运算符、函数和替换函数" class="headerlink" title="new: 运算符、函数和替换函数"></a>new: 运算符、函数和替换函数</h3><p>运算符new 和 new [] 分别调用如下函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void * operator new(std::size_t);		//use by new</span><br><span class="line">void * operator new [] (std::size_t);		//use by new []</span><br></pre></td></tr></table></figure>
+
+<p>运算符delete 和 delete [] 分别调用如下函数：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> * <span class="keyword">operator</span> <span class="title">delete</span><span class="params">(<span class="type">void</span> *)</span></span>;		<span class="comment">//use by delete</span></span><br><span class="line"><span class="type">void</span> * <span class="keyword">operator</span> <span class="keyword">delete</span> [](<span class="type">void</span> *);		<span class="comment">//use by delete []</span></span><br></pre></td></tr></table></figure>
+
+<p>这些函数称为 <strong>分配函数</strong> ，位于全局名称空间中。std::size_t 是一个 typedef。</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * pi = <span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line"><span class="comment">//将转换为下面这样</span></span><br><span class="line"><span class="type">int</span> * pi = <span class="built_in">new</span> (<span class="built_in">sizeof</span>(<span class="type">int</span>));</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> * pi = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">40</span>];</span><br><span class="line"><span class="comment">//将转换为下面这样</span></span><br><span class="line"><span class="type">int</span> * pi = <span class="built_in">new</span> (<span class="number">40</span> * <span class="built_in">sizeof</span>(<span class="type">int</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//同样的</span></span><br><span class="line"><span class="keyword">delete</span> pi;</span><br><span class="line"><span class="comment">//将转换为下面这样</span></span><br><span class="line"><span class="built_in">delete</span> (pi);</span><br></pre></td></tr></table></figure>
+
+<h3 id="定位-placement-new-运算符"><a href="#定位-placement-new-运算符" class="headerlink" title="定位 placement new 运算符"></a>定位 placement new 运算符</h3><p>通常，new负责在 堆 中分配一个足以满足要求的内存块，但 <strong>定位new可以让程序员指定要使用的内存位置</strong>。不会内存分配失败，因为它根本不分配内存，只调用对象的构造函数。它允许在一块已经分配成功的内存上重新构造对象或对象数组。定义如下：</p>
+<p>void* operator new(size_t,void*);</p>
+<p>void operator delete(void*,void*);</p>
+<p>1.使用 定位new运算符，首先要包含 <strong>头文件 new</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;new&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">chaff</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> dross[<span class="number">20</span>];</span><br><span class="line">    <span class="type">int</span> slag;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">char</span> buffer1[<span class="number">50</span>];</span><br><span class="line"><span class="type">char</span> buffer2[<span class="number">200</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    chaff * p1, p2;</span><br><span class="line">    p2 = <span class="built_in">new</span> (buffer1) chaff;	<span class="comment">// 在buffer1中</span></span><br><span class="line">    p2 = <span class="built_in">new</span> (buffer2) <span class="type">int</span>[<span class="number">20</span>]; <span class="comment">// 在buffer2中</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.使用placement new构造起来的对象或数组，要<strong>显式调用它们的析构函数</strong>来销毁（析构函数并不释放对象的内存），千万不要使用delete.这是因为placement new构造起来的对象或数组大小并不一定等于原来分配的内存大小，使用delete会造成内存泄漏或者之后释放内存时出现运行时错误。</p>
+<p>3.当使用new运算符定义一个多维数组变量或数组对象时，它产生一个指向数组第一个元素的指针，返回的类型保持了除最左边维数外的所有维数。</p>
+<h2 id="c-引用"><a href="#c-引用" class="headerlink" title="c++引用"></a>c++引用</h2>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8(C%E8%AF%AD%E8%A8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-21T10:55:12+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Apr 21, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/[数据结构]单向链表及其基本操作(C语言)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>学习</p></a></div>
+  <span hidden itemprop="keywords">学习</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/&title=C++学习(一)-类与重载 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/&title=C++学习(一)-类与重载 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/&title=C++学习(一)-类与重载 - 5m10v3 blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/04/18/AliyunCTF2023-%E5%AD%97%E8%8A%82%E7%A0%81%E8%B7%B3%E5%8A%A8%E5%A4%8D%E7%8E%B0/'>
+          <p class='title'>AliyunCTF2023-字节码跳动复现<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>复现本题主要是为了学习js字节码，若有不足之处，请各位师傅多多指出
+V8 是 Google 开发的开源 JavaScript 引擎。 Chrome、Node.js和许多其他应用程序都在使用 V8...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(C%E8%AF%AD%E8%A8%80)/"  itemprop="url">
-        单向链表及其基本操作(C语言)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        单向链表什么是单向链表链表是一种物理储存单元上非连续、非顺序的储存结构。它由一系列结点（链表中每一个元素称为结点）组成，结点可动态生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。
-其实可以形象的认为，单向链表就好像一列火车。链表的节点就好像火车的每一节车厢，而链表节点的数据域就对应车厢中存放的货物，链表节点的指针域充当连接各节车厢的锁链。
-为什么需...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-11T00:00:00+08:00">2024-04-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url"><span itemprop="name">数据结构</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(C%E8%AF%AD%E8%A8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2603,212 +2725,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://img2.woyaogexing.com/2024/03/26/c9ed4f48dcabd3e7!400x400.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>5m10v3</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">5m10v3 blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:3353581619@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/C/" href="/categories/C/"
-            active-action="action-categoriesC"
-            ><div class='name'>C++</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesIDAE5ADA6E4B9A0"
-            ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/WIN32API/" href="/categories/WIN32API/"
-            active-action="action-categoriesWIN32API"
-            ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
-            active-action="action-categoriescppE98086E59091"
-            ><div class='name'>cpp逆向</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesctfE5ADA6E4B9A0"
-            ><div class='name'>ctf学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/dll%E6%B3%A8%E5%85%A5/" href="/categories/dll%E6%B3%A8%E5%85%A5/"
-            active-action="action-categoriesdllE6B3A8E585A5"
-            ><div class='name'>dll注入</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/" href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/"
-            active-action="action-categoriesjsE5AD97E88A82E7A081"
-            ><div class='name'>js字节码</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux%E5%AD%A6%E4%B9%A0/" href="/categories/linux%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categorieslinuxE5ADA6E4B9A0"
-            ><div class='name'>linux学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/python/" href="/categories/python/"
-            active-action="action-categoriespython"
-            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/python%E5%AD%A6%E4%B9%A0/" href="/categories/python%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriespythonE5ADA6E4B9A0"
-            ><div class='name'>python学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"
-            active-action="action-categoriesE58685E6A0B8E9A9B1E58AA8"
-            ><div class='name'>内核驱动</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
-            active-action="action-categoriesE58AA0E5AF86E7AE97E6B395"
-            ><div class='name'>加密算法</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE5AE89E58D93E98086E59091"
-            ><div class='name'>安卓逆向</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-            active-action="action-categoriesE695B0E68DAEE7BB93E69E84"
-            ><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
-            active-action="action-categoriesE788ACE899AB"
-            ><div class='name'>爬虫</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(13)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
-            active-action="action-categoriesE9A9B1E58AA8E98086E59091"
-            ><div class='name'>驱动逆向</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
-    </div>
-  </section>
-
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#new%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-text">new操作符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-new-%E8%BF%90%E7%AE%97%E7%AC%A6-%E5%88%86%E9%85%8D%E5%86%85%E5%AD%98-%E5%B9%B6-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">使用 new 运算符 分配内存 并 初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-%E5%A4%B1%E8%B4%A5%E6%97%B6%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-text">new 失败时处理方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new-%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E6%9B%BF%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="toc-text">new: 运算符、函数和替换函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D-placement-new-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">定位 placement new 运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c-%E5%BC%95%E7%94%A8"><span class="toc-text">c++引用</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2840,13 +2798,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3360,7 +3319,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/数据结构/","name":"数据结构"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/C/","name":"C++"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/04/21/c++学习(一)-类/","name":"C++学习(一)-类与重载"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++学习(一)-类与重载","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/","wordCount":0,"datePublished":"2024-04-20T16:00:00.000Z","dateModified":"2024-04-21T02:55:12.861Z","articleSection":"C++","keywords":"学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
