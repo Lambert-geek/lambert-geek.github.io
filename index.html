@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713715517697),
+    lastupdate: new Date(1713972824984),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2593,6 +2593,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
       
     
     
@@ -2600,7 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/21/c++学习(一)-类/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/23/C++学习(三)-模板与容器/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2618,7 +2622,142 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/"  itemprop="url">
+      <a href="/2024/04/23/C++%E5%AD%A6%E4%B9%A0(%E4%B8%89)-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%AE%B9%E5%99%A8/"  itemprop="url">
+        C++学习(三)-模板与容器
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        模板函数模板的概念 函数模板代表了一个函数家族，该函数模板与类型无关，在使用时被参数化，根据实参类型产生函数的特定类型版本。
+关于函数模板的原理，这里偷一个图
+
+编译器编译阶段，对于函数模板的使用，编译器需要根据传入的实参类型来推演生成对应类型的函数以供调用，彼此的地址也是不同的。比如，当用int类型使用函数模板时，编译器通过对实参类型的推演，将T确定为int类型，然后产生一份专门处理int...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-23T00:00:00+08:00">2024-04-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/C/">C++</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/C/" itemprop="url"><span itemprop="name">C++</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/23/C++%E5%AD%A6%E4%B9%A0(%E4%B8%89)-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E5%AE%B9%E5%99%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/22/C++学习(二)-继承和多态/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/22/C++%E5%AD%A6%E4%B9%A0(%E4%BA%8C)-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/"  itemprop="url">
+        C++学习(二)-继承与多态
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        继承
+我们发现，定义这些类时，下级别的成员除了拥有上一级的共性，还有自己的特性。
+这个时候我们就可以考虑利用继承的技术，减少重复代码
+继承的基本语法例如我们看到很多网站中，都有公共的头部，公共的底部，甚至公共的左侧列表，只有中心内容不同
+接下来我们分别利用普通写法和继承的写法来实现网页中的内容，看一下继承存在的意义以及好处
+普通实现：
+1234567891011121314151617181...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-22T00:00:00+08:00">2024-04-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/C/">C++</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/C/" itemprop="url"><span itemprop="name">C++</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/22/C++%E5%AD%A6%E4%B9%A0(%E4%BA%8C)-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/21/C++学习(一)-类与重载/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/21/C++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB%E4%B8%8E%E9%87%8D%E8%BD%BD/"  itemprop="url">
         C++学习(一)-类与重载
       </a>
     </h2>
@@ -2626,9 +2765,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        。。
-new操作符使用 new 运算符 分配内存 并 初始化1.分配内存初始化标量类型（如 int 或 double），在类型名后加初始值，并用小括号括起，C++11中也支持大括号。
-12345int * pi = new int (6); double * pd = new double (9.99); //C++11中, 支持以下写法int * pi = new int &#123;6&...
+        new操作符使用 new 运算符 分配内存 并 初始化1.分配内存初始化标量类型（如 int 或 double），在类型名后加初始值，并用小括号括起，C++11中也支持大括号。
+12345int * pi = new int (6); double * pd = new double (9.99); //C++11中, 支持以下写法int * pi = new int &#123;6&#12...
       
     
   </div>
@@ -2649,7 +2787,7 @@ new操作符使用 new 运算符 分配内存 并 初始化1.分配内存初始�
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/21/c++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB/' itemprop="url">
+          <a class='readmore' href='/2024/04/21/C++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB%E4%B8%8E%E9%87%8D%E8%BD%BD/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3114,136 +3252,6 @@ https://tw.coderbridge.com/s...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/10/Windows内核驱动学习(四)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/"  itemprop="url">
-        Windows内核驱动学习(四)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        这里笔者用的系统为Win10，virtual studio2019
-配置驱动开发环境这里参考官方文档https://learn.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk
-笔者建议下载virtual studio2019(比较稳定)+SDK10.0.22000.0,还有一个原因就是生成的驱动在win7，win10...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-10T00:00:00+08:00">2024-04-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/">内核驱动</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" itemprop="url"><span itemprop="name">内核驱动</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/10/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E5%9B%9B)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/09/2024长城杯-ez_driver复现与思考/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/"  itemprop="url">
-        2024长城杯-ez_driver复现与思考
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        当时这道题在比赛的时候，因为自己对c语言的学艺不精，没有解出来这是道驱动逆向题，但是最简单的方法用不到动调
-以下是主要加密程序
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-09T00:00:00+08:00">2024-04-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/">驱动逆向</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">驱动逆向</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/09/2024%E9%95%BF%E5%9F%8E%E6%9D%AF-ez_driver%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%80%83/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3252,7 +3260,7 @@ https://tw.coderbridge.com/s...
       <div class="prev-next">
         
         <p class="current">
-          1 / 7
+          1 / 8
         </p>
         
           <a class="next" rel="next" href="/page/2/">
@@ -3353,7 +3361,7 @@ https://tw.coderbridge.com/s...
           <li><a class="flat-box"
             title="/categories/C/" href="/categories/C/"
             active-action="action-categoriesC"
-            ><div class='name'>C++</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>C++</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"

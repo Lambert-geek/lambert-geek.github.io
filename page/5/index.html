@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713715517697),
+    lastupdate: new Date(1713972824984),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2447,6 +2447,156 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/10/日记(9)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/10/%E6%97%A5%E8%AE%B0(9)/"  itemprop="url">
+        日记(9)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        总的来说今天收获还是可以的，至少证明自己还有好多需要去学习，总结，反思。今天学习的东西:
+
+gdb 调试指令
+罗学长教的watch 指令
+DSCTF2022 -nothing调试(调试了一部分)
+
+明天完成任务:
+
+继续完成DSCTF2022 -nothing调试
+
+我现在只想对nothing那道题说
+
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-10T00:00:00+08:00">2024-03-10</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/10/%E6%97%A5%E8%AE%B0(9)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"  itemprop="url">
+        2023CICN初赛-ezbyte复现
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        思路(一)手撸首先是先要找到main函数，在start函数里面我们可以找到main函数
+
+之后我们先简单识别一些函数
+
+很显然v7是我们输入的数
+
+我们在v7这里下个硬件断点，跟踪它的变化
+
+第一个我们发现这里是一些SSE指令和ymm寄存器，应该是对中间32个字节进行了处理
+
+然后就是这里比对，由此我们可以确定对中间32个字节进行了加密
+
+然后我们看见这里有个条件跳转，但是我们动调了以后发现...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-09T00:00:00+08:00">2024-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/09/日记(8)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2807,76 +2957,6 @@ SEH的简单总结
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/c++反汇编-异常处理学习(初探)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/"  itemprop="url">
-        c++反汇编-异常处理学习(初探)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1.基本知识C++中的异常处理机制由try、throw、catch语句组成。 
-
-try语句块负责监视异常。 
-
-throw用于发送异常信息，也称为抛出异常。 c
-
-catch用于捕获异常并做出相应处理。异常处理的基本C++语法如下所示。
-1234567891011121314try &#123; // 检测异常 // 执行代码 throw 异常类型 ;// 抛出异常 &#125; catc...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-05T00:00:00+08:00">2024-03-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/cpp%E9%80%86%E5%90%91/">cpp逆向</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/cpp%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">cpp逆向</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/日记(5)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2933,6 +3013,76 @@ catch用于捕获异常并做出相应处理。异常处理的基本C++语法如
       
         <div>
           <a class='readmore' href='/2024/03/05/%E6%97%A5%E8%AE%B0(5)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/C++反汇编-异常处理学习(初探)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/"  itemprop="url">
+        c++反汇编-异常处理学习(初探)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.基本知识C++中的异常处理机制由try、throw、catch语句组成。 
+
+try语句块负责监视异常。 
+
+throw用于发送异常信息，也称为抛出异常。 c
+
+catch用于捕获异常并做出相应处理。异常处理的基本C++语法如下所示。
+1234567891011121314try &#123; // 检测异常 // 执行代码 throw 异常类型 ;// 抛出异常 &#125; catc...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-05T00:00:00+08:00">2024-03-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/cpp%E9%80%86%E5%90%91/">cpp逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/cpp%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">cpp逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/' itemprop="url">
             Read More
           </a>
         </div>
@@ -3008,135 +3158,6 @@ catch用于捕获异常并做出相应处理。异常处理的基本C++语法如
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/27/python学习之bs4/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/27/python%E5%AD%A6%E4%B9%A0%E4%B9%8Bbs4/"  itemprop="url">
-        python学习之bs4
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        BS4解析html文件Beautiful Soup 简称 BS4（其中 4 表示版本号）是一个 Python 第三方库，它可以从 HTML 或 XML 文档中快速地提取指定的数据。
-BS4解析对象
-1234#导入解析包from bs4 import BeautifulSoup#创建beautifulsoup解析对象soup = BeautifulSoup(html_doc, &#x27;ht...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-27T00:00:00+08:00">2024-02-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/python/">python</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/python/" itemprop="url"><span itemprop="name">python</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/27/python%E5%AD%A6%E4%B9%A0%E4%B9%8Bbs4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/27/python_requests学习/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/27/python_requests%E5%AD%A6%E4%B9%A0/"  itemprop="url">
-        python学习之requests
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        urllib与requests一 . urllib的学习1.urllib的基本方法介绍1.1 urlib.request1.构造简单请求
-1234567891011121314import urllib.requesturl = &#x27;http://www.baidu.com&#x27;# 进行请求response = urllib.request.urlopen(url)# 获取状态...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-27T00:00:00+08:00">2024-02-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%88%AC%E8%99%AB/" itemprop="url"><span itemprop="name">爬虫</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/27/python_requests%E5%AD%A6%E4%B9%A0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3151,7 +3172,7 @@ BS4解析对象
           </a>
         
         <p class="current">
-          5 / 7
+          5 / 8
         </p>
         
           <a class="next" rel="next" href="/page/6/">
@@ -3252,7 +3273,7 @@ BS4解析对象
           <li><a class="flat-box"
             title="/categories/C/" href="/categories/C/"
             active-action="action-categoriesC"
-            ><div class='name'>C++</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>C++</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"

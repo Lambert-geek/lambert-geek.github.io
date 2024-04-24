@@ -40,7 +40,7 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++反汇编-异常处理学习(初探)">
-<meta property="og:url" content="http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/index.html">
+<meta property="og:url" content="http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
 <meta property="og:description" content="1.基本知识C++中的异常处理机制由try、throw、catch语句组成。   try语句块负责监视异常。   throw用于发送异常信息，也称为抛出异常。 c  catch用于捕获异常并做出相应处理。异常处理的基本C++语法如下所示。 1234567891011121314try &amp;#123; &#x2F;&#x2F; 检测异常 &#x2F;&#x2F; 执行代码 throw 异常类型 ;&#x2F;&#x2F; 抛出异常 &amp;#125; catch (">
 <meta property="og:locale" content="en_US">
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713715517697),
+    lastupdate: new Date(1713972824984),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2445,7 +2445,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/c++反汇编-异常处理学习(初探)/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/05/C++反汇编-异常处理学习(初探)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2577,7 +2577,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>根据图13-6显示的信息，此时spare项保存了类的名称。有了这 些信息后，就可以与抛出异常时的信息进行对比，得到对应的表结 构，通过_msRttiDscr表结构中的CatchProc项得到catch块的首地 址。根据图13-4中显示的信息，可知处理int类型异常的catch语句块 的首地址在地址标号sub_40107D处，跟踪到此地址处，相关信息如 图13-7所示。</p>
 <p><img src="/../image/344.png" class="lazyload" data-srcset="/../image/344.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="344"></p>
-<img src="/2024/03/05/c++反汇编-异常处理学习(初探)/image" class="lazyload" data-srcset="/2024/03/05/c++反汇编-异常处理学习(初探)/image" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="345" style="zoom: 67%;" />
+<img src="/2024/03/05/C++反汇编-异常处理学习(初探)/image" class="lazyload" data-srcset="/2024/03/05/C++反汇编-异常处理学习(初探)/image" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="345" style="zoom: 67%;" />
 
 <p>上图是最简单的try catch模块，直接就可以找到catch块处理代码</p>
 <p>到此，在处理异常过程中接触到的表结构已经被找到，接下来还 需要找到抛出异常时产生的表格信息。抛出异常的工作由throw语句完 成，找到调用throw时的代码信息如图所示</p>
@@ -2668,7 +2668,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
           
           >
           
@@ -2680,7 +2680,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
           
           >
           
@@ -2692,7 +2692,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/&title=c++反汇编-异常处理学习(初探) - 5m10v3 blog&summary="
           
           >
           
@@ -2725,25 +2725,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/03/07/%E6%97%A5%E8%AE%B0(6)/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>日记(6)</p>
-          <p class='content'>今天复现了一下2022强网杯的easyre真的是太爽了，三位师傅的想法深深在我的脑海中已经融会贯通了，他们不分伯仲
-
-其中SMC的知识和ptrace调试还是要加深学习一下
-今日完成任务:
-
-SE...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/03/05/%E6%97%A5%E8%AE%B0(5)/'>
-          <p class='title'>日记(5)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/2024/03/05/%E6%97%A5%E8%AE%B0(5)/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>日记(5)</p>
           <p class='content'>今日解决了之前寒假里面week4里面的那个crackme2
 主要知识点SEH异常处理，SMC封装
 
 处理这个的方式就是利用强制跳转，跳到 loc_1400034EB
 
 然后F5之后，我们发现su...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/03/03/%E9%80%86%E5%90%91%E7%AE%97%E6%B3%95%E4%B9%8BAES%E5%8A%A0%E5%AF%86/'>
+          <p class='title'>逆向算法之AES加密<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>高级加密标准（英语：Advanced Encryption Standard，[缩写]：AES），在[密码学]中又称Rijndael加密法，是[美国联邦政府]采用的一种[区块加密]标准。这个标准...</p>
         </a>
       
     </div>
@@ -2759,7 +2754,7 @@ SE...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3375,7 +3370,7 @@ SE...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/cpp逆向/","name":"cpp逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/05/c++反汇编-异常处理学习(初探)/","name":"c++反汇编-异常处理学习(初探)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"c++反汇编-异常处理学习(初探)","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/05/c++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/","wordCount":0,"datePublished":"2024-03-04T16:00:00.000Z","dateModified":"2024-03-13T12:26:16.089Z","articleSection":"cpp逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/cpp逆向/","name":"cpp逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/05/C++反汇编-异常处理学习(初探)/","name":"c++反汇编-异常处理学习(初探)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"c++反汇编-异常处理学习(初探)","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/05/C++%E5%8F%8D%E6%B1%87%E7%BC%96-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%AD%A6%E4%B9%A0(%E5%88%9D%E6%8E%A2)/","wordCount":0,"datePublished":"2024-03-04T16:00:00.000Z","dateModified":"2024-03-13T12:26:16.089Z","articleSection":"cpp逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
