@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713972824984),
+    lastupdate: new Date(1714131569334),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2474,6 +2474,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/25/日记(21)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/25/%E6%97%A5%E8%AE%B0(21)/"  itemprop="url">
+        日记(21)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        学习这个pe型病毒，主要目的还是再过一遍PE结构，以及一些win32API的学习
+目前只是了解了这个病毒的原理，还没有具体去写
+学习：
+
+Win32API的学习
+PE型结构
+
+但是近期主要还是集中在学习反调试，LLVM混淆
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-25T00:00:00+08:00">2024-04-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/25/%E6%97%A5%E8%AE%B0(21)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/23/C++学习(三)-模板与容器/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -3076,70 +3147,6 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/30/win32API学习(第一天)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/"  itemprop="url">
-        win32API学习(第一天)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        实例一(实现植物大战僵尸无限阳光)我们想利用MFC实现窗口化
-12345678FindWindow   查找窗口句柄//源码HWND FindWindowW(  [in, optional] LPCWSTR lpClassName,  [in, optional] LPCWSTR lpWindowName);//首先这个函数是返回HWND类型，然后返回的是窗口句柄HWND wndProces...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-30T00:00:00+08:00">2024-03-30</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/WIN32API/">WIN32API</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/WIN32API/" itemprop="url"><span itemprop="name">WIN32API</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/30/win32API%E5%AD%A6%E4%B9%A0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3259,6 +3266,11 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
             ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/PE%E5%9E%8B/" href="/categories/PE%E5%9E%8B/"
+            active-action="action-categoriesPEE59E8B"
+            ><div class='name'>PE型</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/WIN32API/" href="/categories/WIN32API/"
             active-action="action-categoriesWIN32API"
             ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
@@ -3321,7 +3333,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(21)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
@@ -3361,7 +3373,7 @@ windows系统就是由许多的动态链接库(DLL 文件)构成
 
 
     <div class='content'>
-      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
+      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92/" style="font-size: 14px; color: #999">计算机病毒</a>
     </div>
   </section>
 

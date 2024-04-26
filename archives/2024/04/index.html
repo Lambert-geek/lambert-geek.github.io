@@ -1625,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1713972824984),
+    lastupdate: new Date(1714131569334),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2472,6 +2472,140 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/25/日记(21)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/25/%E6%97%A5%E8%AE%B0(21)/"  itemprop="url">
+        日记(21)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        学习这个pe型病毒，主要目的还是再过一遍PE结构，以及一些win32API的学习
+目前只是了解了这个病毒的原理，还没有具体去写
+学习：
+
+Win32API的学习
+PE型结构
+
+但是近期主要还是集中在学习反调试，LLVM混淆
+
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-25T00:00:00+08:00">2024-04-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/25/%E6%97%A5%E8%AE%B0(21)/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/24/PE病毒初探-注入exe/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3 blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/24/PE%E7%97%85%E6%AF%92%E5%88%9D%E6%8E%A2-%E6%B3%A8%E5%85%A5exe/"  itemprop="url">
+        PE病毒初探-注入exe
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        一、实验原理：Win32的可执行文件，如*.exe、*.dll、*.ocx等，都是PE格式文件。感染PE格式文件的win32病毒，简称PE病毒。PE病毒同时也是所有病毒中数量极多、破坏性极大、技巧性最强的一类病毒。为了更好地发展反病毒技术，了解病毒的原理是极为必要的。一个PE病毒基本上需要具有重定位、截获API函数地址、搜索感染目标文件、内存文件映射、实施感染等几个功能，这也是病毒必须解决的...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-24T00:00:00+08:00">2024-04-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/PE%E5%9E%8B/">PE型</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/PE%E5%9E%8B/" itemprop="url"><span itemprop="name">PE型</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/24/PE%E7%97%85%E6%AF%92%E5%88%9D%E6%8E%A2-%E6%B3%A8%E5%85%A5exe/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/23/C++学习(三)-模板与容器/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
@@ -2989,137 +3123,6 @@ https://tw.coderbridge.com/s...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/[数据结构]双向链表及双向循环链表(C语言)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8(C%E8%AF%AD%E8%A8%80)/"  itemprop="url">
-        双向链表及双向循环链表(C语言)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        双向链表双向链表概念双向链表也叫双链表，其每个数据结点中都有两个指针，分别指向直接后继和直接前驱。在单向链表中若要找到某个节点的前驱节点，需要先遍历到这个节点，然后再遍历一次找到其前驱节点，这无疑是十分低效的。而双向链表可以做到正向反向遍历，由此相比单向链表可以更高效地找到某个节点的前驱节点。
-双向链表的创建双向链表的节点构成双向链表的单个节点含有两个指针域，一个值域。
-结构体
-123456...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-11T00:00:00+08:00">2024-04-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url"><span itemprop="name">数据结构</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8(C%E8%AF%AD%E8%A8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/11/[数据结构]单向链表及其基本操作(C语言)/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(C%E8%AF%AD%E8%A8%80)/"  itemprop="url">
-        单向链表及其基本操作(C语言)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        单向链表什么是单向链表链表是一种物理储存单元上非连续、非顺序的储存结构。它由一系列结点（链表中每一个元素称为结点）组成，结点可动态生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。
-其实可以形象的认为，单向链表就好像一列火车。链表的节点就好像火车的每一节车厢，而链表节点的数据域就对应车厢中存放的货物，链表节点的指针域充当连接各节车厢的锁链。
-为什么需...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-11T00:00:00+08:00">2024-04-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url"><span itemprop="name">数据结构</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/11/%5B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%5D%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C(C%E8%AF%AD%E8%A8%80)/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3238,6 +3241,11 @@ https://tw.coderbridge.com/s...
             ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
+            title="/categories/PE%E5%9E%8B/" href="/categories/PE%E5%9E%8B/"
+            active-action="action-categoriesPEE59E8B"
+            ><div class='name'>PE型</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/categories/WIN32API/" href="/categories/WIN32API/"
             active-action="action-categoriesWIN32API"
             ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
@@ -3300,7 +3308,7 @@ https://tw.coderbridge.com/s...
           <li><a class="flat-box"
             title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
             active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(20)</div></a></li>
+            ><div class='name'>日记</div><div class='badge'>(21)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
@@ -3340,7 +3348,7 @@ https://tw.coderbridge.com/s...
 
 
     <div class='content'>
-      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a>
+      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92/" style="font-size: 14px; color: #999">计算机病毒</a>
     </div>
   </section>
 
