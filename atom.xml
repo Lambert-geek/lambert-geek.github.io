@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-26T11:38:49.370Z</updated>
+  <updated>2024-05-09T09:01:03.865Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日记(22)</title>
+    <link href="http://example.com/2024/05/09/%E6%97%A5%E8%AE%B0(22)/"/>
+    <id>http://example.com/2024/05/09/%E6%97%A5%E8%AE%B0(22)/</id>
+    <published>2024-05-08T16:00:00.000Z</published>
+    <updated>2024-05-09T09:01:03.865Z</updated>
+    
+    <content type="html"><![CDATA[<p>近期主要在弄ISCC的题目,大约弄了一周时间，从里面的安卓题学到了东西<br>接下来还是想先看完pe型结构和pe型病毒的制作，然后去看LLVM混淆，反调试</p><p>近期小目标：</p><ul><li>编写一个pe解析器(1天)</li><li>编写一个感染exe的pe型病毒(1天)</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;近期主要在弄ISCC的题目,大约弄了一周时间，从里面的安卓题学到了东西&lt;br&gt;接下来还是想先看完pe型结构和pe型病毒的制作，然后去看LLVM混淆，反调试&lt;/p&gt;
+&lt;p&gt;近期小目标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编写一个pe解析器(1天)&lt;/li&gt;
+&lt;li&gt;编写一个感染exe</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="http://example.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>日记(21)</title>
@@ -484,31 +512,6 @@
     <summary type="html">&lt;h2 id=&quot;编写DLL&quot;&gt;&lt;a href=&quot;#编写DLL&quot; class=&quot;headerlink&quot; title=&quot;编写DLL&quot;&gt;&lt;/a&gt;编写DLL&lt;/h2&gt;&lt;p&gt;在VS2019创建动态链接库&lt;/p&gt;
 &lt;p&gt;这个函数就是DLL的导出函数&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/../</summary>
-      
-    
-    
-    
-    <category term="dll注入" scheme="http://example.com/categories/dll%E6%B3%A8%E5%85%A5/"/>
-    
-    
-    <category term="学习" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DLL学习(一)</title>
-    <link href="http://example.com/2024/03/30/DLL%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"/>
-    <id>http://example.com/2024/03/30/DLL%E5%AD%A6%E4%B9%A0(%E4%B8%80)/</id>
-    <published>2024-03-29T16:00:00.000Z</published>
-    <updated>2024-03-31T01:09:12.899Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="了解dll"><a href="#了解dll" class="headerlink" title="了解dll"></a>了解dll</h2><p>DLL 是 Dynamic Link Library的缩写，意为动态链接库</p><p>在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。</p><p>比如:</p><p>windows系统就是由许多的动态链接库(DLL 文件)构成</p><p><img src="/../image/606.png" class="lazyload" data-srcset="/../image/606.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="606"></p><p>当我们执行某一个程序时，相应的DLL文件就会被调用，一个应用程序可有多个DLL文件，一个DLL文件也可能被几个应用程序所共用，这样的DLL文件被称为共享DLL文件</p><p><img src="/../image/607.png" class="lazyload" data-srcset="/../image/607.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="607"></p><p>共享DLL感染掉，重启电脑的时候，所有调用它的都会被感染</p><p>它允许程序共享执行特殊任务所需的代码和其他资源</p><p>比较大的应用程序都由很多模块(动态链接库)组成,这些模块分别完成相对独立的功能，它们彼此协作来完成</p><p>Windows 系统平台上提供了一种完全不同的较有效的编提和运行环境，你可以将独立的程序模块创建为较小的 DLL 文件，并可对它们单独编译和测试。在运行时，只有当 EXE 程序确实要调用这些 DLL 模块的情况下，系统才会将它们装载到内存空间中。<br>这种方式不仅减少了 EXE 文件的大小和对内存空间的需求，而且使这些 DL 模块可以同时被多个应用程序使用。Windows 自己就将些主要的系统功能以 DLL 模块的形式实现，<br>般来说，DLL 是一种磁盘文件，以.dI、.DRV、.FON、.SYS 和许多以,EXE 为扩展名的系统文件都可以是 DLL[动志链接库。</p><p>它由全局数据、服务的数和资源组成，在运行时被系统加我到调用进程的虚拟空间中，成为调用进程的一部分-&gt;理解方法:<br>把外挂 DLL外部加载到游戏中，成为游戏的一部分.</p><p>注意点:</p><p>如果与其它DLL之间没有冲突，该文件通常映射到进程虚拟空间的同一地址上。</p><p>DLL 模块中包含各种导出函数，用于向外界提供服务，exe</p><p>一个DLL 在内存中只有一个实例:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">DLL 实现了代码封装性;</span><br><span class="line"></span><br><span class="line">DLL 的编制与具体的编程语言及编译器无关，C/C++/易语言/VB/py/delphi；</span><br><span class="line"></span><br><span class="line">DLL 模块需要的堆栈内存都是从运行进程的堆栈中分配出来的；</span><br><span class="line"></span><br><span class="line">DLL 函数中的代码所创建的任何对象(包括变量)都归调于它的线程或进程所有；</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;了解dll&quot;&gt;&lt;a href=&quot;#了解dll&quot; class=&quot;headerlink&quot; title=&quot;了解dll&quot;&gt;&lt;/a&gt;了解dll&lt;/h2&gt;&lt;p&gt;DLL 是 Dynamic Link Library的缩写，意为动态链接库&lt;/p&gt;
-&lt;p&gt;在Windows中，许多应</summary>
       
     
     
