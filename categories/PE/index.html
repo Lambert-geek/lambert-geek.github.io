@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  
-  <link rel="canonical" href="http://example.com/2024/02/23/[逆向]pe文件格式解析/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="http://example.com/categories/pe/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,16 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="5m10v3 blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>(逆向)PE文件格式解析 - 5m10v3 blog</title>
-  <meta name="keywords" content="ctf学习,null">
+  <title>Category: PE - 5m10v3 blog</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
-  
-<meta property="og:type" content="article">
-<meta property="og:title" content="(逆向)PE文件格式解析">
-<meta property="og:url" content="http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="5m10v3 blog">
+<meta property="og:url" content="http://example.com/categories/PE/index.html">
 <meta property="og:site_name" content="5m10v3 blog">
-<meta property="og:description" content="0x01 简介PE（Portable Execute）文件是 Windows 下可执行文件的总称，常见的有 DLL， EXE， OCX，SYS 等，事实上，一个文件是否是 PE 文件与其扩展名无关， PE 文件可以是任何扩展名。那 Windows 是怎么区分可执行文件和非可执行文件的呢？我们调用 LoadLibrary 传递了一个文件名，系统是如何判断这个文件是一个合法的动态库呢？这就涉及到 PE">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-28T09:40:22.411Z">
 <meta property="article:author" content="5m10v3">
-<meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1630,7 +1625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715245291844),
+    lastupdate: new Date(1715350907870),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2361,7 +2356,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class='cover-wrapper  search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://w.wallhaven.cc/full/jx/wallhaven-jxqgjw.jpg"></div>
 
@@ -2443,9 +2438,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/02/23/[逆向]PE文件格式解析/">
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/10/[逆向]PE文件格式解析/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3 blog">
   </span>
@@ -2454,281 +2465,68 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-
-
+  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  <div class="article-meta" id="top">
+  
     
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/"  itemprop="url">
+        PE文件格式解析
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
     
-    
-      <h1 class="title" itemprop="name headline">
-        (逆向)PE文件格式解析
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
-      </span>
+      
+        下图是PE文件格式示意图
+格式首先在这里说明一个概念，可执行文件(Executable File)是指可以由操作系统直接加载的文件，在Windows操作系统中可执行文件就是PE文件结构，在Linux下则是ELF文件，我们这里只讨论Windows下的PE文件，要了解PE文件，首先要知道PE格式，那么什么是PE格式呢，既然是一个格式，那肯定是我们都需要遵循的定理
+其实PE格式就是各种结构体的结合...
+      
     
   </div>
-
-
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-10T00:00:00+08:00">2024-05-10</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/PE/">PE</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/PE/" itemprop="url"><span itemprop="name">PE</span></a>
+            </span>
           
         
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-23T00:00:00+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Feb 23, 2024</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
       </div>
-    
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <h2 id="0x01-简介"><a href="#0x01-简介" class="headerlink" title="0x01 简介"></a>0x01 简介</h2><p>PE（Portable Execute）文件是 Windows 下可执行文件的总称，常见的有 DLL， EXE， OCX，SYS 等，事实上，一个文件是否是 PE 文件与其扩展名无关， PE 文件可以是任何扩展名。那 Windows 是怎么区分可执行文件和非可执行文件的呢？我们调用 LoadLibrary 传递了一个文件名，系统是如何判断这个文件是一个合法的动态库呢？这就涉及到 PE 文件结构了。PE 文件的结构一般来说如下图所示：从起始位置开始依次是 DOS 头， NT 头，节表以及具体的节</p>
-<p><img src="/../image/312.png" class="lazyload" data-srcset="/../image/312.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="312"></p>
-<h2 id="0x02-DOS-头"><a href="#0x02-DOS-头" class="headerlink" title="0x02 DOS 头"></a>0x02 DOS 头</h2><p>DOS 头是用来兼容 MS-DOS 操作系统的，目的是当这个文件在 MS-DOS 上运行时提示一段文字，大部分情况下是： This program cannot be run in DOS mode. 还有一个目的，就是指明 NT 头在文件中的位置。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">Copytypedef <span class="keyword">struct</span> _IMAGE_DOS_ &#123; <span class="comment">// DOS .EXE header</span></span><br><span class="line">    <span class="comment">// offset: 0H</span></span><br><span class="line">    WORD e_magic; <span class="comment">// Magic number</span></span><br><span class="line">    <span class="comment">// offset: 2H</span></span><br><span class="line">    WORD e_cblp; <span class="comment">// Bytes on last page of file</span></span><br><span class="line">    <span class="comment">// offset: 4H</span></span><br><span class="line">    WORD e_cp; <span class="comment">// Pages in file</span></span><br><span class="line">    <span class="comment">// offset: 6H</span></span><br><span class="line">    WORD e_crlc; <span class="comment">// Relocations</span></span><br><span class="line">    <span class="comment">// offset: 8H</span></span><br><span class="line">    WORD e_cparhdr; <span class="comment">// Size of header in paragraphs</span></span><br><span class="line">    <span class="comment">// offset: AH</span></span><br><span class="line">    WORD e_minalloc; <span class="comment">// Minimum extra paragraphs needed</span></span><br><span class="line">    <span class="comment">// offset: CH</span></span><br><span class="line">    WORD e_maxalloc; <span class="comment">// Maximum extra paragraphs needed</span></span><br><span class="line">    <span class="comment">// offset: EH</span></span><br><span class="line">    WORD e_ss; <span class="comment">// Initial (relative) SS value</span></span><br><span class="line">    <span class="comment">// offset: 10H</span></span><br><span class="line">    WORD e_sp; <span class="comment">// Initial SP value</span></span><br><span class="line">    <span class="comment">// offset: 12H</span></span><br><span class="line">    WORD e_csum; <span class="comment">// Checksum</span></span><br><span class="line">    <span class="comment">// offset: 14h</span></span><br><span class="line">    WORD e_ip; <span class="comment">// Initial IP value</span></span><br><span class="line">    <span class="comment">// offset: 16H</span></span><br><span class="line">    WORD e_cs; <span class="comment">// Initial (relative) CS value</span></span><br><span class="line">    <span class="comment">// offset: 18H</span></span><br><span class="line">    WORD e_lfarlc; <span class="comment">// File address of relocation table</span></span><br><span class="line">    <span class="comment">// offset: 1AH</span></span><br><span class="line">    WORD e_ovno; <span class="comment">// Overlay number</span></span><br><span class="line">    <span class="comment">// offset: 1CH</span></span><br><span class="line">    WORD e_res[<span class="number">4</span>]; <span class="comment">// Reserved words</span></span><br><span class="line">    <span class="comment">// offset: 24H</span></span><br><span class="line">    WORD e_oemid; <span class="comment">// OEM identifier (for e_oeminfo)</span></span><br><span class="line">    <span class="comment">// offset: 26H</span></span><br><span class="line">    WORD e_oeminfo; <span class="comment">// OEM information; e_oemid specific</span></span><br><span class="line">    <span class="comment">// offset: 28H</span></span><br><span class="line">    WORD e_res2[<span class="number">10</span>]; <span class="comment">// Reserved words</span></span><br><span class="line">    <span class="comment">// offset: 3CH</span></span><br><span class="line">    LONG e_lfanew; <span class="comment">// File address of new exe header</span></span><br><span class="line">&#125; IMAGE_DOS_HEADER, *PIMAGE_DOS_HEADER;</span><br><span class="line"></span><br><span class="line">#注： WORD 为一个 <span class="number">16</span><span class="keyword">bit</span> 的无符号数</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-1-e-magic"><a href="#2-1-e-magic" class="headerlink" title="2.1 e_magic"></a>2.1 e_magic</h3><p>e_magic 是 一个 WORD 类型， 值是一个常数 0x4D5A，用文本编辑器查看该值位‘MZ’，可执行文件必须都是’MZ’开头。</p>
-<p>注：4DH 为 M 的 ASCLL 码的 16 进制, 5AH 为 Z 的 ASCLL 码的 16 进制。</p>
-<h3 id="2-2-e-lfanew"><a href="#2-2-e-lfanew" class="headerlink" title="2.2 e_lfanew"></a>2.2 e_lfanew</h3><p>e_lfanew 为 32 位可执行文件扩展的域，用来表示 DOS 头之后的 NT 头相对文件起始地址的偏移。</p>
-<p><img src="/../image/313.png" class="lazyload" data-srcset="/../image/313.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="313"></p>
-<h2 id="0x03-NT-头"><a href="#0x03-NT-头" class="headerlink" title="0x03 NT 头"></a>0x03 NT 头</h2><p>NT 头包含 windows PE 文件的主要信息，其中包括一个‘PE’字样的签名， PE 文件头（IMAGE_FILE_HEADER）和 PE 可选头（IMAGE_OPTIONAL_HEADER32）。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Copytypedef <span class="keyword">struct</span> <span class="title class_">_IMAGE_NT_HEADERS</span> &#123;</span><br><span class="line">    <span class="comment">// offset: 0H</span></span><br><span class="line">    DWORD Signature;</span><br><span class="line">    <span class="comment">// offset: 4H</span></span><br><span class="line">    IMAGE_FILE_HEADER FileHeader;</span><br><span class="line">    <span class="comment">// offset: 18H</span></span><br><span class="line">    IMAGE_OPTIONAL_HEADER32 OptionalHeader;</span><br><span class="line">&#125; IMAGE_NT_HEADERS32, *PIMAGE_NT_HEADERS32;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-1-Signature"><a href="#3-1-Signature" class="headerlink" title="3.1 Signature"></a>3.1 Signature</h3><p>类似于 DOS 头中的 e_magic，其高 16 位是 0，低 16 是 0x4550，用字符表示是’PE’。<br>批： 45H 为 P 的 ASCLL 码的 16 进制, 50H 为 E 的 ASCLL 码 16 进制。</p>
-<h3 id="3-2-IMAGE-FILE-HEADER"><a href="#3-2-IMAGE-FILE-HEADER" class="headerlink" title="3.2 IMAGE_FILE_HEADER"></a>3.2 IMAGE_FILE_HEADER</h3><p>IMAGE_FILE_HEADER 是 PE 文件头， C 语言的定义是这样的：</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Copytypedef struct _IMAGE_FILE_HEADER &#123;</span><br><span class="line">    +<span class="number">4H</span> <span class="built_in">WORD</span> Machine<span class="comment">;</span></span><br><span class="line">    +<span class="number">6H</span> <span class="built_in">WORD</span> NumberOfSections<span class="comment">;</span></span><br><span class="line">    +<span class="number">8H</span> <span class="built_in">DWORD</span> TimeDateStamp<span class="comment">;</span></span><br><span class="line">    +<span class="number">CH</span> <span class="built_in">DWORD</span> PointerToSymbolTable<span class="comment">;</span></span><br><span class="line">    +<span class="number">10H</span> <span class="built_in">DWORD</span> NumberOfSymbols<span class="comment">;</span></span><br><span class="line">    +<span class="number">14H</span> <span class="built_in">WORD</span> SizeOfOptionalHeader<span class="comment">;</span></span><br><span class="line">    +<span class="number">16H</span> <span class="built_in">WORD</span> Characteristics<span class="comment">;</span></span><br><span class="line">&#125; IMAGE_FILE_HEADER, *PIMAGE_FILE_HEADER<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<p>每个域的具体含义：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CopyMachine              显示该文件的运行平台，是 x86、 x64 还是 I64 等等，常见的值列举如下：</span><br><span class="line">                     <span class="meta">#<span class="keyword">define</span> IMAGE_FILE_MACHINE_I386 0x014c    <span class="comment">// Intel 386.</span></span></span><br><span class="line">                     <span class="meta">#<span class="keyword">define</span> IMAGE_FILE_MACHINE_ARM 0x01c0     <span class="comment">// ARM</span></span></span><br><span class="line">                     <span class="meta">#<span class="keyword">define</span> IMAGE_FILE_MACHINE_POWERPC 0x01F0 <span class="comment">// IBM PowerPC</span></span></span><br><span class="line">                     <span class="meta">#<span class="keyword">define</span> IMAGE_FILE_MACHINE_IA64 0x0200    <span class="comment">// Intel 64</span></span></span><br><span class="line">                     <span class="meta">#<span class="keyword">define</span> IMAGE_FILE_MACHINE_AMD64 0x8664   <span class="comment">// AMD64 (K8)</span></span></span><br><span class="line"></span><br><span class="line">NumberOfSections     该 PE 文件中有多少个节，也就是节表中的项数。</span><br><span class="line">TimeDateStamp        PE 文件的创建时间，一般有连接器填写。 表明文件是何时被创建的。这个值是自 <span class="number">1970</span> 年 <span class="number">1</span> 月 <span class="number">1</span> 日以来用格林威治时间（GMT）计算的秒数</span><br><span class="line">PointerToSymbolTable COFF 文件符号表在文件中的偏移，主要指向调式信息</span><br><span class="line">NumberOfSymbols      符号表的数量。</span><br><span class="line">SizeOfOptionalHeader 紧随其后的可选头的大小,对于 <span class="number">32</span> 位系统，通常为 <span class="number">0X00E0</span>H ,<span class="number">64</span> 位系统为 <span class="number">0X00F0</span>H 。</span><br><span class="line">Characteristics      可执行文件的属性，定义在 winnt.h 头文件中。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../image/314.png" class="lazyload" data-srcset="/../image/314.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="314"></p>
-<h3 id="3-3-IMAGE-OPTIONAL-HEADER32"><a href="#3-3-IMAGE-OPTIONAL-HEADER32" class="headerlink" title="3.3 IMAGE_OPTIONAL_HEADER32"></a>3.3 IMAGE_OPTIONAL_HEADER32</h3><p>IMAGE_OPTIONAL_HEADER32 是 PE 可选头，别看他名字叫可选头，其实一点都不能少， 它在不同的平台下是不一样的，例如 32 位下是 IMAGE_OPTIONAL_HEADER32，而在 64 位下是 IMAGE_OPTIONAL_HEADER64。为了简单起见，我们只看 32 位：</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Copytypedef struct _IMAGE_OPTIONAL_HEADER &#123;</span><br><span class="line"></span><br><span class="line">// 必选部分</span><br><span class="line">+<span class="number">18H</span> <span class="built_in">WORD</span> Magic<span class="comment">;</span></span><br><span class="line">+<span class="number">1AH</span> <span class="built_in">BYTE</span> MajorLinkerVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">1BH</span> <span class="built_in">BYTE</span> MinorLinkerVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">1CH</span> <span class="built_in">DWORD</span> SizeOfCode<span class="comment">;</span></span><br><span class="line">+<span class="number">20H</span> <span class="built_in">DWORD</span> SizeOfInitializedData<span class="comment">;</span></span><br><span class="line">+<span class="number">24H</span> <span class="built_in">DWORD</span> SizeOfUninitializedData<span class="comment">;</span></span><br><span class="line">+<span class="number">28H</span> <span class="built_in">DWORD</span> AddressOfEntryPoint<span class="comment">;</span></span><br><span class="line">+<span class="number">2CH</span> <span class="built_in">DWORD</span> BaseOfCode<span class="comment">;</span></span><br><span class="line">+<span class="number">30H</span> <span class="built_in">DWORD</span> BaseOfData<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">// 可选部分</span><br><span class="line">+<span class="number">34H</span> <span class="built_in">DWORD</span> ImageBase<span class="comment">;</span></span><br><span class="line">+<span class="number">38H</span> <span class="built_in">DWORD</span> SectionAlignment<span class="comment">;</span></span><br><span class="line">+<span class="number">3CH</span> <span class="built_in">DWORD</span> FileAlignment<span class="comment">;</span></span><br><span class="line">+<span class="number">40H</span> <span class="built_in">WORD</span> MajorOperatingSystemVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">42H</span> <span class="built_in">WORD</span> MinorOperatingSystemVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">44H</span> <span class="built_in">WORD</span> MajorImageVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">46H</span> <span class="built_in">WORD</span> MinorImageVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">48H</span> <span class="built_in">WORD</span> MajorSubsystemVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">4AH</span> <span class="built_in">WORD</span> MinorSubsystemVersion<span class="comment">;</span></span><br><span class="line">+<span class="number">4CH</span> <span class="built_in">DWORD</span> Win32VersionValue<span class="comment">;</span></span><br><span class="line">+<span class="number">50H</span> <span class="built_in">DWORD</span> SizeOfImage<span class="comment">;</span></span><br><span class="line">+<span class="number">54H</span> <span class="built_in">DWORD</span> SizeOfHeaders<span class="comment">;</span></span><br><span class="line">+<span class="number">58H</span> <span class="built_in">DWORD</span> CheckSum<span class="comment">;</span></span><br><span class="line">+<span class="number">5CH</span> <span class="built_in">WORD</span> Subsystem<span class="comment">;</span></span><br><span class="line">+<span class="number">5EH</span> <span class="built_in">WORD</span> DllCharacteristics<span class="comment">;</span></span><br><span class="line">+<span class="number">60H</span> <span class="built_in">DWORD</span> SizeOfStackReserve<span class="comment">;</span></span><br><span class="line">+<span class="number">64H</span> <span class="built_in">DWORD</span> SizeOfStackCommit<span class="comment">;</span></span><br><span class="line">+<span class="number">68H</span> <span class="built_in">DWORD</span> SizeOfHeapReserve<span class="comment">;</span></span><br><span class="line">+<span class="number">6CH</span> <span class="built_in">DWORD</span> SizeOfHeapCommit<span class="comment">;</span></span><br><span class="line">+<span class="number">70H</span> <span class="built_in">DWORD</span> LoaderFlags<span class="comment">;</span></span><br><span class="line">+<span class="number">74H</span> <span class="built_in">DWORD</span> NumberOfRvaAndSizes<span class="comment">;</span></span><br><span class="line">+<span class="number">78H</span> IMAGE_DATA_DIRECTORY</span><br><span class="line">DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES]<span class="comment">;</span></span><br><span class="line">&#125; IMAGE_OPTIONAL_HEADER32, *PIMAGE_OPTIONAL_HEADER32<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<p>1.必选部分</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">CopyMagic  表示可选头的类型：</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> IMAGE_NT_OPTIONAL_HDR32_MAGIC 0x10b <span class="comment">// 32 位 PE 可选头</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> IMAGE_NT_OPTIONAL_HDR64_MAGIC 0x20b <span class="comment">// 64 位 PE 可选头</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> IMAGE_ROM_OPTIONAL_HDR_MAGIC 0x107</span></span><br><span class="line"></span><br><span class="line">MajorLinkerVersion  链接器的版本号</span><br><span class="line">MinorLinkerVersion  链接器的版本号</span><br><span class="line"></span><br><span class="line">SizeOfCode  代码段的长度，如果有多个代码段，则是代码段长度的总和 </span><br><span class="line">SizeOfInitializedData  初始化的数据长度 </span><br><span class="line">SizeOfUninitializedData  未初始化的数据长度 </span><br><span class="line"></span><br><span class="line">AddressOfEntryPoint  程序入口的 <span class="built_in">RVA</span>(相对虚拟地址)，对于 exe 可以理解为 WinMain 的 RVA。对于 DLL 可以理解为 DllMain 的 RVA，如果在一个可执行文件上附加了一段代码并想让这段代码首先被执行，那么只需要将这个入口地址指向附加的代码就可以了。在脱壳时第一件事就是找入口点，指的就是这个值。</span><br><span class="line"></span><br><span class="line">BaseOfCode  代码段起始地址的 RVA</span><br><span class="line">BaseOfData  数据段起始地址的 RVA</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../image/315.png" class="lazyload" data-srcset="/../image/315.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="315"></p>
-<p>从上面的图中可以看出该PE文件的 AddressOfEntryPoint 为: 0x00001340,由于此文件是64位的，我们可以拿IDA64进行验证：</p>
-<p><img src="/../image/316.png" class="lazyload" data-srcset="/../image/316.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="316"></p>
-<p>文件载入IDA64后，找到EXPORTS菜单选项，即可看到Main入口：</p>
-<p>2.可选字段部分</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">CopyImageBase：映象（加载到内存中的 PE 文件）的基地址，这个基地址是建议，对于 DLL 来说，如果无法加载到这个地址，系统会自动为其选择地址。 </span><br><span class="line">链接器产生可执行文件的时候对应这个地址来生成机器码，所以当文件被装入这个地址时不需要进行重定位操作，装入的速度最快。当文件被装载到其他地址时，进行重定位操作，会慢一点。</span><br><span class="line">对于 EXE 文件来说，由于每个文件总是使用独立的虚拟地址空间，优先装入地址不可能被其他模块占据，所以 EXE 总是能够按照这个地址装入。这也意味着 EXE 文件不再需要重定位信息。</span><br><span class="line">对于 DLL 文件来说，由于多个 DLL 文件全部使用宿主 EXE 文件的地址空间，不能保证优先装入地址没有被其他的 DLL 使用，所以 DLL 文件中必须包含重定位信息以防万一。</span><br><span class="line">因此，在前面介绍的 IMAGE_FILE_HEADER 结构的 Characteristics 字段中，DLL 文件对应的 IMAGE_FILE_RELOCS_STRIPPED 位总是为 <span class="number">0</span>，而 EXE 文件的这个标志位总是为 <span class="number">1</span>，即 DLL 中不删除重定位信息， EXE 文件中删除重定位信息。</span><br><span class="line">一般 EXE 文件的默认优先装入地址被定为 <span class="number">00400000h</span>，而 DLL 文件的默认优先装入地址被定为 <span class="number">10000000h</span>。</span><br><span class="line"></span><br><span class="line">SectionAlignment  节对齐，PE 中的节被加载到内存时会按照这个域指定的值来对齐，比如这个值是 <span class="number">0x1000</span>，那么每个节的起始地址的低 <span class="number">12</span> 位都为 <span class="number">0</span>。</span><br><span class="line">FileAlignment     节在文件(磁盘)中按此值对齐，SectionAlignment 必须大于或等于 FileAlignment。</span><br><span class="line"></span><br><span class="line">MajorOperatingSystemVersion   所需操作系统的版本号，随着操作系统版本越来越多，这个好像不是那么重要了。</span><br><span class="line">MinorOperatingSystemVersion   所需操作系统的版本号，随着操作系统版本越来越多，这个好像不是那么重要了。</span><br><span class="line">MajorImageVersion 映象的版本号，这个是开发者自己指定的，由连接器填写。</span><br><span class="line">MinorImageVersion 映象的版本号，这个是开发者自己指定的，由连接器填写。</span><br><span class="line">MajorSubsystemVersion  所需子系统版本号。</span><br><span class="line">MinorSubsystemVersion  所需子系统版本号。</span><br><span class="line">Win32VersionValue 保留，必须为 <span class="number">0</span>。</span><br><span class="line">SizeOfImage       映象的大小， PE 文件加载到内存中空间是连续的，这个值指定占用虚拟空间的大小。</span><br><span class="line">SizeOfHeaders     所有文件头（包括节表）的大小，这个值是以 FileAlignment 对齐的。</span><br><span class="line">CheckSum          映象文件的校验和。</span><br><span class="line"></span><br><span class="line">Subsystem         运行该 PE 文件所需的子系统，可以是下面图<span class="number">5</span>定义中的某一个：(图见代码段下)</span><br><span class="line">DllCharacteristics  DLL 的文件属性，只对 DLL 文件有效</span><br><span class="line"></span><br><span class="line">SizeOfStackReserve  运行时为每个线程栈保留内存的大小</span><br><span class="line">SizeOfStackCommit   运行时每个线程栈初始占用内存大小</span><br><span class="line">SizeOfHeapReserve   运行时为进程堆保留内存大小。</span><br><span class="line">SizeOfHeapCommit    运行时进程堆初始占用内存大小</span><br><span class="line">LoaderFlags         保留，必须为 <span class="number">0</span></span><br><span class="line">NumberOfRvaAndSizes 数据目录的项数，即下面这个数组的项数</span><br><span class="line"></span><br><span class="line">DataDirectory       数据目录，是一个数组，数组的项定义如下：</span><br><span class="line"></span><br><span class="line">    typedef struct _IMAGE_DATA_DIRECTORY &#123;</span><br><span class="line">        <span class="built_in">DWORD</span> VirtualAddress<span class="comment">;</span></span><br><span class="line">        <span class="built_in">DWORD</span> Size<span class="comment">;</span></span><br><span class="line">    &#125; IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">有两个值：VirtualAddress，Size。一个是地址，一个是大小</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../image/317.png" class="lazyload" data-srcset="/../image/317.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="317"></p>
-<h2 id="0X04-节表"><a href="#0X04-节表" class="headerlink" title="0X04 节表"></a>0X04 节表</h2><p>节表是 PE 文件后续节的描述， Windows 根据节表的描述加载每个节。 PE 文件中所有节的属性都被定义在节表中，节表由一系列的 IMAGE_SECTION_HEADER 结构排列而成，每个结构用来描述一个节，结构的排列顺序和它们描述的节在文件中的排列顺序是一致的。全部有效结构的最后以一个空的 IMAGE_SECTION_HEADER 结构作为结束，所以节表中 IMAGE_SECTION_HEADER 结构数量等于节的数量加一。</p>
-<p>节表总是被存放在紧接在 PE 文件头的地方。节表中 IMAGE_SECTION_HEADER 结构的总数总是由 PE 文件头 IMAGE_NT_HEADERS(注：即本资料中的 NT 头) 结构中的 FileHeader.NumberOfSections 字段来指定的。</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Copytypedef struct _IMAGE_SECTION_HEADER &#123;</span><br><span class="line"> <span class="built_in">BYTE</span> Name[IMAGE_SIZEOF_SHORT_NAME]<span class="comment">;</span></span><br><span class="line"> union &#123;</span><br><span class="line">     <span class="built_in">DWORD</span> PhysicalAddress<span class="comment">;</span></span><br><span class="line">     <span class="built_in">DWORD</span> VirtualSize<span class="comment">;</span></span><br><span class="line"> &#125; Misc<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> VirtualAddress<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> SizeOfRawData<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> PointerToRawData<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> PointerToRelocations<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> PointerToLinenumbers<span class="comment">;</span></span><br><span class="line"> <span class="built_in">WORD</span> NumberOfRelocations<span class="comment">;</span></span><br><span class="line"> <span class="built_in">WORD</span> NumberOfLinenumbers<span class="comment">;</span></span><br><span class="line"> <span class="built_in">DWORD</span> Characteristics<span class="comment">;</span></span><br><span class="line">&#125; IMAGE_SECTION_HEADER, *PIMAGE_SECTION_HEADER<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-1-节表中的域"><a href="#4-1-节表中的域" class="headerlink" title="4.1 节表中的域"></a>4.1 节表中的域</h3><p>Name 是一个区块名，由 8 个 ASCII 码组成，用来定义区块的名称的数组。多数区块名都习惯性以一个“.”作为开头（例如： .text），这个“.” 实际上不是必须的。如果区块名达到 8 个字节，后面就没有 0 字符了。</p>
-<p>注意：前边带有一个 <code>“$”</code> 的区块名字会从连接器那里得到特殊的待遇，前边带有 <code>“$”</code> 的相同名字的区块在载入时候将会被合并，在合并之后的区块中，他们是按照 <code>“$”</code> 后边的字符的字母顺序进行合并的。每个区块的名称都是唯一的，不能有同名的两个区块。但事实上节的名称不代表任何含义，他的存在仅仅是为了正规统一编程的时候方便程序员查看方便而设置的一个标记而已。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CopyVirtualSize        对表对应的区块的大小，这是区块的数据在没有进行对齐处理前的实际大小。</span><br><span class="line">VirtualAddress     该区块装载到内存中的 RVA 地址。这个地址是按照内存页来对齐的，因此它的数值总是 SectionAlignment 的值的整数倍。</span><br><span class="line">PointerToRawData   指出节在磁盘文件中所处的位置。这个数值是从文件头开始算起的偏移量。</span><br><span class="line">SizeOfRawData      该区块在磁盘中所占的大小，这个数值等于 VirtualSize 字段的值按照 FileAlignment 的值对齐以后的大小。</span><br><span class="line">Characteristics    该区块的属性。该字段是按位来指出区块的属性（如代码/数据/可读/可写等）的标志。</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-装载过程"><a href="#4-2-装载过程" class="headerlink" title="4.2 装载过程"></a>4.2 装载过程</h3><p>依靠 PointerToRawData， SizeOfRawData， VirtualAddress， VirtualSize 这 4 个字段的值，装载器就可以从 PE 文件中找出某个节(从 PointerToRawData 偏移开始的 SizeOfRawData 字节)的数据，并将它映射到内存中去(映射到从模块基地址偏移 VirtualAddress 的地方，并占用以 VirtualSize 的值按照页的尺寸对齐后的空间大小)。</p>
-<h2 id="0X05-节块"><a href="#0X05-节块" class="headerlink" title="0X05 节块"></a>0X05 节块</h2><h3 id="5-1-简介"><a href="#5-1-简介" class="headerlink" title="5.1 简介"></a>5.1 简介</h3><p>每个节实际上是一个容器，可以包含代码、数据等等，每个节可以有独立的内存权限，比如代码节默认有读&#x2F;执行权限，节的名字和数量可以自己定义。</p>
-<p>通常，区块中的数据在逻辑上是关联的。 PE 文件一般至少都会有两个区块：一个是代码块，另一个是数据块。每一个区块都需要有一个截然不同的名字，这个名字主要是用来表达区块的用途。例如有一个区块叫.rdata，表明他是一个只读区块。注意：区块在映像中是按起始地址（RVA）来排列的，而不是按字母表顺序。</p>
-<p>另外，使用区块名字只是人们为了认识和编程的方便，而对操作系统来说这些是无关紧要的。微软给这些区块取了个有特色的名字，但这不是必须的。当编程从 PE 文件中读取需要的内容时，如输入表、输出表，不能以区块名字作为参考，正确的方法是按照数据目录表中的字段来进行定位。</p>
-<h3 id="5-2-块的偏移地址"><a href="#5-2-块的偏移地址" class="headerlink" title="5.2 块的偏移地址"></a>5.2 块的偏移地址</h3><p>块起始地址在磁盘中是按照 IMAGE_OPTIONAL_HEADER32 中的 FileAlignment 字段的值进行对齐的，而当被加载到内存中时是按照同一结构中的 SectionAlignment 字段的值设置对齐的，两者的值可能不同。所以一个块表被装载到内存后相对于文件头的偏移地址和磁盘中的偏移地址可能是不同的。</p>
-<h3 id="5-3-区块的对齐值"><a href="#5-3-区块的对齐值" class="headerlink" title="5.3 区块的对齐值"></a>5.3 区块的对齐值</h3><p>之前我们简单了解过区块是要对齐的，无论是在内存中存放还是在磁盘中存放，但他们一般的对齐值是不同的。</p>
-<p>PE 文件头里边的 FileAligment 定义了磁盘区块的对齐值。每一个区块从对齐值的倍数的偏移位置开始存放。而区块的实际代码或数据的大小不一定刚好是这么多，所以在多余的地方一般以 00h 来填充，这就是区块间的间隙。例如，在 PE 文件中，一个典型的对齐值是 200h ，这样，每个区块都将从 200h 的倍数的文件偏移位置开始，假设第一个区块在 400h 处，长度为 90h，那么从文件 400h 到 490h<br>为这一区块的内容，而由于文件的对齐值是 200h，所以为了使这一区块的长度为 FileAlignment 的整数倍， 490h 到 600h 这一个区间都会被 00h 填充，这段空间称为区块间隙，下一个区块的开始地址为 600h 。</p>
-<p>一般在 X86 系列的 CPU 中，页是按 4KB（1000h）来排列的；在 IA-64 上，是按 8KB（2000h）来排列的。所以在X86 系统中， PE文件区块的内存对齐值一般等于 1000h，每个区块按 1000h 的倍数在内存中存放。</p>
-<h3 id="5-4-RVA-和文件偏移的转换"><a href="#5-4-RVA-和文件偏移的转换" class="headerlink" title="5.4 RVA 和文件偏移的转换"></a>5.4 RVA 和文件偏移的转换</h3><p>RVA 是相对虚拟地址（Relative Virtual Address）的缩写，顾名思义，它是一个“相对地址”。 PE 文件中的各种数据结构中涉及地址的字段大部分都是以 RVA 表示的。更为准确的说，RVA 是当 PE 文件被装载到内存中后，某个数据位置相对于文件头的偏移量。</p>
-<p>举个例子，如果 Windows 装载器将一个 PE 文件装入到 00400000h 处的内存中，而某个区块中的某个数据被装入 <code>0040**xh</code> 处，那么这个数据的 RVA 就是 <code>（0040**xh - 00400000h ）= **xh</code> ，反过来说，将 RVA 的值加上文件被装载的基地址，就可以找到数据在内存中的实际地址。</p>
-
-  </div>
-  
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
       
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
+        <div>
+          <a class='readmore' href='/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/' itemprop="url">
+            Read More
+          </a>
+        </div>
       
     </div>
   
-  
-    
 
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-28T17:40:22+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 28, 2024</p>
-  </a>
 </div>
 
+          </div>
         
       
-        
-          
+    
+  </section>
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ctf%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>ctf学习</p></a></div>
-  <span hidden itemprop="keywords">ctf学习</span>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
     
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/&title=(逆向)PE文件格式解析 - 5m10v3 blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/&title=(逆向)PE文件格式解析 - 5m10v3 blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/&title=(逆向)PE文件格式解析 - 5m10v3 blog&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
-  
-  
-
-  
-    <div class="prev-next">
-      
-        <a class='prev' href='/2024/02/26/%E6%97%A5%E8%AE%B0(3)/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>日记(3)</p>
-          <p class='content'>今天学习了一下idapython，感觉用脚本去除花指令真的爽
-
-我们发现有好多这样的指令
-
-那我就写一个脚本
-12345678910111213141516171819202122import ...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/02/23/%E6%97%A5%E8%AE%B0(2)/'>
-          <p class='title'>日记(2)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>今天学习了PE文件格式，去解决了一下昨天做的那道题
-
-发现他的
-DOS头都不对
-123456789101112131415161718192021222324252627282930313233...</p>
-        </a>
-      
-    </div>
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
   
 
 
-  <article class="post white-box shadow floatable blur" id="comments">
-    <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/23/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/index.html#comments">
-    </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-
-    <div id="layoutHelper-comments"></div>
-
-  </article>
-
-
-
-
-
-
+  
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2737,48 +2535,222 @@ DOS头都不对
     
     
       
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://img2.woyaogexing.com/2024/03/26/c9ed4f48dcabd3e7!400x400.jpg'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>5m10v3</h2>
+        
+        
+        
+          <p><span id="jinrishici-sentence">5m10v3 blog</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:3353581619@qq.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
     
   
 
-
-<div class="widget-sticky pjax">
-
   
+    
+    
+      
   
-
-
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+  <section class="widget category desktop pjax">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-%E7%AE%80%E4%BB%8B"><span class="toc-text">0x01 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-DOS-%E5%A4%B4"><span class="toc-text">0x02 DOS 头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-e-magic"><span class="toc-text">2.1 e_magic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-e-lfanew"><span class="toc-text">2.2 e_lfanew</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x03-NT-%E5%A4%B4"><span class="toc-text">0x03 NT 头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Signature"><span class="toc-text">3.1 Signature</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-IMAGE-FILE-HEADER"><span class="toc-text">3.2 IMAGE_FILE_HEADER</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-IMAGE-OPTIONAL-HEADER32"><span class="toc-text">3.3 IMAGE_OPTIONAL_HEADER32</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0X04-%E8%8A%82%E8%A1%A8"><span class="toc-text">0X04 节表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E8%8A%82%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%9F%9F"><span class="toc-text">4.1 节表中的域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%A3%85%E8%BD%BD%E8%BF%87%E7%A8%8B"><span class="toc-text">4.2 装载过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0X05-%E8%8A%82%E5%9D%97"><span class="toc-text">0X05 节块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%AE%80%E4%BB%8B"><span class="toc-text">5.1 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%9D%97%E7%9A%84%E5%81%8F%E7%A7%BB%E5%9C%B0%E5%9D%80"><span class="toc-text">5.2 块的偏移地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E5%8C%BA%E5%9D%97%E7%9A%84%E5%AF%B9%E9%BD%90%E5%80%BC"><span class="toc-text">5.3 区块的对齐值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-RVA-%E5%92%8C%E6%96%87%E4%BB%B6%E5%81%8F%E7%A7%BB%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">5.4 RVA 和文件偏移的转换</span></a></li></ol></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/C/" href="/categories/C/"
+            active-action="action-categoriesC"
+            ><div class='name'>C++</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriesIDAE5ADA6E4B9A0"
+            ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/PE/" href="/categories/PE/"
+            active-action="action-categoriesPE"
+            ><div class='name'>PE</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/PE%E5%9E%8B/" href="/categories/PE%E5%9E%8B/"
+            active-action="action-categoriesPEE59E8B"
+            ><div class='name'>PE型</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/WIN32API/" href="/categories/WIN32API/"
+            active-action="action-categoriesWIN32API"
+            ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/cpp%E9%80%86%E5%90%91/" href="/categories/cpp%E9%80%86%E5%90%91/"
+            active-action="action-categoriescppE98086E59091"
+            ><div class='name'>cpp逆向</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriesctfE5ADA6E4B9A0"
+            ><div class='name'>ctf学习</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/dll%E6%B3%A8%E5%85%A5/" href="/categories/dll%E6%B3%A8%E5%85%A5/"
+            active-action="action-categoriesdllE6B3A8E585A5"
+            ><div class='name'>dll注入</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/" href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/"
+            active-action="action-categoriesjsE5AD97E88A82E7A081"
+            ><div class='name'>js字节码</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/linux%E5%AD%A6%E4%B9%A0/" href="/categories/linux%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categorieslinuxE5ADA6E4B9A0"
+            ><div class='name'>linux学习</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/python/" href="/categories/python/"
+            active-action="action-categoriespython"
+            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/python%E5%AD%A6%E4%B9%A0/" href="/categories/python%E5%AD%A6%E4%B9%A0/"
+            active-action="action-categoriespythonE5ADA6E4B9A0"
+            ><div class='name'>python学习</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" href="/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"
+            active-action="action-categoriesE58685E6A0B8E9A9B1E58AA8"
+            ><div class='name'>内核驱动</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" href="/categories/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"
+            active-action="action-categoriesE58AA0E5AF86E7AE97E6B395"
+            ><div class='name'>加密算法</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"
+            active-action="action-categoriesE5AE89E58D93E98086E59091"
+            ><div class='name'>安卓逆向</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+            active-action="action-categoriesE695B0E68DAEE7BB93E69E84"
+            ><div class='name'>数据结构</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
+            active-action="action-categoriesE697A5E8AEB0"
+            ><div class='name'>日记</div><div class='badge'>(22)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%88%AC%E8%99%AB/" href="/categories/%E7%88%AC%E8%99%AB/"
+            active-action="action-categoriesE788ACE899AB"
+            ><div class='name'>爬虫</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
+            active-action="action-categoriesE98086E59091"
+            ><div class='name'>逆向</div><div class='badge'>(12)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
+            active-action="action-categoriesE9A9B1E58AA8E98086E59091"
+            ><div class='name'>驱动逆向</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
+
+    
   
+
+  
+    
+    
+      
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Linux%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">Linux学习</a> <a href="/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/" style="font-size: 19px; color: #777">Windows内核驱动开发</a> <a href="/tags/ctf%E5%AD%A6%E4%B9%A0/" style="font-size: 21.5px; color: #666">ctf学习</a> <a href="/tags/python%E5%AD%A6%E4%B9%A0/" style="font-size: 16.5px; color: #888">python学习</a> <a href="/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" style="font-size: 14px; color: #999">字节码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 24px; color: #555">学习</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92/" style="font-size: 14px; color: #999">计算机病毒</a>
+    </div>
+  </section>
+
+
+    
+  
+
+  
+
+
+<div class="widget-sticky pjax">
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2810,14 +2782,13 @@ DOS头都不对
 </aside>
 
 
-
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3331,7 +3302,7 @@ DOS头都不对
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/02/23/[逆向]PE文件格式解析/","name":"(逆向)PE文件格式解析"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"(逆向)PE文件格式解析","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/","wordCount":0,"datePublished":"2024-02-22T16:00:00.000Z","dateModified":"2024-02-28T09:40:22.411Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/PE/","name":"PE"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

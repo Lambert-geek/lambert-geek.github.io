@@ -1,3 +1,4 @@
+http://example.com/2024/05/10/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/
 http://example.com/2024/05/09/%E6%97%A5%E8%AE%B0(22)/
 http://example.com/2023/12/19/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/
 http://example.com/2024/04/25/%E6%97%A5%E8%AE%B0(21)/
@@ -62,7 +63,6 @@ http://example.com/2024/03/07/%E6%97%A5%E8%AE%B0(6)/
 http://example.com/2024/03/03/%E9%80%86%E5%90%91%E7%AE%97%E6%B3%95%E4%B9%8BAES%E5%8A%A0%E5%AF%86/
 http://example.com/2024/02/26/%E6%97%A5%E8%AE%B0(3)/
 http://example.com/2024/02/18/Frida%E5%AD%A6%E4%B9%A0(1)/
-http://example.com/2024/02/23/[%E9%80%86%E5%90%91]PE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/
 http://example.com/2024/02/27/%E6%97%A5%E8%AE%B0(4)/
 http://example.com/2024/02/23/%E6%97%A5%E8%AE%B0(2)/
 http://example.com/2024/02/22/%E6%97%A5%E8%AE%B0(1)/
@@ -104,3 +104,4 @@ http://example.com/categories/%E7%88%AC%E8%99%AB/
 http://example.com/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/
 http://example.com/categories/C/
 http://example.com/categories/PE%E5%9E%8B/
+http://example.com/categories/PE/
