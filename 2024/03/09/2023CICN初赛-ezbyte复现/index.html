@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/03/09/2023cicn初赛-ezbyte复现/"/>
+  <link rel="canonical" href="https://5m10v3.github.io/2024/03/09/2023cicn初赛-ezbyte复现/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,18 +32,18 @@
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-      <link rel="alternate" href="/atom.xml" title="5m10v3 blog" type="application/atom+xml">
+      <link rel="alternate" href="/atom.xml" title="5m10v3's blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>2023CICN初赛-ezbyte复现 - 5m10v3 blog</title>
+  <title>2023CICN初赛-ezbyte复现 - 5m10v3's blog</title>
   <meta name="keywords" content="ctf学习,null">
-  <meta desc name="description" content="5m10v3 blog - 5m10v3 - 5m10v3 blog">
+  <meta desc name="description" content="Just Do It,But Not Just Do It. - 5m10v3 - 5m10v3's blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="2023CICN初赛-ezbyte复现">
-<meta property="og:url" content="http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/index.html">
-<meta property="og:site_name" content="5m10v3 blog">
+<meta property="og:url" content="https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="5m10v3&#39;s blog">
 <meta property="og:description" content="思路(一)手撸首先是先要找到main函数，在start函数里面我们可以找到main函数  之后我们先简单识别一些函数  很显然v7是我们输入的数  我们在v7这里下个硬件断点，跟踪它的变化  第一个我们发现这里是一些SSE指令和ymm寄存器，应该是对中间32个字节进行了处理  然后就是这里比对，由此我们可以确定对中间32个字节进行了加密  然后我们看见这里有个条件跳转，但是我们动调了以后发现，根本">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-03-08T16:00:00.000Z">
 <meta property="article:modified_time" content="2024-03-12T12:18:12.381Z">
@@ -1583,9 +1583,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1613,9 +1613,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717162358059),
+    lastupdate: new Date(1717163345151),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2193,7 +2193,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="http://5m10v3.github.io" title="更多"
+                href="http://5m10v3.github.io" title="更多"
                   
                   
                   
@@ -2331,7 +2331,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="http://5m10v3.github.io" title="更多"
+                href="http://5m10v3.github.io" title="更多"
                   
                   
                   
@@ -2445,13 +2445,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/">
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/03/09/2023CICN初赛-ezbyte复现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3 blog">
+    <meta itemprop="name" content="5m10v3's blog">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3 blog">
-    <meta itemprop="description" content="">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
   </span>
   
 
@@ -2500,7 +2500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-03-09T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Mar 9, 2024</p>
+    <p>发布于：2024年3月9日</p>
   </a>
 </div>
 
@@ -2596,7 +2596,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-12T20:18:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 12, 2024</p>
+    <p>更新于：2024年3月12日</p>
   </a>
 </div>
 
@@ -2619,7 +2619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3 blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3's blog&summary="
           
           >
           
@@ -2631,7 +2631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3 blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3's blog&summary="
           
           >
           
@@ -2643,7 +2643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3 blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/&title=2023CICN初赛-ezbyte复现 - 5m10v3's blog&summary="
           
           >
           
@@ -2859,7 +2859,7 @@ DSCTF2022 -nothing调试(调试了一部分)...</p>
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
@@ -2871,9 +2871,9 @@ DSCTF2022 -nothing调试(调试了一部分)...</p>
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       
@@ -3323,7 +3323,7 @@ DSCTF2022 -nothing调试(调试了一部分)...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"5m10v3 blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/03/09/2023CICN初赛-ezbyte复现/","name":"2023CICN初赛-ezbyte复现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3 blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"5m10v3 blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2023CICN初赛-ezbyte复现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"5m10v3 blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/","wordCount":0,"datePublished":"2024-03-08T16:00:00.000Z","dateModified":"2024-03-12T12:18:12.381Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.github.io/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.github.io/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.github.io/2024/03/09/2023CICN初赛-ezbyte复现/","name":"2023CICN初赛-ezbyte复现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.github.io/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2023CICN初赛-ezbyte复现","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.github.io/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/","wordCount":0,"datePublished":"2024-03-08T16:00:00.000Z","dateModified":"2024-03-12T12:18:12.381Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
