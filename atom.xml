@@ -6,7 +6,7 @@
   <link href="https://5m10v3.github.io/atom.xml" rel="self"/>
   
   <link href="https://5m10v3.github.io/"/>
-  <updated>2024-05-31T13:32:24.873Z</updated>
+  <updated>2024-06-01T13:49:22.605Z</updated>
   <id>https://5m10v3.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日记(23)</title>
+    <link href="https://5m10v3.github.io/2024/06/01/%E6%97%A5%E8%AE%B0(24)/"/>
+    <id>https://5m10v3.github.io/2024/06/01/%E6%97%A5%E8%AE%B0(24)/</id>
+    <published>2024-05-31T16:00:00.000Z</published>
+    <updated>2024-06-01T13:49:22.605Z</updated>
+    
+    <content type="html"><![CDATA[<p>上一次写日记已经是半个多月前了，这半个多月太忙了，还出去了一周的时间。<br>回来这几天勉强把状态调整了回来，今天打了一个比赛，做了一个迷宫题，但不是传统的那种迷宫题，这个比赛的时间也短，最后就差一分钟！一分钟！，就能把这个flag给交上去了😔😔😔</p><p>总的来说自己对这类题的掌握程度还是不足，今天学长又给了一道迷宫的题，比较难调，是一个类似树状的</p><p>近期规划:</p><ul><li>多复现一些大比赛的题目</li><li>同时基本功也不能落下</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上一次写日记已经是半个多月前了，这半个多月太忙了，还出去了一周的时间。&lt;br&gt;回来这几天勉强把状态调整了回来，今天打了一个比赛，做了一个迷宫题，但不是传统的那种迷宫题，这个比赛的时间也短，最后就差一分钟！一分钟！，就能把这个flag给交上去了😔😔😔&lt;/p&gt;
+&lt;p&gt;总的</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="https://5m10v3.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="学习" scheme="https://5m10v3.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>2024CISCN(初赛)解题思路及复现</title>
@@ -495,31 +520,6 @@
     
     
     <category term="学习" scheme="https://5m10v3.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows内核驱动学习(三)</title>
-    <link href="https://5m10v3.github.io/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/"/>
-    <id>https://5m10v3.github.io/2024/04/03/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%89)/</id>
-    <published>2024-04-02T16:00:00.000Z</published>
-    <updated>2024-04-13T05:17:35.989Z</updated>
-    
-    <content type="html"><![CDATA[<p>这一节讲述的是如何断在DriverEntry处</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这一节讲述的是如何断在DriverEntry处&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="内核驱动" scheme="https://5m10v3.github.io/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"/>
-    
-    
-    <category term="Windows内核驱动开发" scheme="https://5m10v3.github.io/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
