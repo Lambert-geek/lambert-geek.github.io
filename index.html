@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717249887427),
+    lastupdate: new Date(1717333900104),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2613,6 +2613,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
       
     
     
@@ -2688,6 +2692,81 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/06/01/逆向练习(二)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/06/01/%E9%80%86%E5%90%91%E7%BB%83%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
+        逆向练习(二)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今日练习一题之maze
+题目链接如下，供各位师傅下载
+https://wwb.lanzout.com/iH49D20nej0j
+直接字符串定位到main函数
+反编译之后我们发现看不懂，那些走迷宫的操作我们也看不到
+我们直接看它的CFG
+
+第一个call指令的这个函数为输入函数，但是每次只能输入一个字符
+然后对你输入的字符处理的地方是这里
+
+第一步我们应该先找到迷宫在哪里，经过调试
+
+r13这...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-06-01T00:00:00+08:00">2024-06-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/06/01/%E9%80%86%E5%90%91%E7%BB%83%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/05/31/2024CISCN(初赛)解题思路及复现/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3's blog">
@@ -2741,6 +2820,79 @@ exp
       
         <div>
           <a class='readmore' href='/2024/05/31/2024CISCN(%E5%88%9D%E8%B5%9B)%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E5%A4%8D%E7%8E%B0/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/05/29/逆向练习(一)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/05/29/%E9%80%86%E5%90%91%E7%BB%83%E4%B9%A0(%E4%B8%80)/"  itemprop="url">
+        逆向练习(一)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        今日练习一题之AES魔改
+题目链接如下，供各位师傅下载
+https://wwb.lanzout.com/iq2Aw20n4ype密码:2v3h
+解题思路打开题目发现没有main函数，我们通过字符串查找定位到main函数，我们发现main函数的地方标红，发现是有花指令
+
+我们进行修复的时候要先修复下面那个call指令
+修复成下图这个样子
+
+然后再将上面nop掉，就可以恢复这个主函数
+
+我们可以...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-29T00:00:00+08:00">2024-05-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/05/29/%E9%80%86%E5%90%91%E7%BB%83%E4%B9%A0(%E4%B8%80)/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3155,139 +3307,6 @@ PE型结构
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/04/22/C++学习(二)-继承和多态/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3's blog">
-    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/22/C++%E5%AD%A6%E4%B9%A0(%E4%BA%8C)-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/"  itemprop="url">
-        C++学习(二)-继承与多态
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        继承
-我们发现，定义这些类时，下级别的成员除了拥有上一级的共性，还有自己的特性。
-这个时候我们就可以考虑利用继承的技术，减少重复代码
-继承的基本语法例如我们看到很多网站中，都有公共的头部，公共的底部，甚至公共的左侧列表，只有中心内容不同
-接下来我们分别利用普通写法和继承的写法来实现网页中的内容，看一下继承存在的意义以及好处
-普通实现：
-1234567891011121314151617181...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-22T00:00:00+08:00">2024-04-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/C/">C++</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/C/" itemprop="url"><span itemprop="name">C++</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/22/C++%E5%AD%A6%E4%B9%A0(%E4%BA%8C)-%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/04/21/C++学习(一)-类与重载/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3's blog">
-    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/21/C++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB%E4%B8%8E%E9%87%8D%E8%BD%BD/"  itemprop="url">
-        C++学习(一)-类与重载
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        new操作符使用 new 运算符 分配内存 并 初始化1.分配内存初始化标量类型（如 int 或 double），在类型名后加初始值，并用小括号括起，C++11中也支持大括号。
-12345int * pi = new int (6); double * pd = new double (9.99); //C++11中, 支持以下写法int * pi = new int &#123;6&#12...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-21T00:00:00+08:00">2024-04-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/C/">C++</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/C/" itemprop="url"><span itemprop="name">C++</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/21/C++%E5%AD%A6%E4%B9%A0(%E4%B8%80)-%E7%B1%BB%E4%B8%8E%E9%87%8D%E8%BD%BD/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3492,7 +3511,7 @@ PE型结构
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(12)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(14)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
