@@ -1598,7 +1598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717932177793),
+    lastupdate: new Date(1717932552451),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2570,24 +2570,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/03/30/DLL%E6%B3%A8%E5%85%A5%E5%AD%A6%E4%B9%A0(%E4%B8%80)%E8%BF%9C%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B3%A8%E5%85%A5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>DLL注入学习(一)远程线程注入</p>
-          <p class='content'>远程线程指的是跨进程，可以在别的进程里创建线程
-用到的API函数是 CreateRemoteThread
-使用 CreateRemoteThread 创建远程线程的时候，需要提供目标进程的句柄，...</p>
+        <a class='prev' href='/2024/03/30/DLL%E5%AD%A6%E4%B9%A0(%E4%B8%80)/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>DLL学习(一)</p>
+          <p class='content'>了解dllDLL 是 Dynamic Link Library的缩写，意为动态链接库
+在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文...</p>
         </a>
       
       
-        <a class='next' href='/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8Bc++%E9%80%86%E5%90%91/'>
-          <p class='title'>IDA学习之c++逆向<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>STL 逆向方法论
-识别 STL 容器类型
-识别 STL 容器操作
-提取STL 容器中的数据
+        <a class='next' href='/2024/03/28/IDA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E4%BF%AE%E5%A4%8D/'>
+          <p class='title'>IDA学习之类型修复<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>源码编译成二进制代码的过程中，大量辅助信息被删除，其中最重要的就是类型信息
+为什么要修复伪代码中的类型？
 
-逆向STL 主要的问题:
-缺少符号,无法判断STL 容器类型 （主要困难）
-STL 内部数据结构复...</p>
+提高伪代码的准确度
+指导 IDA 反编译器中的优化器使用正确的优化方案
+让 IDA 生...</p>
         </a>
       
     </div>
