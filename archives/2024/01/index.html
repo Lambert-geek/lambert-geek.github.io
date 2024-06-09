@@ -1595,7 +1595,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1717931269005),
+    lastupdate: new Date(1717931703515),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -1613,11 +1613,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     plugins: {
       message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
-      
-      aplayer: {
-        id: 993524571,
-        enable:true
-      },
       
       
       
@@ -2408,11 +2403,11 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
       <div>
         
           
-          <a class='avatar' href='/'><img src='https://beta.glilmu.com/i/2022/12/05/1xv9ka.png'></a>
+          <a class='avatar' target="_blank" rel="noopener" href='https://5m10v3.top/'><img src=''></a>
           <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://beta.glilmu.com/i/2022/12/05/1xv9ka.png">
+            <meta itemprop="image" content="">
             <meta itemprop="name" content="5m10v3">
-            <meta itemprop="url" content="/">
+            <meta itemprop="url" content="https://5m10v3.top/">
           </span>
         
         <time itemprop="dateCreated datePublished" datetime="2024-01-26T00:00:00+08:00">2024-01-26</time>
@@ -2462,7 +2457,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://img2.woyaogexing.com/2024/03/26/c9ed4f48dcabd3e7!400x400.jpg'/>
+          <img no-lazy src='https://ibb.co/1RDCy30'/>
         </a>
       
     
@@ -2811,22 +2806,6 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
         <div class="aplayer-container">
           
 
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='true'
-      volume='0.7'
-      loop='all'
-      order='list'
-      fixed='true'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='993524571'
-      list-folded='true'>
-    </meting-js>
-  
-
 
         </div>
       
@@ -3008,79 +2987,6 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
 
 
 
-  <script>
-  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.css");
-  (async () => {
-    // APlayer 需要在  MetingJS 之前加载
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.js")
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/meting/dist/Meting.min.js")
-  
-  })();
-
-  function SetAPlayerPlugin(){
-    let Metings = document.querySelectorAll('meting-js');
-    if (Metings.length === 0) {return;};
-    if (Metings[0].aplayer && Metings[0].aplayer.on) {
-      // improve the accessibility https://web.dev/button-name/
-      document.querySelectorAll(".aplayer-icon-menu").forEach(e=>{
-        e.setAttribute("aria-label","Aplayer Menu")
-      })
-      // message see: /layout/_plugins/message/script.ejs
-      
-        try {
-          setTimeout(() => {
-            Metings.forEach((item, index) => {
-              const aplayerItem = item.aplayer; if(!aplayerItem) return;
-              const rightAplayerCheck = 'true' === 'true'
-                && item.meta.id === '993524571';
-              if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
-              if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
-                aplayerItem.on('play', function messagePlay() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                      icon: 'fa-solid fa-play',
-                      transitionIn: 'flipInX',
-                      transitionOut: 'flipOutX'
-                    });
-                  }, 100)
-                });
-              }
-              if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
-                aplayerItem.on('pause', function messagePause() {
-                  let index = aplayerItem.list.index;
-                  let title = aplayerItem.list.audios[index].title;
-                  let artist = aplayerItem.list.audios[index].artist;
-                  setTimeout(() => {
-                    // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
-                    if(aplayerItem.paused) {
-                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
-                        icon: 'fa-solid fa-pause',
-                        transitionIn: 'flipInX',
-                        transitionOut: 'flipOutX'
-                      });
-                    }
-                  }, 100)
-                });
-              }
-            });
-          }, 500)
-        } catch (error) { console.error(error); }
-      
-    }else{
-      volantis.requestAnimationFrame(SetAPlayerPlugin)
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", ()=>{
-    SetAPlayerPlugin();
-  });
-  volantis.pjax.push(SetAPlayerPlugin);
-</script>
-
-
 
 
       <script>
@@ -3222,7 +3128,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
 
 
   <script>
-  let imgs = ["https://alpha.glilmu.com/i/2022/12/05/he1uuk.jpg"];
+  let imgs = ["https://ibb.co/xh19DVG"];
   let index = 0;
   let IntervalParallax = null;
 
