@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://5m10v3.github.io/2024/03/12/dsctf2022-nothing复现与思路/"/>
+  <link rel="canonical" href="https://5m10v3.top/2024/03/12/dsctf2022-nothing复现与思路/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -40,7 +40,7 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="DSCTF2022-nothing复现与思路">
-<meta property="og:url" content="https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/index.html">
+<meta property="og:url" content="https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/index.html">
 <meta property="og:site_name" content="5m10v3&#39;s blog">
 <meta property="og:description" content="DWARF分析器通过Richar师傅的思路 参考通过DWARF Expression将代码隐藏在栈展开过程中这篇文章，可以得知有可能是在DWRAF中恢复寄存器的表达式中做了手脚。通过readelf -wf nothing查看得到大量信息。其中有4段DW_CFA_val_expression非常长就是恢复寄存器所运行的表达式，具体指令含义请参考文档DWARF 5 Standard(2.5 DWARF">
 <meta property="og:locale" content="zh_CN">
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1718188649584),
+    lastupdate: new Date(1718189104693),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2383,7 +2383,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing复现与思路/">
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/03/12/DSCTF2022-nothing复现与思路/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3's blog">
   </span>
@@ -2626,7 +2626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
           
           >
           
@@ -2638,7 +2638,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
           
           >
           
@@ -2650,7 +2650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/&title=DSCTF2022-nothing复现与思路 - 5m10v3's blog&summary="
           
           >
           
@@ -3342,7 +3342,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.github.io/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.github.io/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing复现与思路/","name":"DSCTF2022-nothing复现与思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.github.io/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DSCTF2022-nothing复现与思路","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.github.io/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.github.io/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/","wordCount":0,"datePublished":"2024-03-11T16:00:00.000Z","dateModified":"2024-06-09T09:15:38.709Z","articleSection":"逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.top/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.top/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.top/2024/03/12/DSCTF2022-nothing复现与思路/","name":"DSCTF2022-nothing复现与思路"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.top/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DSCTF2022-nothing复现与思路","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.top/2024/03/12/DSCTF2022-nothing%E5%A4%8D%E7%8E%B0%E4%B8%8E%E6%80%9D%E8%B7%AF/","wordCount":0,"datePublished":"2024-03-11T16:00:00.000Z","dateModified":"2024-06-09T09:15:38.709Z","articleSection":"逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
