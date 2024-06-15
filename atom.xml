@@ -6,7 +6,7 @@
   <link href="https://5m10v3.top/atom.xml" rel="self"/>
   
   <link href="https://5m10v3.top/"/>
-  <updated>2024-06-14T11:08:28.072Z</updated>
+  <updated>2024-06-15T08:12:34.226Z</updated>
   <id>https://5m10v3.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日记(26)</title>
+    <link href="https://5m10v3.top/2024/06/15/%E6%97%A5%E8%AE%B0(26)/"/>
+    <id>https://5m10v3.top/2024/06/15/%E6%97%A5%E8%AE%B0(26)/</id>
+    <published>2024-06-14T16:00:00.000Z</published>
+    <updated>2024-06-15T08:12:34.226Z</updated>
+    
+    <content type="html"><![CDATA[<p>近来学习了白龙大佬的白盒密码学系列，感觉受益匪浅，有种高山流水觅知音的感觉，也认识了跟自己志同道合的伙伴，今日上午也去考了第一次四级考试（希望没有第二次哈哈哈哈哈哈）<br>在闲暇之余也观看了跟自己同为大一下的师傅们的文章<br>一句话总结：“一山更比一山高”<br>但是这也更让我提起兴趣了，因为可以挑战这么多强有力的对手，同时也激励自己继续学<br>在这里说一下暑假的安排吧</p><ul><li><p>学习一下《逆向工程核心原理》这本书里面的知识，给自己打下一个坚实的基础吧</p></li><li><p>同时也多做题（尽量用新学到的知识去做）</p></li><li><p>多弄一些安卓知识</p></li><li><p>学习游戏安全相关的知识</p><p>在最后想用小排球里面的这张图激励自己</p><p><img src="https://s2.loli.net/2024/06/15/KnvqJ6gZFX5AcGE.jpg" class="lazyload" data-srcset="https://s2.loli.net/2024/06/15/KnvqJ6gZFX5AcGE.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;近来学习了白龙大佬的白盒密码学系列，感觉受益匪浅，有种高山流水觅知音的感觉，也认识了跟自己志同道合的伙伴，今日上午也去考了第一次四级考试（希望没有第二次哈哈哈哈哈哈）&lt;br&gt;在闲暇之余也观看了跟自己同为大一下的师傅们的文章&lt;br&gt;一句话总结：“一山更比一山高”&lt;br&gt;但是这</summary>
+      
+    
+    
+    
+    <category term="日记" scheme="https://5m10v3.top/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="学习" scheme="https://5m10v3.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>第七届强网杯-dotdot复现及思考</title>
@@ -46,8 +70,16 @@
     <link href="https://5m10v3.top/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
     <id>https://5m10v3.top/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</id>
     <published>2024-06-10T16:00:00.000Z</published>
-    <updated>2024-06-11T13:29:19.874Z</updated>
+    <updated>2024-06-14T14:00:09.202Z</updated>
     
+    <content type="html"><![CDATA[<p>首先在这里非常感谢白龙大佬的白盒密码系列，让我对于白盒AES有了更深刻的认识，在这里给白龙大佬宣传一波</p><p><img src="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" class="lazyload" data-srcset="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p><a href="https://public.zsxq.com/groups/28855842512881.html">https://public.zsxq.com/groups/28855842512881.html</a></p><p>首先我们先谈一下白盒</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先在这里非常感谢白龙大佬的白盒密码系列，让我对于白盒AES有了更深刻的认识，在这里给白龙大佬宣传一波&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png&quot; class=&quot;lazyload&quot;</summary>
+      
     
     
     
@@ -482,30 +514,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;简单通信&quot;&gt;&lt;a href=&quot;#简单通信&quot; class=&quot;headerlink&quot; title=&quot;简单通信&quot;&gt;&lt;/a&gt;简单通信&lt;/h2&gt;&lt;p&gt;这篇文章主要实现内核驱动和应用层之间的通信，通信是驱动开发中不可或缺的一部分，通过通信可以实现驱动和应用层之间的数据交换和控</summary>
-      
-    
-    
-    
-    <category term="内核驱动" scheme="https://5m10v3.top/categories/%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/"/>
-    
-    
-    <category term="Windows内核驱动开发" scheme="https://5m10v3.top/tags/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows内核驱动学习(七)</title>
-    <link href="https://5m10v3.top/2024/04/13/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%83)/"/>
-    <id>https://5m10v3.top/2024/04/13/Windows%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0(%E4%B8%83)/</id>
-    <published>2024-04-12T16:00:00.000Z</published>
-    <updated>2024-06-09T09:07:00.354Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="蓝屏分析"><a href="#蓝屏分析" class="headerlink" title="蓝屏分析"></a>蓝屏分析</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;蓝屏分析&quot;&gt;&lt;a href=&quot;#蓝屏分析&quot; class=&quot;headerlink&quot; title=&quot;蓝屏分析&quot;&gt;&lt;/a&gt;蓝屏分析&lt;/h2&gt;</summary>
       
     
     
