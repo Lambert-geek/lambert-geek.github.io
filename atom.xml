@@ -70,9 +70,9 @@
     <link href="https://5m10v3.top/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
     <id>https://5m10v3.top/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</id>
     <published>2024-06-10T16:00:00.000Z</published>
-    <updated>2024-06-14T14:00:09.202Z</updated>
+    <updated>2024-06-17T12:15:04.766Z</updated>
     
-    <content type="html"><![CDATA[<p>首先在这里非常感谢白龙大佬的白盒密码系列，让我对于白盒AES有了更深刻的认识，在这里给白龙大佬宣传一波</p><p><img src="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" class="lazyload" data-srcset="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p><a href="https://public.zsxq.com/groups/28855842512881.html">https://public.zsxq.com/groups/28855842512881.html</a></p><p>首先我们先谈一下白盒</p>]]></content>
+    <content type="html"><![CDATA[<p>首先在这里非常感谢白龙大佬的白盒密码系列，让我对于白盒AES有了更深刻的认识，在这里给白龙大佬宣传一波</p><p><img src="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" class="lazyload" data-srcset="https://s2.loli.net/2024/06/14/CYim2DVxKAz5r8S.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p><p><a href="https://public.zsxq.com/groups/28855842512881.html">https://public.zsxq.com/groups/28855842512881.html</a></p><p>首先我们先谈一下白盒AES是怎么实现的，这里我们讲解最常见的查表法实现白盒AES</p>]]></content>
     
     
       
