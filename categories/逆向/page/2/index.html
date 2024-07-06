@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720254722275),
+    lastupdate: new Date(1720274482165),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2390,6 +2390,89 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/03/09/2023CICN初赛-ezbyte复现/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/"  itemprop="url">
+        2023CICN初赛-ezbyte复现
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        思路(一)手撸首先是先要找到main函数，在start函数里面我们可以找到main函数
+
+之后我们先简单识别一些函数
+
+很显然v7是我们输入的数
+
+我们在v7这里下个硬件断点，跟踪它的变化
+
+第一个我们发现这里是一些SSE指令和ymm寄存器，应该是对中间32个字节进行了处理
+
+然后就是这里比对，由此我们可以确定对中间32个字节进行了加密
+
+然后我们看见这里有个条件跳转，但是我们动调了以后发现...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="5m10v3">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-03-09T00:00:00+08:00">2024-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/03/09/2023CICN%E5%88%9D%E8%B5%9B-ezbyte%E5%A4%8D%E7%8E%B0/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/03/09/逆向学习之SMC/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3's blog">
@@ -2893,11 +2976,6 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
             ><div class='name'>PE</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
-            title="/categories/WIN32API/" href="/categories/WIN32API/"
-            active-action="action-categoriesWIN32API"
-            ><div class='name'>WIN32API</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
             title="/categories/WP/" href="/categories/WP/"
             active-action="action-categoriesWP"
             ><div class='name'>WP</div><div class='badge'>(1)</div></a></li>
@@ -2911,11 +2989,6 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
             title="/categories/ctf%E5%AD%A6%E4%B9%A0/" href="/categories/ctf%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesctfE5ADA6E4B9A0"
             ><div class='name'>ctf学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/dll%E6%B3%A8%E5%85%A5/" href="/categories/dll%E6%B3%A8%E5%85%A5/"
-            active-action="action-categoriesdllE6B3A8E585A5"
-            ><div class='name'>dll注入</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/" href="/categories/js%E5%AD%97%E8%8A%82%E7%A0%81/"
@@ -2955,7 +3028,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
           <li><a class="flat-box"
             title="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/" href="/categories/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/"
             active-action="action-categoriesE5AE89E58D93E98086E59091"
-            ><div class='name'>安卓逆向</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>安卓逆向</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
@@ -2975,7 +3048,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(15)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(16)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
@@ -3031,7 +3104,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>82 篇</div>
+          <div>78 篇</div>
         </div>
       
 
@@ -3077,7 +3150,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/07/02/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"><div class="item"><time>2024-07-05</time><span>逆向</span></div><span>C/C++逆向学习(一)</span></a></li><li><a class="widget-last" href="/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/"><div class="item"><time>2024-07-03</time><span>PE</span></div><span>PE文件格式解析</span></a></li><li><a class="widget-last" href="/2024/07/01/%E6%97%A5%E8%AE%B0(27)/"><div class="item"><time>2024-07-01</time><span>日记</span></div><span>日记(27)</span></a></li><li><a class="widget-last" href="/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2024-06-19</time><span>CTF</span></div><span>白盒AES算法学习</span></a></li><li><a class="widget-last" href="/2024/06/15/%E6%97%A5%E8%AE%B0(26)/"><div class="item"><time>2024-06-15</time><span>日记</span></div><span>日记(26)</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/07/02/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"><div class="item"><time>2024-07-06</time><span>逆向</span></div><span>C/C++逆向学习(一)</span></a></li><li><a class="widget-last" href="/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/"><div class="item"><time>2024-07-06</time><span>逆向</span></div><span>2024春秋联赛-夏季赛</span></a></li><li><a class="widget-last" href="/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/"><div class="item"><time>2024-07-03</time><span>PE</span></div><span>PE文件格式解析</span></a></li><li><a class="widget-last" href="/2024/07/01/%E6%97%A5%E8%AE%B0(27)/"><div class="item"><time>2024-07-01</time><span>日记</span></div><span>日记(27)</span></a></li><li><a class="widget-last" href="/2024/06/11/%E7%99%BD%E7%9B%92AES%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2024-06-19</time><span>CTF</span></div><span>白盒AES算法学习</span></a></li></ul>
   </div>
 </section>
 
@@ -3207,7 +3280,7 @@ xmm0，xmm1，xmm2这又是啥？？经过搜索之后发现，这是128位的�
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2022</a></p>
+        <p><a href="/">Copyright © 2023-2024</a></p>
 
         </div>
       
