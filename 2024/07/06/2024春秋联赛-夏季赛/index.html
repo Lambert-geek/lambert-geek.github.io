@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-07-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-07T01:15:04.966Z">
+<meta property="article:modified_time" content="2024-07-07T06:29:26.081Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="ctf学习">
 <meta name="twitter:card" content="summary">
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720333595705),
+    lastupdate: new Date(1720336581012),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2525,7 +2525,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><img src="C:/Users/sm1ov3/AppData/Roaming/Typora/typora-user-images/image-20240707090456001.png" class="lazyload" data-srcset="C:/Users/sm1ov3/AppData/Roaming/Typora/typora-user-images/image-20240707090456001.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240707090456001"></p>
 <p><img src="https://s2.loli.net/2024/07/07/zQpWrXkDtGBgOfR.png" class="lazyload" data-srcset="https://s2.loli.net/2024/07/07/zQpWrXkDtGBgOfR.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>byte_4045B0,byte_4045A0这两个变量，后面会查到</p>
-<p>ida脚本</p>
+<p>idapython脚本</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> idc <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0x401890</span>,<span class="number">0x4019D1</span>):</span><br><span class="line">   patch_byte(i,get_wide_byte(i)^<span class="number">0x66</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;done!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>还原main函数</p>
@@ -2579,7 +2579,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-07T09:15:04+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-07T14:29:26+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年7月7日</p>
@@ -2664,7 +2664,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2024/07/07/%E5%91%A8%E6%8A%A5(%E4%B8%80)/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>周报(一)</p>
-          <p class='content'></p>
+          <p class='content'>这一周完成的任务
+
+汇编知识的重新梳理
+
+C语言在逆向中的体现
+
+做了春秋联赛的夏季赛
+
+
+
+汇编的部分笔记，当时只记了一些比较重要的知识，写的不是那么全面，所以就没放到博客上面🙏🙏🙏
+以...</p>
         </a>
       
       
@@ -3322,7 +3333,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.top/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.top/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.top/2024/07/06/2024春秋联赛-夏季赛/","name":"2024春秋联赛-夏季赛"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.top/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2024春秋联赛-夏季赛","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.top/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.top/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/","wordCount":0,"datePublished":"2024-07-05T16:00:00.000Z","dateModified":"2024-07-07T01:15:04.966Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://s2.loli.net/2024/07/06/CxVGYmoc3XBeLiu.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.top/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.top/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.top/2024/07/06/2024春秋联赛-夏季赛/","name":"2024春秋联赛-夏季赛"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.top/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"2024春秋联赛-夏季赛","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.top/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.top/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/","wordCount":0,"datePublished":"2024-07-05T16:00:00.000Z","dateModified":"2024-07-07T06:29:26.081Z","articleSection":"逆向","keywords":"ctf学习","image":{"@type":"ImageObject","url":"https://s2.loli.net/2024/07/06/CxVGYmoc3XBeLiu.png","width":1024,"height":768}}]</script>
 
 
 
