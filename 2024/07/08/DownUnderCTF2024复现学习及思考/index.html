@@ -42,11 +42,11 @@
 <meta property="og:title" content="DownUnderCTF2024复现学习及思考">
 <meta property="og:url" content="https://5m10v3.top/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/index.html">
 <meta property="og:site_name" content="5m10v3&#39;s blog">
-<meta property="og:description" content="Just Do It,But Not Just Do It.">
+<meta property="og:description" content="number-mashing  rusty-vault  jmp-flag  dungeon  pressing-buttons   目前只学习复现了这几道题，主要是为了分享里面的一些比较好玩的做题思路，若有解释的不太好的地方，望师傅们指正🙏🏻🙏🏻🙏🏻 number-mashing 逻辑非常简单，输入两个整数，但是第一个判断那里其实在IDA显示的不对，看了题目出的源码才知道  我们其">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-07-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-08T12:44:55.011Z">
+<meta property="article:modified_time" content="2024-07-09T01:12:50.004Z">
 <meta property="article:author" content="5m10v3">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720442724811),
+    lastupdate: new Date(1720531769671),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2451,7 +2451,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：0 字</p>
+      <p>字数：328 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2481,7 +2481,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/beginner/number-mashing">number-mashing</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/rev/rusty-vault">rusty-vault</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/rev/jmp-flag">jmp-flag</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/rev/dungeon">dungeon</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/rev/pressing-buttons">pressing-buttons</a></p>
+</li>
+</ul>
+<p>目前只学习复现了这几道题，主要是为了分享里面的一些比较好玩的做题思路，若有解释的不太好的地方，望师傅们指正🙏🏻🙏🏻🙏🏻</p>
+<h2 id="number-mashing"><a href="#number-mashing" class="headerlink" title="number-mashing"></a>number-mashing</h2><p><img src="https://s2.loli.net/2024/07/08/LRaj7oMtd4ps2mZ.png" class="lazyload" data-srcset="https://s2.loli.net/2024/07/08/LRaj7oMtd4ps2mZ.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>逻辑非常简单，输入两个整数，但是第一个判断那里其实在IDA显示的不对，看了题目出的源码才知道</p>
+<p><img src="https://s2.loli.net/2024/07/08/5SvYBs8ZoQ9Le1N.png" class="lazyload" data-srcset="https://s2.loli.net/2024/07/08/5SvYBs8ZoQ9Le1N.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我们其实可以把elf文件拖到ghidra里面</p>
+<p>它的正常加密是</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    setvbuf(<span class="built_in">stdout</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">    setvbuf(<span class="built_in">stdin</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Give me some numbers: &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">0</span> || y == <span class="number">0</span> || y == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;Nope!&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> z = x / y;</span><br><span class="line">    <span class="keyword">if</span>(z != x) &#123;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;Nope!&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">char</span> flag[<span class="number">0x100</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    FILE* f = fopen(<span class="string">&quot;flag.txt&quot;</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line">    fread(flag, <span class="number">1</span>, <span class="number">0x100</span>, f);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Correct! %s\n&quot;</span>, flag);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看完判断条件之后，我们可以发现如果从正常数学角度来说，其实是一个伪命题</p>
+<p>那我们就从别的角度来想，它的type既然是int 类型，那我们就想一下整形溢出</p>
+<p>int 类型的范围的是**-2147483648～2147483647**，那我们第一个数取-2147483648，第二个数取-1</p>
+<p>(-2147483648)&#x2F;(-1)&#x3D;2147483648,整形溢出了 2147483648—&gt;-2147483648</p>
+<p><img src="https://s2.loli.net/2024/07/08/83dYNuGPjm4BqTz.png" class="lazyload" data-srcset="https://s2.loli.net/2024/07/08/83dYNuGPjm4BqTz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<h2 id="rusty-vault"><a href="#rusty-vault" class="headerlink" title="rusty-vault"></a>rusty-vault</h2>
   </div>
   
   
@@ -2505,10 +2530,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-08T20:44:55+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-09T09:12:50+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年7月8日</p>
+    <p>更新于：2024年7月9日</p>
   </a>
 </div>
 
@@ -2588,6 +2613,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2024/07/09/Python-Capstone%E5%8F%8D%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Python-Capstone反汇编学习</p>
+          <p class='content'>在复现DownUnderCTF2024发现wp中作者使用的是capstone来解的那道题,觉得是个好用的方法现在来学一下
+capstone官网
+The Ultimate Disassembly ...</p>
+        </a>
+      
       
         <a class='next' href='/2024/07/07/%E5%91%A8%E6%8A%A5(%E4%B8%80)/'>
           <p class='title'>周报(一)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2650,9 +2682,19 @@ C语言在逆向中的体现
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#number-mashing"><span class="toc-text">number-mashing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rusty-vault"><span class="toc-text">rusty-vault</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3242,7 +3284,7 @@ C语言在逆向中的体现
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.top/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.top/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.top/2024/07/08/DownUnderCTF2024复现学习及思考/","name":"DownUnderCTF2024复现学习及思考"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.top/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DownUnderCTF2024复现学习及思考","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.top/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.top/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/","wordCount":0,"datePublished":"2024-07-07T16:00:00.000Z","dateModified":"2024-07-08T12:44:55.011Z","articleSection":"逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://s2.loli.net/2024/07/08/qfwmaOKxrEQpYAG.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","sameAs":["https://github.com/volantis-x"],"description":"Just Do It,But Not Just Do It."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://5m10v3.top/","name":"5m10v3's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://5m10v3.top/categories/逆向/","name":"逆向"}},{"@type":"ListItem","position":3,"item":{"@id":"https://5m10v3.top/2024/07/08/DownUnderCTF2024复现学习及思考/","name":"DownUnderCTF2024复现学习及思考"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"5m10v3's blog","url":"https://5m10v3.top/","keywords":null,"description":"Just Do It,But Not Just Do It.","author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/","description":"Just Do It,But Not Just Do It."},"publisher":{"@type":"Organization","name":"5m10v3's blog","url":"https://5m10v3.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://5m10v3.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DownUnderCTF2024复现学习及思考","description":"Just Do It,But Not Just Do It.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://5m10v3.top/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/"},"author":{"@type":"Person","name":"5m10v3","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://5m10v3.top/"},"publisher":{"@type":"Organization","name":"5m10v3's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://5m10v3.top/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/","wordCount":0,"datePublished":"2024-07-07T16:00:00.000Z","dateModified":"2024-07-09T01:12:50.004Z","articleSection":"逆向","keywords":"学习","image":{"@type":"ImageObject","url":"https://s2.loli.net/2024/07/08/qfwmaOKxrEQpYAG.png","width":1024,"height":768}}]</script>
 
 
 

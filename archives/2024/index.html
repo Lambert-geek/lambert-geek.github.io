@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720442724811),
+    lastupdate: new Date(1720531769671),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2412,6 +2412,86 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/07/09/Python-Capstone反汇编学习/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
+  </span>
+  
+  
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2024/07/09/Python-Capstone%E5%8F%8D%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/">
+        <img itemprop="image" class='headimg' alt="Python-Capstone反汇编学习" src='https://www.wangonc.com/wp-content/uploads/2022/01/wallhaven-l3zmwy_1920x1080.jpg'/>
+      </a>
+    </div>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/07/09/Python-Capstone%E5%8F%8D%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/"  itemprop="url">
+        Python-Capstone反汇编学习
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        在复现DownUnderCTF2024发现wp中作者使用的是capstone来解的那道题,觉得是个好用的方法现在来学一下
+capstone官网
+The Ultimate Disassembly Framework
+官方教程（python）
+Programming with Python language
+官方教程（C）
+Programming with C language
+官方教程（Jav...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="5m10v3">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-07-09T00:00:00+08:00">2024-07-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/07/09/Python-Capstone%E5%8F%8D%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/07/08/DownUnderCTF2024复现学习及思考/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3's blog">
@@ -2438,6 +2518,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
+    
+      
+        
+number-mashing
+
+rusty-vault
+
+jmp-flag
+
+dungeon
+
+pressing-buttons
+
+
+目前只学习复现了这几道题，主要是为了分享里面的一些比较好玩的做题思路，若有解释的不太好的地方，望师傅们指正🙏🏻🙏🏻🙏🏻
+number-mashing
+逻辑非常简单，输入两个整数，但是第一个判断那里其实在IDA显示的不对，看了题目出的源码才知道
+
+...
+      
     
   </div>
   
@@ -2603,13 +2703,14 @@ snack
 HardSignin
 BEDTEA
 
+附件在此，师傅们自取
+https://wwb.lanzout.com/iP5Fl23wywed
 Snakepython逆向
 1python pyinstxtractor.py snake.exe
 
 
 python3.8 直接选择在线pyc编译网站
-https://www.lddgo.net/string/pyc-compile-decompile
-123456789101112131415161718192021222...
+https://www.lddgo.net/string/pyc-compil...
       
     
   </div>
@@ -2639,6 +2740,75 @@ https://www.lddgo.net/string/pyc-compile-decompile
       
         <div>
           <a class='readmore' href='/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/07/03/C orC++逆向学习(二)/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="5m10v3's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="5m10v3's blog">
+    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
+  </span>
+  
+  
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2024/07/03/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/">
+        <img itemprop="image" class='headimg' alt="C/C++逆向学习(二)" src='https://s2.loli.net/2024/07/04/D5paeXbTPREqAQM.png'/>
+      </a>
+    </div>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/07/03/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"  itemprop="url">
+        C/C++逆向学习(二)
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="5m10v3">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-07-03T00:00:00+08:00">2024-07-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E9%80%86%E5%90%91/">逆向</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E9%80%86%E5%90%91/" itemprop="url"><span itemprop="name">逆向</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/07/03/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3040,161 +3210,6 @@ https://public.zsxq.com/groups/28855842512881.html
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/06/08/RCTF-Noval_cython复现及思考/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3's blog">
-    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/06/08/RCTF-Noval_cython%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%80%9D%E8%80%83/">
-        <img itemprop="image" class='headimg' alt="RCTF-Noval_cpython复现及思考" src='https://s2.loli.net/2024/06/10/3zGKZh6xP1Tr4Du.png'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/06/08/RCTF-Noval_cython%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%80%9D%E8%80%83/"  itemprop="url">
-        RCTF-Noval_cpython复现及思考
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        以下为附件链接，供各位师傅下载练习https://wwb.lanzout.com/i7mkm21aeegd
-趁热打铁，前一阵子打国赛遇到了cpython的题，但是国赛那道cpython和这个相比简直就是”关公面前耍大刀“。
-在此也非常感谢z221x师傅的博客
-http://z221x.cc/index.php/2024/05/29/rctf%e9%80%86%e5%90%91%e5%a4%8...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="5m10v3">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-06-08T00:00:00+08:00">2024-06-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CTF/">CTF</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/CTF/" itemprop="url"><span itemprop="name">CTF</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/06/08/RCTF-Noval_cython%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%80%9D%E8%80%83/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/06/07/关于爆破迷宫路径的一系列思考/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5m10v3's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="5m10v3's blog">
-    <meta itemprop="description" content="Just Do It,But Not Just Do It.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/06/07/%E5%85%B3%E4%BA%8E%E7%88%86%E7%A0%B4%E8%BF%B7%E5%AE%AB%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%80%E7%B3%BB%E5%88%97%E6%80%9D%E8%80%83/"  itemprop="url">
-        关于爆破迷宫路径的一系列思考
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        题目链接在此，供各位师傅下载练习
-https://wwb.lanzout.com/iWuvC216lmqj
-前几天学长给了一道maze的题，动态调试过程可谓非常艰难(对我现在的水平而言)，于是学长提供了一种用subprocess的方法
-程序分析
-首先通过字符串定位到主函数那里，我们发现cmp那里其实是一个长度校验，判断路径的长度是不是为140
-
-这里为判断路径方向
-
-中间过程太复杂，我们直接...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="5m10v3">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-06-07T00:00:00+08:00">2024-06-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CTF/">CTF</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/CTF/" itemprop="url"><span itemprop="name">CTF</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/06/07/%E5%85%B3%E4%BA%8E%E7%88%86%E7%A0%B4%E8%BF%B7%E5%AE%AB%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%80%E7%B3%BB%E5%88%97%E6%80%9D%E8%80%83/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3393,7 +3408,7 @@ https://wwb.lanzout.com/iWuvC216lmqj
           <li><a class="flat-box"
             title="/categories/%E9%80%86%E5%90%91/" href="/categories/%E9%80%86%E5%90%91/"
             active-action="action-categoriesE98086E59091"
-            ><div class='name'>逆向</div><div class='badge'>(17)</div></a></li>
+            ><div class='name'>逆向</div><div class='badge'>(19)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/" href="/categories/%E9%A9%B1%E5%8A%A8%E9%80%86%E5%90%91/"
@@ -3449,7 +3464,7 @@ https://wwb.lanzout.com/iWuvC216lmqj
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>80 篇</div>
+          <div>82 篇</div>
         </div>
       
 
@@ -3470,7 +3485,7 @@ https://wwb.lanzout.com/iWuvC216lmqj
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-07-08 日</div>
+          <div id="last-update-show">2024-07-09 日</div>
         </div>
       
     </div>
@@ -3495,7 +3510,7 @@ https://wwb.lanzout.com/iWuvC216lmqj
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/"><div class="item"><time>2024-07-08</time><span>逆向</span></div><span>DownUnderCTF2024复现学习及思考</span></a></li><li><a class="widget-last" href="/2024/07/02/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"><div class="item"><time>2024-07-08</time><span>逆向</span></div><span>C/C++逆向学习(一)</span></a></li><li><a class="widget-last" href="/2024/07/07/%E5%91%A8%E6%8A%A5(%E4%B8%80)/"><div class="item"><time>2024-07-07</time><span>日记</span></div><span>周报(一)</span></a></li><li><a class="widget-last" href="/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/"><div class="item"><time>2024-07-07</time><span>逆向</span></div><span>2024春秋联赛-夏季赛</span></a></li><li><a class="widget-last" href="/2024/07/01/%E6%97%A5%E8%AE%B0(27)/"><div class="item"><time>2024-07-07</time><span>日记</span></div><span>日记(27)</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/07/09/Python-Capstone%E5%8F%8D%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0/"><div class="item"><time>2024-07-09</time><span>逆向</span></div><span>Python-Capstone反汇编学习</span></a></li><li><a class="widget-last" href="/2024/07/03/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%BA%8C)/"><div class="item"><time>2024-07-09</time><span>逆向</span></div><span>C/C++逆向学习(二)</span></a></li><li><a class="widget-last" href="/2024/07/02/C%20orC++%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0(%E4%B8%80)/"><div class="item"><time>2024-07-09</time><span>逆向</span></div><span>C/C++逆向学习(一)</span></a></li><li><a class="widget-last" href="/2024/07/08/DownUnderCTF2024%E5%A4%8D%E7%8E%B0%E5%AD%A6%E4%B9%A0%E5%8F%8A%E6%80%9D%E8%80%83/"><div class="item"><time>2024-07-09</time><span>逆向</span></div><span>DownUnderCTF2024复现学习及思考</span></a></li><li><a class="widget-last" href="/2024/07/06/2024%E6%98%A5%E7%A7%8B%E8%81%94%E8%B5%9B-%E5%A4%8F%E5%AD%A3%E8%B5%9B/"><div class="item"><time>2024-07-08</time><span>逆向</span></div><span>2024春秋联赛-夏季赛</span></a></li></ul>
   </div>
 </section>
 
