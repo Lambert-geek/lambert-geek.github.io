@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1720785606144),
+    lastupdate: new Date(1720786348654),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -3091,7 +3091,7 @@ LLVM的初步学习
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/05/10/[逆向]PE文件格式解析/">
+  <link itemprop="mainEntityOfPage" href="https://5m10v3.top/2024/05/09/日记(22)/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="5m10v3's blog">
   </span>
@@ -3102,24 +3102,30 @@ LLVM的初步学习
   
   
   
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2024/05/09/%E6%97%A5%E8%AE%B0(22)/">
+        <img itemprop="image" class='headimg' alt="日记(22)" src='https://s2.loli.net/2024/07/07/cE9KkaAQ6DYBUCb.png'/>
+      </a>
+    </div>
   
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/"  itemprop="url">
-        PE文件格式解析
+      <a href="/2024/05/09/%E6%97%A5%E8%AE%B0(22)/"  itemprop="url">
+        日记(22)
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        下图是PE文件格式示意图
-格式首先在这里说明一个概念，可执行文件(Executable File)是指可以由操作系统直接加载的文件，在Windows操作系统中可执行文件就是PE文件结构，在Linux下则是ELF文件，我们这里只讨论Windows下的PE文件，要了解PE文件，首先要知道PE格式，那么什么是PE格式呢，既然是一个格式，那肯定是我们都需要遵循的定理
-其实PE格式就是各种结构体的结合...
+        近期主要在弄ISCC的题目,大约弄了一周时间，从里面的安卓题学到了东西接下来还是想先看完pe型结构和pe型病毒的制作，然后去看LLVM混淆，反调试
+近期小目标：
+
+编写一个pe解析器(1天)
+编写一个感染exe的pe型病毒(1天)（这个没有完成）
+
+
       
     
   </div>
@@ -3135,20 +3141,20 @@ LLVM的初步学习
             <meta itemprop="url" content="/">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-05-10T00:00:00+08:00">2024-05-10</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-05-09T00:00:00+08:00">2024-05-09</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/PE/">PE</a>
+          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/PE/" itemprop="url"><span itemprop="name">PE</span></a>
+              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/05/10/%5B%E9%80%86%E5%90%91%5DPE%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/' itemprop="url">
+          <a class='readmore' href='/2024/05/09/%E6%97%A5%E8%AE%B0(22)/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3203,7 +3209,7 @@ LLVM的初步学习
     
       
         <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://s2.loli.net/2024/06/10/SkNFqYJohbiDQmj.jpg'/>
+          <img no-lazy src='https://s2.loli.net/2024/07/12/6aSrw9hHgOsDbXL.jpg'/>
         </a>
       
     
@@ -3213,7 +3219,7 @@ LLVM的初步学习
           <h2>5m10v3</h2>
         
         
-          <p>一名二进制CTFer</p>
+          <p>目前主要方向为re</p>
 
         
         
@@ -3286,11 +3292,6 @@ LLVM的初步学习
             title="/categories/IDA%E5%AD%A6%E4%B9%A0/" href="/categories/IDA%E5%AD%A6%E4%B9%A0/"
             active-action="action-categoriesIDAE5ADA6E4B9A0"
             ><div class='name'>IDA学习</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/PE/" href="/categories/PE/"
-            active-action="action-categoriesPE"
-            ><div class='name'>PE</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/WP/" href="/categories/WP/"
@@ -3421,7 +3422,7 @@ LLVM的初步学习
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>83 篇</div>
+          <div>82 篇</div>
         </div>
       
 
